@@ -1,0 +1,17 @@
+[Unit]
+Description=housing-alert collector (oneshot, timer에서 30분마다 깨워 주기 판단)
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=@ROOT@
+Environment=TMPDIR=@HOME@/.tmp
+Environment=PYTHONUNBUFFERED=1
+ExecStart=@ROOT@/.venv/bin/python -m housing_alert collect
+Restart=on-failure
+RestartSec=10min
+TimeoutStartSec=30min
+MemoryMax=300M
+CPUQuota=50%
+Nice=10
+IOSchedulingClass=idle

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}공고 알림{% endblock %} · housing-alert</title>
+<link rel="stylesheet" href="{{ base }}/static/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="{{ base }}/">🏠 공고 알림</a>
+  {% if logged_in %}
+  <nav>
+    <a href="{{ base }}/">대시보드</a>
+    <a href="{{ base }}/notices">공고</a>
+    <a href="{{ base }}/filters">필터</a>
+    <a href="{{ base }}/settings">설정</a>
+    <form method="post" action="{{ base }}/logout" class="inline"><button class="link">로그아웃</button></form>
+  </nav>
+  {% endif %}
+</header>
+<main>
+  {% if msg %}<div class="flash ok">{{ msg }}</div>{% endif %}
+  {% if err %}<div class="flash err">{{ err }}</div>{% endif %}
+  {% block content %}{% endblock %}
+</main>
+<script>window.HA_BASE = "{{ base }}"; window.HA_CSRF = "{{ csrf }}";</script>
+<script src="{{ base }}/static/app.js"></script>
+</body>
+</html>

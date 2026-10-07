@@ -1,0 +1,18 @@
+[Unit]
+Description=housing-alert web UI (FastAPI + uvicorn)
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=@ROOT@
+Environment=TMPDIR=@HOME@/.tmp
+Environment=PYTHONUNBUFFERED=1
+ExecStart=@ROOT@/.venv/bin/python -m housing_alert serve
+Restart=on-failure
+RestartSec=5
+MemoryMax=300M
+CPUQuota=50%
+Nice=5
+
+[Install]
+WantedBy=default.target

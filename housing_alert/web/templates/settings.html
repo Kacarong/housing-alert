@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}설정{% endblock %}
+{% block content %}
+<h1>설정</h1>
+
+<section class="card" id="webhook">
+  <h2>디스코드 웹훅</h2>
+  <p>현재: {% if webhook_masked %}<code>{{ webhook_masked }}</code>{% if webhook_from_env %} <span class="muted small">(.env 값)</span>{% endif %}{% else %}<span class="badge muted">미설정 — 알림은 미발송으로 쌓임</span>{% endif %}</p>
+  <form method="post" action="{{ base }}/settings/webhook" class="inline-form">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <input name="webhook_url" placeholder="https://discord.com/api/webhooks/..." autocomplete="off">
+    <button class="primary" name="action" value="save">저장</button>
+    {% if webhook_masked and not webhook_from_env %}<button name="action" value="clear" class="danger" formnovalidate>지우기</button>{% endif %}
+  </form>
+  <form method="post" action="{{ base }}/settings/webhook/test"><input type="hidden" name="csrf" value="{{ csrf }}"><button {% if not webhook_masked %}disabled{% endif %}>테스트 발송</button></form>
+</section>
+
+<section class="card" id="backlog">
+  <h2>밀린 알림 <span class="badge {% if backlog %}warn{% else %}muted{% endif %}">{{ backlog }}건</span></h2>
+  <p class="muted small">웹훅이 없던 동안 쌓인 미발송 알림입니다. 웹훅을 넣은 뒤 한 번에 보낼지 버릴지 고르세요. (10건 초과면 요약 메시지로 묶어 보냅니다.)</p>
+  <form method="post" action="{{ base }}/settings/backlog" class="actions">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <button class="primary" name="action" value="send" {% if not backlog or not webhook_masked %}disabled{% endif %}>모두 보내기</button>
+    <button class="danger" name="action" value="discard" {% if not backlog %}disabled{% endif %} onclick="return confirm('밀린 알림을 모두 버릴까요?')">모두 버리기</button>
+  </form>
+</section>
+
+<section class="card" id="apikey">
+  <h2>공공데이터포털 인증키</h2>
+  <p>현재: {% if key_masked %}<code>{{ key_masked }}</code>{% if key_from_env %} <span class="muted small">(.env 값)</span>{% endif %}{% else %}<span class="badge muted">키 미설정 — API 수집기 건너뜀</span>{% endif %}</p>
+  <p class="muted small">data.go.kr에서 「한국부동산원_청약홈 분양정보 조회 서비스」, 「한국토지주택공사_분양임대공고문 조회 서비스」 활용신청 후 받은 일반 인증키(Encoding/Decoding 어느 쪽이든 가능)를 넣으세요. 저장하면 다음 수집부터 바로 쓰입니다.</p>
+  <form method="post" action="{{ base }}/settings/apikey" class="inline-form">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <input name="api_key" placeholder="인증키" autocomplete="off">
+    <button class="primary" name="action" value="save">저장</button>
+    {% if key_masked and not key_from_env %}<button name="action" value="clear" class="danger">지우기</button>{% endif %}
+  </form>
+</section>
+
+<section class="card">
+  <h2>수집 주기</h2>
+  <form method="post" action="{{ base }}/settings/schedule" class="grid2">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <label>주간 간격(분)<input type="number" name="day_interval_min" min="30" value="{{ schedule.day_interval_min }}"></label>
+    <label>야간 간격(분)<input type="number" name="night_interval_min" min="30" value="{{ schedule.night_interval_min }}"></label>
+    <label>야간 시작(시)<input type="number" name="night_start_hour" min="0" max="23" value="{{ schedule.night_start_hour }}"></label>
+    <label>야간 끝(시)<input type="number" name="night_end_hour" min="0" max="23" value="{{ schedule.night_end_hour }}"></label>
+    <label>요약 메시지 기준(건 초과)<input type="number" name="summary_threshold" min="1" value="{{ summary_threshold }}"></label>
+    <div class="full"><button class="primary">저장</button></div>
+  </form>
+</section>
+
+<section class="card">
+  <h2>협동조합 의심 키워드</h2>
+  <p class="muted small">공고명·본문·단지 정보에 하나라도 있으면 '제외됨'으로 표시하고 알리지 않습니다. 한 줄에 하나. 저장하면 저장된 공고 전체를 다시 판정합니다.</p>
+  <form method="post" action="{{ base }}/settings/keywords">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <textarea name="keywords" rows="10">{{ keywords }}</textarea>
+    <div class="actions"><button class="primary" name="action" value="save">저장</button><button name="action" value="reset">기본값으로</button></div>
+  </form>
+</section>
+
+<section class="card">
+  <h2>비밀번호 변경</h2>
+  {% if initial_pw_in_env %}<p class="small warn-text">아직 설치 시 생성된 초기 비밀번호를 쓰고 있습니다. 바꾸는 것을 권장합니다.</p>{% endif %}
+  <form method="post" action="{{ base }}/settings/password" class="grid2">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <label class="full">현재 비밀번호<input type="password" name="current" autocomplete="current-password" required></label>
+    <label>새 비밀번호(8자 이상)<input type="password" name="new" minlength="8" autocomplete="new-password" required></label>
+    <label>새 비밀번호 확인<input type="password" name="confirm" minlength="8" autocomplete="new-password" required></label>
+    <div class="full"><button class="primary">변경</button></div>
+  </form>
+</section>
+{% endblock %}

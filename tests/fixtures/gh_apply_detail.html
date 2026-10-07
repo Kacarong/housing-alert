@@ -1,0 +1,1349 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HEADER BEGIN -->
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<link rel="icon" type="image/ico" href="/images/favicon.ico?v=20260917">
+	<link rel="stylesheet" type="text/css" href="/css/all.css?v=20260917">
+	<link rel="stylesheet" type="text/css" href="/css/add.css?v=20260917">
+	<!-- 	<link rel="stylesheet" type="text/css" href="/css/udt.css"> -->
+	
+	
+	
+	<title>GH주택청약·임대센터  | 임대주택-청약공고</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- 운영일 경우에만 -->
+	
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120963123-1"></script>
+	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-120963123-1');
+	</script>
+
+	<script src="/js/plugin/jquery.3.1.1.min.js?v=20260917"></script>
+	<script src="/js/plugin/jquery-ui.min.js?v=20260917"></script>
+	<!-- 성능제어 Netfunnel -->
+	<script src="/netfunnel/netfunnel.js?v=20260917"></script>
+	<script src="/netfunnel/netfunnel_skin.js?v=20260917"></script>
+
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script>
+		
+		function closeStopInfo6() {
+			if ($("input[name='today_show6']").is(":checked") == true ) {
+				setCookie("close2", "Y", 1);
+			}
+		    $("#stop_info6").hide(); //popclose 오류로인한 코드 변경
+		}
+		
+		var strReqUri = "/WEB-INF/jsp/ghhmw/sr/SR7150M01.jsp";
+		strReqUri = strReqUri.toUpperCase();
+
+		if(window.name == "iframeDialog" && strReqUri.indexOf("login") > -1)
+		{
+			parent.document.location.href = "/login/login.do";
+		}
+
+		$(function(){
+			$('#preCorRrno').hide();
+			$('#midCorRrno').hide();
+			$('#postCorRrno').hide();
+
+			/**
+			 * Description	: 상단 lnb_wrap setting
+			 */
+			$navi = $("#naviUl li").last();
+			var umid = $navi.data("umid");
+			if(umid != null) {
+				$navi.append($("#menu"+umid).next("ul").clone());
+				$navi.find('a').removeAttr('id');
+			}
+
+			
+			var strMenuId = "menu" + $("#naviUl li").eq(1).data('mid');
+			$('#gnb #' + strMenuId).addClass('lnb_active');
+
+			
+		});
+
+	</script>
+
+</head>
+<body>
+
+<!-- 웹접근성 네비게이션///// -->
+<div class="navi_tab">
+	<a href="#content">본문 바로가기</a>
+	<a href="#gnb">주메뉴 바로가기</a>
+</div>
+<!-- ///// 웹접근성 네비게이션 -->
+
+<!-- 헤더영역 ///// -->
+<header>
+	<!-- 최상단 header ///// -->
+	<div class="head_line">
+		<div class="guide flex justify-between items-center">
+			<ul class="head_link2 flex h-full">
+				<li><a class="bg-white block h-full py-3 px-4" href="javascript:$net.href('/');">GH주택청약·임대센터</a></li>
+				<li><a class="text-white block h-full py-3 px-4" href="https://buy.gh.or.kr" target="_blank" title="새창열림">토지분양 시스템</a></li>
+				<li><a class="bg-blue_dk text-white block h-full py-3 px-4" href="https://irts.molit.go.kr/usr/pblinstt/gico/cnstrnhous/RtecsGicoCtrtcTypeSelect.do" target="_blank" title="새창열림">전자계약 시스템</a></li>
+			</ul>
+
+			<ul class="head_link2 flex h-full">
+			    <li>
+			        <a href="https://www.youtube.com/channel/UC4V9wPROpkKjZ8_cSTIvB3g" target="_blank" title="GH 유튜브 바로가기 (새창열림)" class="block max-w-[42px] max-h-[42px] hover:opacity-80 transition-opacity">
+			            <img src="/images/sns_guide/sns_youtube.png?v=20260917" alt="유튜브" class="block w-[28px] h-[28px]">
+			        </a>
+			    </li>
+
+			    <li>
+			        <a href="https://www.instagram.com/gh_official_insta" target="_blank" title="GH 인스타그램 바로가기 (새창열림)" class="block max-w-[42px] max-h-[42px] hover:opacity-80 transition-opacity">
+			            <img src="/images/sns_guide/sns_insta.png?v=20260917" alt="인스타그램" class="block">
+			        </a>
+			    </li>
+
+			    <li>
+			        <a href="https://blog.naver.com/ghstory_official" target="_blank" title="GH 네이버 블로그 바로가기 (새창열림)" class="block max-w-[42px] max-h-[42px] hover:opacity-80 transition-opacity">
+			            <img src="/images/sns_guide/sns_naver.png?v=20260917" alt="네이버 블로그" class="block">
+			        </a>
+			    </li>
+
+			    <li>
+			        <a href="https://www.facebook.com/gh.or.kr" target="_blank" title="GH 페이스북 바로가기 (새창열림)" class="block max-w-[42px] max-h-[42px] hover:opacity-80 transition-opacity">
+			            <img src="/images/sns_guide/sns_facebook.png?v=20260917" alt="페이스북" class="block">
+			        </a>
+			    </li>
+			</ul>
+
+			<div class="head_login2 flex items-center">
+
+				<div class="flex flex-col items-center justify-center">
+					<!-- <img class="block h-[45px]" src="/images/common/t_logo3.png" alt="변화의중심 기회의경기"> -->
+				</div>
+
+				
+
+
+				<ul class="flex gap-6 ml-4 text-white">
+					
+						
+							<li class="flex flex-col items-center justify-center">
+								<a href="javascript:$net.href('/login/login.do');" class="flex items-center justify-center"><i class="block fa-lg fa-user-circle far mr-2"></i>로그인</a>
+							</li>
+						
+						
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- ///// 최상단 header -->
+
+	<!-- GNB ///// -->
+	<div class="head_box">
+		<div class="guide">
+			<h1><a href="/"><img class="b42" src="/images/common/t_logo.png?v=20260917" alt="GH주택청약·임대센터"></a></h1>
+			<div class="login_logout">
+				<div class="guide">
+					
+						
+						
+							<p>어서오세요.&nbsp;<b class="color_blue">GH주택청약·임대센터</b>입니다.</p>
+							<a href="javascript:$net.href('/login/login.do');" class="flex items-center justify-center"><i class="block fa-lg fa-user-circle far mr-2"></i>로그인</a>
+						
+					
+				</div>
+			</div>
+			<div class="head_mo_link">
+				<div class="bg-blue_mt px-3 pt-[60px] pb-6 text-[1.2rem] text-white">
+					
+						
+						
+							<h2 class="usr-w text-left"><span class="dfd font-bold">어서오세요.&nbsp;GH주택청약·임대센터입니다.</span></h2>
+							<a href="javascript:$net.href('/login/login.do');" class="block p-2 mt-4" style="border:1px solid white"><i class="fa-user-circle far mr-2"></i>로그인</a>
+						
+					
+				</div>
+				
+				
+			</div>
+
+			<!-- GNB 영역 START -->
+			<div id="gnb">
+				<ul>
+					
+<li class="menuLv1">
+	<a href="javascript:$net.href('');" id="menu854">청약 서비스</a>
+	<div class="gnb_wrap">
+		<div class="gnb_box guide">
+			<p>청약정보</p>
+			<ul>
+				<li>
+					<span>청약공고</span>
+					<ul>
+						<li><a href="javascript:$net.href('/sb/sr/sr7150/selectPbancRentHouseList.do');" id="menu916">임대주택</a></li>
+						<li><a href="javascript:$net.href('/sb/sr/sr7170/selectPbancRentSopsrtList.do');" id="menu918">임대상가</a></li>
+						<li><a href="javascript:$net.href('/sb/sr/sr7155/selectPbancRentHouseList.do');" id="menu1087">매입임대</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>공지사항</span>
+					<ul>
+						<li><a href="javascript:$net.href('/sr/sr7190/selectNoticeList.do');" id="menu920">공지사항</a></li>
+						<li><a href="javascript:$net.href('/sb/sr/sr7127/selectGHmap.do');" id="menu1416">GH 집찾기</a></li>
+						<li><a href="javascript:$net.href('/sr/sr7940/selectRentGuideList.do');" id="menu1443">임대가이드</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>자료실</span>
+					<ul>
+						<li><a href="javascript:$net.href('/sr/sr7200/selectRecordList.do');" id="menu921">자료실</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>FAQ</span>
+					<ul>
+						<li><a href="javascript:$net.href('/sr/sr7210/selectFAQList.do');" id="menu922">FAQ</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="gnb_box guide">
+			<p>온라인청약</p>
+			<ul>
+				<li>
+					<span>청약연습</span>
+					<ul>
+						<li><a href="javascript:$net.href('/sb/sr/sr7230/selectSbscPrctHouse.do');" id="menu924">임대주택</a></li>
+						<li><a href="javascript:$net.href('/sb/sr/sr7250/selectSbsAplyPrct.do');" id="menu926">임대상가</a></li>
+						<li><a href="javascript:$net.href('/sb/sr/sr7240/selectPrchsAplyPrct.do');" id="menu1074">매입임대</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>청약신청</span>
+					<ul>
+						<li><a href="javascript:$net.href('/sb/sr/sr7270/selectSbscAplyHouse.do');" id="menu928">임대주택</a></li>
+						<li><a href="javascript:$net.href('/sb/sr/sr7290/selectSbsAply.do');" id="menu930">임대상가</a></li>
+						<li><a href="javascript:$net.href('/sb/sr/sr7280/selectPrchsAply.do');" id="menu1075">매입임대</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>신청내역 조회</span>
+					<ul>
+						<li><a href="javascript:$net.href('/sb/sr/sr7300/selectAplyDtlsList.do');" id="menu931">임대주택</a></li>
+						<li><a href="javascript:$net.href('/sb/sr/sr7301/selectAplyDtlsList.do');" id="menu1090">임대상가</a></li>
+						<li><a href="javascript:$net.href('/sb/sr/sr7302/selectAplyDtlsList.do');" id="menu1091">매입임대</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>서류제출대상조회/서류제출</span>
+					<ul>
+						<li><a href="javascript:$net.href('/sb/sr/sr7310/selectPbancList.do');" id="menu932">서류제출자당첨조회</a></li>
+						<li><a href="javascript:$net.href('/sb/sr/sr7320/selectPaprSbmsnPbancList.do');" id="menu933">심사서류제출</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>소명대상 조회/서류제출</span>
+					<ul>
+						<li><a href="javascript:$net.href('/sb/sr/sr7330/selectOnlnExplnTrgtList.do');" id="menu934">소명대상조회</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>당첨결과조회</span>
+					<ul>
+						<li><a href="javascript:$net.href('/sb/sr/sr7351/selectPblancWinnerList.do');" id="menu1017">당첨자목록</a></li>
+						<li><a href="javascript:$net.href('/sb/sr/sr7931/selectPblancFinQualfVrifyList.do');" id="menu1367">적격자조회</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>자가진단</span>
+					<ul>
+						<li><a href="javascript:$net.href('/sb/sr/sr7370/selectSelfDiagnosisMain.do');" id="menu1286">자가진단</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</li>
+<li class="menuLv1">
+	<a href="javascript:$net.href('');" id="menu855">계약서비스</a>
+	<div class="gnb_wrap">
+		<div class="gnb_box guide">
+			<p>계약정보조회/변경</p>
+			<ul>
+				<li>
+					<span>계약정보조회</span>
+					<ul>
+						<li><a href="javascript:$net.href('/ct/sr/sr7380/selectContractList.do');" id="menu939">계약정보조회</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>예비입주자조회</span>
+					<ul>
+						<li><a href="javascript:$net.href('/ct/sr/sr7410/selectIndividualReserveList.do');" id="menu942">입주순위</a></li>
+						<li><a href="javascript:$net.href('/ct/sr/sr7420/selectModifyMemberInfoForm.do');" id="menu943">개인정보변경</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="gnb_box guide">
+			<p>계약</p>
+			<ul>
+				<li>
+					<span>계약변경신청</span>
+					<ul>
+						<li><a href="javascript:$net.href('/ct/sr/sr7500/selectCtrtList.do');" id="menu951">계약변경신청</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>임대주택 해약신청</span>
+					<ul>
+						<li><a href="javascript:$net.href('/ct/sr/sr7540/selectCancelContractList.do');" id="menu955">임대주택 해약신청</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="gnb_box guide">
+			<p>계약갱신</p>
+			<ul>
+				<li>
+					<span>계약갱신서류제출</span>
+					<ul>
+						<li><a href="javascript:$net.href('/ct/sr/sr7620/selectHouseUpdtPaprList.do');" id="menu963">계약갱신서류제출</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>소명대상조회/서류제출</span>
+					<ul>
+						<li><a href="javascript:$net.href('/ct/sr/sr7650/selectCtrtExplnTrgtList.do');" id="menu966">소명대상 조회</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</li>
+<li class="menuLv1">
+	<a href="javascript:$net.href('');" id="menu856">입주 지원</a>
+	<div class="gnb_wrap">
+		<div class="gnb_box guide">
+			<p>입주</p>
+			<ul>
+				<li>
+					<span>입주</span>
+					<ul>
+						<li><a href="javascript:$net.href('/cs/sr/sr7900/selectNoticeList.do');" id="menu968">입주안내</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</li>
+<li class="menuLv1">
+	<a href="javascript:$net.href('');" id="menu857">고객지원</a>
+	<div class="gnb_wrap">
+		<div class="gnb_box guide">
+			<p>증명서발급</p>
+			<ul>
+				<li>
+					<span>증명발급</span>
+					<ul>
+						<li><a href="javascript:$net.href('/cs/sr/sr7760/selectCtrtCrtfList.do');" id="menu977">계약사실원신청</a></li>
+						<li><a href="javascript:$net.href('/cs/sr/sr7770/selectCtrtCrtfIssuList.do');" id="menu978">계약사실원 발급내역조회</a></li>
+						<li><a href="javascript:$net.href('/cs/sr/sr7780/selectRightInfrCrtfCtrtList.do');" id="menu979">권리침해확인서 신청</a></li>
+						<li><a href="javascript:$net.href('/cs/sr/sr7790/selectRightInfrCrtfIssuList.do');" id="menu980">권리침해확인서 발급내역조회</a></li>
+						<li><a href="javascript:$net.href('/cs/sr/sr7800/selectRntchgPayCrtfCtrtList.do');" id="menu981">임대료납부확인서 신청</a></li>
+						<li><a href="javascript:$net.href('/cs/sr/sr7810/selectRntchgPayCrtfIssuList.do');" id="menu982">임대료납부확인서 발급내역조회</a></li>
+						<li><a href="javascript:$net.href('/cs/sr/sr7910/selectGtnRemainPayCrtfList.do');" id="menu1150">잔금납부확인서 발급내역조회</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>증명서진위확인</span>
+					<ul>
+						<li><a href="javascript:$net.href('/cs/sr/sr7860/selectIssuCrtfView.do');" id="menu987">증명서 진위확인</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="gnb_box guide">
+			<p>자동이체신청</p>
+			<ul>
+				<li>
+					<span>자동이체신청</span>
+					<ul>
+						<li><a href="javascript:$net.href('/cs/sr/sr7890/selectCtrtList.do');" id="menu1116">자동이체신청</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="gnb_box guide">
+			<p>대출추천</p>
+			<ul>
+				<li>
+					<span>대출추천서</span>
+					<ul>
+						<li><a href="javascript:$net.href('/cs/as/as0100/selectCtrtInfoList.do');" id="menu988">대출추천서 신청</a></li>
+						<li><a href="javascript:$net.href('/cs/as/as0110/selectLonRfrncAplyList.do');" id="menu989">대출추천서 발급내역조회</a></li>
+						<li><a href="javascript:$net.href('/cs/as/as0120/selectLonRfrncIssuYnIdnty.do');" id="menu990">대출추천서 진위확인</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="gnb_box guide">
+			<p>공급센터안내</p>
+			<ul>
+				<li>
+					<span>공급센터안내</span>
+					<ul>
+						<li><a href="javascript:$net.href('/cs/sr/sr7870/selectSplyCenterInfoView.do');" id="menu991">공급센터안내</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="gnb_box guide">
+			<p>과수납안내</p>
+			<ul>
+				<li>
+					<span>과수납반환신청</span>
+					<ul>
+						<li><a href="javascript:$net.href('/cs/sr/sr7920/selectOverPayList.do');" id="menu1299">과수납반환신청</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</li>
+
+				</ul>
+			</div>
+			<!-- GNB 영역 END -->
+
+			<button type="button" class="btn_gnb"><i class="xi-bars"></i><span class="blind">메뉴열기</span></button>
+		</div>
+	</div>
+	<!-- ///// GNB -->
+
+	<!-- floating MENU ///// -->
+	<div class="float_menu">
+		<p class="float_tit">Quick<br/>Menu</p>
+		<ul>
+			<li><a href="javascript:$net.href('/usr/usr0001/selectMyPage.do');"><img src="/images/main/renew/ic_00.png?v=20260917" alt=""><p>마이페이지</p></a></li>
+			<li><a href="javascript:$net.href('/sb/sr/sr7270/selectSbscAplyHouse.do');"><img src="/images/main/mo_link_01.png?v=20260917" alt=""><p>임대주택<br/>청약신청</p></a></li>
+			<li><a href="javascript:$net.href('/sb/sr/sr7230/selectSbscPrctHouse.do');"><img src="/images/main/mo_link_02.png?v=20260917" alt=""><p>임대주택<br/>청약연습</p></a></li>
+			<li><a href="javascript:$net.href('/sb/sr/sr7351/selectPblancWinnerList.do');"><img src="/images/main/mo_link_03.png?v=20260917" alt=""><p>당첨결과 조회</p></a></li>
+			<li><a href="javascript:$net.href('/sb/sr/sr7370/selectSelfDiagnosisMain.do');"><img src="/images/privacy/personal_law05.png?v=20260917" alt=""><p>자가진단</p> </a></li>
+		</ul>
+		<div class="float_info">
+			<span><a href="/cs/sr/sr7870/selectSplyCenterInfoView.do" class="mt0">상담 및 문의</a></span>
+		</div>
+	</div>
+	<!-- ///// floating MENU -->
+
+</header>
+<!-- ///// 헤더영역 -->
+<!-- HEADER END -->
+
+<!-- BODY CONTENT BEGIN -->
+<div id="content" tabindex="0">
+
+	<!-- MENU NAVI BEGIN-->
+	
+
+
+ 
+ 	<!-- LNB ///// -->
+	<div class="lnb_wrap">
+		<div class="guide">
+			<a href="javascript:$net.href('/co/coa/selectMainView.do');" title="홈으로"><i class="xi-home-o"></i><span class="blind">홈으로</span></a>
+			
+			<ul class="lnb_box" id="naviUl">
+				<li><p>청약 서비스</p></li>
+				<li>
+					<button type="button" title="1depth 축소됨">청약정보<i class="xi-angle-down-min"></i></button>
+					<ul>
+						
+						<li><a href="javascript:$net.href('/sb/sr/sr7155/selectPbancRentHouseList.do');">청약정보</a></li>
+						
+						<li><a href="javascript:$net.href('/sb/sr/sr7250/selectSbsAplyPrct.do');">온라인청약</a></li>
+						
+					</ul>
+				</li>
+				<li>
+					<button type="button" title="2depth 축소됨">청약공고<i class="xi-angle-down-min"></i></button>
+					<ul>
+						
+						<li><a href="javascript:$net.href('/sb/sr/sr7155/selectPbancRentHouseList.do');">청약공고</a></li>
+						
+						<li><a href="javascript:$net.href('/sr/sr7940/selectRentGuideList.do');">공지사항</a></li>
+						
+						<li><a href="javascript:$net.href('/sr/sr7200/selectRecordList.do');">자료실</a></li>
+						
+						<li><a href="javascript:$net.href('/sr/sr7210/selectFAQList.do');">FAQ</a></li>
+						
+					</ul>
+				</li>
+				<li>
+					<button type="button" title="3depth 축소됨">임대주택<i class="xi-angle-down-min"></i></button>
+					<ul>
+						
+						<li><a href="javascript:$net.href('/sb/sr/sr7155/selectPbancRentHouseList.do');">매입임대</a></li>
+						
+						<li><a href="javascript:$net.href('/sb/sr/sr7170/selectPbancRentSopsrtList.do');">임대상가</a></li>
+						
+						<li><a href="javascript:$net.href('/sb/sr/sr7150/selectPbancRentHouseList.do');">임대주택</a></li>
+						
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- ///// LNB -->
+	<!-- MENU NAVI END-->
+
+	<div class="sub_content">
+		<div class="guide">
+			<h3 class="sub_title"><span>청약공고</span></h3>
+
+			<div class="sub_textbox mt30">
+				<h5 class="subcont_title">상세정보</h5>
+				<table>
+					<caption>청약공고 상세정보</caption>
+					<colgroup>
+						<col style="width:20%">
+						<col style="width:30%">
+						<col style="width:20%">
+						<col style="width:30%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">공고명</th>
+							<td colspan="3" class="txt_l"><b>경기리츠1호 다산진건데시앙 장기전세주택 예비입주자 모집공고</b></td>
+						</tr>
+						
+							<tr>
+								<th scope="row">공고상태</th>
+								<td class="txt_l">접수마감</td>
+								<th scope="row">유형</th>
+								<td class="txt_l">장기전세</td>
+							</tr>
+						
+
+						<tr>
+							<th scope="row">공고일</th>
+							<td colspan="3" class="txt_l">2026.08.13</td>
+						</tr>
+						<tr>
+							<th scope="row">공고문</th>
+							<td colspan="3" class="txt_l">
+								
+									<p>
+									  <a href="https://apply-cdn.gh.or.kr/sr/sr7150/selectFileDown.do?pbancNo=808&atchFileSn=1720251&atchFileDtlSn=5&mode=1&v=20260813143035" >
+									  경기리츠1호 다산진건데시앙 장기전세주택 예비입주자 모집공고(26.08.13).hwp (690688 Byte)
+									  <img src="/images/sub/hwp.png"
+									  alt="hwp 파일"
+									  class="file_ic">
+									  </a>
+									</p>
+								
+									<p>
+									  <a href="https://apply-cdn.gh.or.kr/sr/sr7150/selectFileDown.do?pbancNo=808&atchFileSn=1720251&atchFileDtlSn=6&mode=1&v=20260813143035" >
+									  경기리츠1호 다산진건데시앙 장기전세주택 예비입주자 모집공고(26.08.13).pdf (1111113 Byte)
+									  <img src="/images/sub/pdf.png"
+									  alt="pdf 파일"
+									  class="file_ic">
+									  </a>
+									</p>
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+				
+					<h5 class="subcont_title">공급정보</h5>
+
+					<ul class="tab_box tab_box2 mb10">
+						
+							
+								
+									
+									
+								
+								
+							
+							<li id="li1" class="active pbancTab" ><a href="javascript:tab_move('suply',1)" title="선택됨">다산진건B1블록 장기전세주택 </a></li>
+						
+					</ul>
+
+					
+						
+							
+							
+								
+							
+						
+						<div id="tab1" class=""  >
+							<table class="mt20">
+								<caption>사업지구별 공급정보</caption>
+								<colgroup>
+									<col style="width:15%">
+									<col style="width:35%">
+									<col style="width:15%">
+									<col style="width:35%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">지구명</th>
+										<td class="txt_l">다산진건B1블록 장기전세주택 </td>
+										<th scope="row">소재지</th>
+										<td class="txt_l">
+											<span>경기도 남양주시 다산동 6026 </span>
+											
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">전용면적(m²)</th>
+										<td class="txt_l">72.9858 ~ 84.9876</td>
+										<th scope="row">모집호수</th>
+										<td class="txt_l">97</td>
+									</tr>
+									<tr>
+										<th scope="row">난방방식</th>
+										<td class="txt_l"></td>
+										<th scope="row">입주예정월</th>
+										<td class="txt_l">
+											
+											
+												2027.05
+											
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							
+
+							<h5 class="subcont_title">단지 관련 이미지 정보</h5>
+
+							<ul class="bul_list depth2_box">
+								<li class="fz14">다운로드 버튼을 클릭하여 이미지 파일 다운로드가 가능합니다.</li>
+							</ul>
+							<div class="caption_tbl mt txt_r">
+								<button type="button" class="down_btn" onclick="javascript:fn_imgDown()">다운로드 <i class="xi-download color_blue"></i></button>
+							</div>
+
+							<div class="left_tab_box">
+								<div class="ltab_box">
+									<ul>
+										
+											
+												
+													
+													
+												
+												
+											
+											<li>
+												<button type="button" onclick="javascript:fn_chgSn('0211029','1720263','1','20260812190648')" data-show="img1tab1" class="active" title="선택됨" >72A 평면도</button>
+											</li>
+										
+											
+												
+												
+													
+													
+												
+											
+											<li>
+												<button type="button" onclick="javascript:fn_chgSn('0211029','1720264','1','20260812190702')" data-show="img2tab1" class="" title="선택안됨" >84A 평면도</button>
+											</li>
+										
+											
+												
+												
+													
+													
+												
+											
+											<li>
+												<button type="button" onclick="javascript:fn_chgSn('0211029','1720265','1','20260812190708')" data-show="img3tab1" class="" title="선택안됨" >84B 평면도</button>
+											</li>
+										
+											
+												
+												
+													
+													
+												
+											
+											<li>
+												<button type="button" onclick="javascript:fn_chgSn('0211029','1720266','1','20260812190715')" data-show="img4tab1" class="" title="선택안됨" >84C1 평면도</button>
+											</li>
+										
+											
+												
+												
+													
+													
+												
+											
+											<li>
+												<button type="button" onclick="javascript:fn_chgSn('0211029','1720267','1','20260812190721')" data-show="img5tab1" class="" title="선택안됨" >84C2 평면도</button>
+											</li>
+										
+											
+												
+												
+													
+													
+												
+											
+											<li>
+												<button type="button" onclick="javascript:fn_chgSn('0211029','1720268','1','20260812190727')" data-show="img6tab1" class="" title="선택안됨" >84D 평면도</button>
+											</li>
+										
+									</ul>
+								</div>
+								<div class="ltab_content">
+									
+										<div id="img1tab1">
+	                                        <img src="https://apply-cdn.gh.or.kr/sb/sr/sr7150/selectAtchImage.do?bizCd=0211029&rcritNmtm=4&atchFileSn=1720263&atchFlag=main&v=20260812190648" alt="">
+										</div>
+									
+										<div id="img2tab1">
+	                                        <img src="https://apply-cdn.gh.or.kr/sb/sr/sr7150/selectAtchImage.do?bizCd=0211029&rcritNmtm=4&atchFileSn=1720264&atchFlag=main&v=20260812190702" alt="">
+										</div>
+									
+										<div id="img3tab1">
+	                                        <img src="https://apply-cdn.gh.or.kr/sb/sr/sr7150/selectAtchImage.do?bizCd=0211029&rcritNmtm=4&atchFileSn=1720265&atchFlag=main&v=20260812190708" alt="">
+										</div>
+									
+										<div id="img4tab1">
+	                                        <img src="https://apply-cdn.gh.or.kr/sb/sr/sr7150/selectAtchImage.do?bizCd=0211029&rcritNmtm=4&atchFileSn=1720266&atchFlag=main&v=20260812190715" alt="">
+										</div>
+									
+										<div id="img5tab1">
+	                                        <img src="https://apply-cdn.gh.or.kr/sb/sr/sr7150/selectAtchImage.do?bizCd=0211029&rcritNmtm=4&atchFileSn=1720267&atchFlag=main&v=20260812190721" alt="">
+										</div>
+									
+										<div id="img6tab1">
+	                                        <img src="https://apply-cdn.gh.or.kr/sb/sr/sr7150/selectAtchImage.do?bizCd=0211029&rcritNmtm=4&atchFileSn=1720268&atchFlag=main&v=20260812190727" alt="">
+										</div>
+									
+								</div>
+							</div>
+							<p class="tbl_after">※ 상기 이미지는 소비자의 이해를 돕기위해 제작된 것으로 실제와 다를 수 있습니다.</p>
+							
+
+							<h5 class="subcont_title">주택형 안내</h5>
+
+							<ul class="bul_list mt10">
+								<li class="fz14">상세공급정보를 확인하시려면 표에서 주택형을 클릭해주세요.</li>
+								<li class="fz14">인터넷청약신청 가능 여부는 공고문을 확인하시기 바랍니다. 현장신청만 가능한 경우에는 신청장소를 방문하여 신청하시기 바랍니다.</li>
+							</ul>
+
+							<div class="tbl_scroll mt10">
+								<table>
+									<caption>주택형, 전용면적(m²), 금회공급 세대수, 임대보증금(원), 월임대료(원), 인터넷청약 진행상태가 보여지는 주택형 안내 테이블</caption>
+									<colgroup>
+										<col style="width:30%">
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<tbody class="tb_house">
+										<tr>
+											<th scope="col">주택형</th>
+											<th scope="col">전용면적(m²)</th>
+											<th scope="col">금회공급 세대수</th>
+											<th scope="col">임대보증금(원)</th>
+											<th scope="col">월임대료(원)</th>
+											<th scope="col">인터넷청약</th>
+										</tr>
+								
+										<tr class="tb_house_con">
+											<td>
+												<button type="button"
+													data-bizCd="0211029"
+													data-rcritNmtm="4"
+													data-bizTyCd="03"
+													data-gnrlDrwtYn=""
+													data-priorDrwtYn=""
+													data-gnrlDrwtGroupTyCd=""
+													data-priorDrwtGroupTyCd=""
+													data-splySlsrtCd=""
+													data-houseTyCd="72A"
+												class="color_blue" >
+													72A 
+												</button>
+											</td>
+											<td>72.9858</td>
+											<td>13</td>
+											<td>공고문 확인</td>
+											<td>공고문 확인</td>
+											<td>접수마감</td>
+										</tr>
+									
+										<tr class="tb_house_con">
+											<td>
+												<button type="button"
+													data-bizCd="0211029"
+													data-rcritNmtm="4"
+													data-bizTyCd="03"
+													data-gnrlDrwtYn=""
+													data-priorDrwtYn=""
+													data-gnrlDrwtGroupTyCd=""
+													data-priorDrwtGroupTyCd=""
+													data-splySlsrtCd=""
+													data-houseTyCd="84A"
+												class="color_blue" >
+													84A 
+												</button>
+											</td>
+											<td>84.9876</td>
+											<td>41</td>
+											<td>공고문 확인</td>
+											<td>공고문 확인</td>
+											<td>접수마감</td>
+										</tr>
+									
+										<tr class="tb_house_con">
+											<td>
+												<button type="button"
+													data-bizCd="0211029"
+													data-rcritNmtm="4"
+													data-bizTyCd="03"
+													data-gnrlDrwtYn=""
+													data-priorDrwtYn=""
+													data-gnrlDrwtGroupTyCd=""
+													data-priorDrwtGroupTyCd=""
+													data-splySlsrtCd=""
+													data-houseTyCd="84B"
+												class="color_blue" >
+													84B 
+												</button>
+											</td>
+											<td>84.9585</td>
+											<td>13</td>
+											<td>공고문 확인</td>
+											<td>공고문 확인</td>
+											<td>접수마감</td>
+										</tr>
+									
+										<tr class="tb_house_con">
+											<td>
+												<button type="button"
+													data-bizCd="0211029"
+													data-rcritNmtm="4"
+													data-bizTyCd="03"
+													data-gnrlDrwtYn=""
+													data-priorDrwtYn=""
+													data-gnrlDrwtGroupTyCd=""
+													data-priorDrwtGroupTyCd=""
+													data-splySlsrtCd=""
+													data-houseTyCd="84C1"
+												class="color_blue" >
+													84C1 
+												</button>
+											</td>
+											<td>84.9825</td>
+											<td>8</td>
+											<td>공고문 확인</td>
+											<td>공고문 확인</td>
+											<td>접수마감</td>
+										</tr>
+									
+										<tr class="tb_house_con">
+											<td>
+												<button type="button"
+													data-bizCd="0211029"
+													data-rcritNmtm="4"
+													data-bizTyCd="03"
+													data-gnrlDrwtYn=""
+													data-priorDrwtYn=""
+													data-gnrlDrwtGroupTyCd=""
+													data-priorDrwtGroupTyCd=""
+													data-splySlsrtCd=""
+													data-houseTyCd="84C2"
+												class="color_blue" >
+													84C2 
+												</button>
+											</td>
+											<td>84.9825</td>
+											<td>12</td>
+											<td>공고문 확인</td>
+											<td>공고문 확인</td>
+											<td>접수마감</td>
+										</tr>
+									
+										<tr class="tb_house_con">
+											<td>
+												<button type="button"
+													data-bizCd="0211029"
+													data-rcritNmtm="4"
+													data-bizTyCd="03"
+													data-gnrlDrwtYn=""
+													data-priorDrwtYn=""
+													data-gnrlDrwtGroupTyCd=""
+													data-priorDrwtGroupTyCd=""
+													data-splySlsrtCd=""
+													data-houseTyCd="84D"
+												class="color_blue" >
+													84D 
+												</button>
+											</td>
+											<td>84.9511</td>
+											<td>10</td>
+											<td>공고문 확인</td>
+											<td>공고문 확인</td>
+											<td>접수마감</td>
+										</tr>
+									
+									</tbody>
+								</table>
+							</div>
+							<h5 class="subcont_title refer_title color_blue"><i class="xi-error-o color_blue"></i> 안내사항</h5>
+							<div class="bg_box">
+								<span>
+									
+										자세한 사항은 공고문을 확인해 주시기 바랍니다.
+										
+									
+								</span>
+							</div>
+
+							<h5 class="subcont_title">공급일정</h5>
+							<ul class="bul_list mt10">
+								
+									
+									
+									<li class="mt5"><span><b>온라인접수기간 : </b>2026.08.24 10:00 ~ 2026.08.24 18:00</span></li>
+								
+								
+									
+									<li class="mt5"><span><b>현장접수기간 : </b>2026.08.24 10:00 ~ 2026.08.24 16:00</span></li>
+								
+								
+									
+									<li class="mt5"><span><b>서류제출대상자 발표일 : </b>2026.09.17 17:00</span></li>
+								
+								
+									
+									<li class="mt5"><span><b>서류제출기간 : </b>2026.09.21 10:00 ~ 2026.09.28 17:00</span></li>
+								
+								
+									
+									<li class="mt5"><span><b>당첨자발표일 : </b>2027.03.04 17:00</span></li>
+								
+								
+									
+									
+								
+							</ul>
+							 <!-- [SFR-006-002 : 모집공고 접수처정보 회차별 관리 (행복만 접수처정보 회차별로) ]  -->
+							
+						</div>
+					
+					<!-- 행복 외에는 접수처 정보 공고별로 관리 -->
+					
+						<h5 class="subcont_title">접수처 정보</h5>
+						<table class="view_tbl">
+							<caption> 접수처 소재지, 전화번호, 운영기간정보</caption>
+							<colgroup>
+								<col style="width:15%">
+								<col style="width:35%">
+								<col style="width:15%">
+								<col style="width:35%">
+							</colgroup>
+							<tbody class="tb_infofc">
+								<tr>
+									<th scope="row">소재지</th>
+									<td colspan="3" class="txt_l">경기도 남양주시 다산동 6027 다산역 경기행복주택 근린생활시설 102호 임대센터
+										
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">전화번호</th>
+									<td class="txt_l">031-510-4039</td>
+									<th scope="row">접수처 운영기간</th>
+									<td class="txt_l">2026.08.24~2026.08.26</td>
+								</tr>
+							</tbody>
+						</table>
+					
+
+					<h5 class="subcont_title">기타사항</h5>
+					<div class="border_box bg_txt_box">
+						<span>
+							
+								자세한 사항은 공고문을 확인해 주시기 바랍니다.
+								
+							
+						</span>
+					</div>
+
+				
+				<h5 class="subcont_title refer_title color_blue"><i class="xi-error-o color_blue"></i> 안내사항</h5>
+				<div class="bg_box">
+					<span>
+						
+							
+							※ 청약접수는 인터넷접수(http://apply.gh.or.kr)만 가능하며, 현장접수는 인터넷 신청이 어려운 중증장애인 및 고령자(만 65세 이상)에 한하여 진행합니다.<br/><br/>※ 인터넷 청약신청 및 현장접수 시 신청자 본인의 인증서(공동/금융인증서 또는 네이버 인증서(카카오 불가))가 필요하오니 반드시 접수일 이전에 미리 준비하시기 바랍니다.<br/><br/>※ 청약신청시 SMS(문자) 수신동의 체크란에 미체크 하실경우 계약안내 등 모집공고 관련 공지사항 수신이 불가합니다.
+						
+					</span>
+				</div>
+			</div>
+			<div class="apply_btn mb0">
+				<button type="button" id="btn_submit" class="btn_submit" >목록으로</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- BODY CONTENT END -->
+
+<!-- FOOTER BEGIN-->
+
+
+
+<!-- 푸터 영역 ///// -->
+
+<footer>
+	<div class="footer-row-1-ct">
+		<div class="foot_wrap rs-frame fb4">
+			<ul class="foot_link2 flex text-white gap-6">
+			    <!--
+				<li><a href="javascript:$net.href('/terms/privacy.do');" style="padding: 5px 10px;box-sizing: border-box;background: #004ea2;border-radius: 5px;color: #fff;">개인정보처리방침</a></li>
+				-->
+				<!-- SR4097/이용삼 : 개인정보처리방침 링크수정요청처리 -->
+				<li><a href="https://www.gh.or.kr/gh/personal-information-processing-policy.do" style="padding: 5px 10px;box-sizing: border-box;background: #004ea2;border-radius: 5px;color: #fff;" title="새창열림" target="_blank">개인정보처리방침</a></li>
+				<li><a href="javascript:$net.href('/terms/email.do');">이메일추출방지정책</a></li>
+				<li><a href="https://www.gh.or.kr/gh/gh-location-announcement.do">찾아오시는길</a></li>
+				<li><a href="javascript:$net.href('/fm/fm6000/bizMbyMain.do');" class="cma_link">주택관리</a></li>
+			</ul>
+		</div>
+	</div>
+         <div class="footer-row-1-ct border-iv-dark-t">
+            <div class="foot_wrap rs-frame fb4">
+               <div class="foot_info_wrap2 lg:flex justify-between ">
+                  <div class="family_box text-white relative leading-none text-left order-2">
+                     <button type="button" onclick="toggleMenuItemY2('.family_box')" class="border-iv-dark px-4 py-4 w-full lg:w-[220px] text-left flex items-center justify-between">
+                        <span>패밀리사이트</span>
+                        <i class="icon-tn-a xi-angle-up"></i>
+                        <i class="icon-tn-a xi-angle-down"></i>
+                     </button>
+                     <ul class="famst px-4 py-4 border-iv-dark border-b-none w-full lg:w-[220px] absolute top-auto bottom-[100%] z-50 bg-stone-700">
+                        <li>
+                           <a class="py-3 block" href="https://www.gh.or.kr/gh/index.do" target="_blank" title="새창열림">경기주택도시공사</a>
+                        </li>
+                        <li>
+                           <a class="py-3 block" href="https://buy.gh.or.kr" target="_blank" title="새창열림">토지분양시스템</a>
+                        </li>
+                        <li>
+                           <a class="py-3 block" href="https://www.gg.go.kr/" target="_blank" title="새창열림">경기도청</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="fc-l order-1">
+                     <h3 class="mb-4 mt-6 lg:mt-0"><img src="/images/main/renew/footer-logo.png?v=20260917" alt="GH주택청약 임대센터"></h3>
+                    <div class="foot_txt_box text-left">
+                        <div class="foot_info" style="display: inline-block;">
+                            <p>(16508) 경기도 수원시 영통구 센트럴타운로 43 (이의동)</p>
+                            <span class="hidden lg:inline-block sepwd"><p class="text-white font-bold">대표전화 <a class="text-white font-bold" href="tel:1588-0466">1588-0466</a></p></span>
+                            <span class="block lg:hidden"><p class="">대표전화 <a href="tel:1588-0466">1588-0466</a></p></span>
+                        </div>
+                        <div class="foot_copy" style="display: inline-block;">
+                            <p class="txt_copy">©2021 BY GYEONGGI HOUSING &amp; URBAN DEVELOPMENT CORPORATION ALL RIGHTS RESERVED</p>
+                            <p class="txt_info">GH 주택 청약ㆍ임대센터는 경기행복주택 및 국민임대주택의 공급안내 및 청약신청 접수를 위한 사이트입니다.</p>
+                        </div>
+                        <!-- 250212 : 웹접근성인증마크 추가 -->
+                        <a href="https://webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank" title="웹접근성인증 새창으로 열기" style="display: inline-block; margin-left: 20px; vertical-align: bottom;">
+                            <img src="/images/main/renew/Wa_mark.png?v=20260917" alt="과학기술정보통신부 WA(WEB접근성) 품질인증 마크, 웹와치(WebWatch) 2026.02.03 ~ 2027.02.02">
+                        </a>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- ///// 푸터 영역 -->
+
+
+<div class="loding_wrap" id="commonProgressBar">
+	<div class="lod_wrap_box">
+		<div class="lod_box">
+		    <div class="lod_txt">
+			    <i class="xi-spinner-2 xi-spin"></i>
+			    <p>처리중입니다.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	var gvPgmId = "SR7150M01";
+	window.onpageshow = function(event) {
+		var commonProgressBar = (window.name == "iframeDialog") ? parent.document.getElementById("commonProgressBar") : document.getElementById("commonProgressBar");
+		commonProgressBar.style.display = "none";
+	};
+</script>
+<script src="/js/jquery.min.js?v=20260917"></script>
+<script src="/js/site.min.js?v=20260917"></script>
+<script type="text/javascript">
+function toggleMenuItemY2(tg) {
+   let target = $(tg);
+   target.toggleClass('on');
+}
+
+$('.latest_tab_012').slick({
+   infinite: true,
+   vertical: true,
+   verticalSwiping: true,
+   slidesToShow: 2,
+   slidesToScroll: 1,
+   nextArrow: $('.mi-hss-slick-next'),
+   prevArrow: $('.mi-hss-slick-prev'),
+   responsive: [
+      {
+         breakpoint: 1022,
+         settings: {
+            slidesToShow: 3,
+            vertical: false,
+            verticalSwiping: false,
+         }
+      },
+      {
+         breakpoint: 612,
+         settings: {
+            slidesToShow: 2,
+            vertical: false,
+            verticalSwiping: false,
+         }
+      },
+   ]
+
+});
+$("#slider_filter012 > button").on('click', function(){
+   const $this = $(this);
+   const tgCC = $(".latest_tab_012");
+   let tgC = $this.data('filter');
+   $this.addClass("bg-blue_mt text-white");
+   $this.siblings().removeClass("bg-blue_mt text-white");
+   tgCC.slick('slickUnfilter');
+
+   if(tgC === 'all'){
+      tgCC.slick('slickUnfilter');
+    } else {
+       tgCC.slick('slickFilter','.'+tgC);
+    }
+
+  })
+</script>
+<script src="/js/renew.js?v=20260917"></script>
+<script src="/js/fontawesome/all.js?v=20260917"></script>
+<script src="/js/com/hom.core.js?v=20260917"></script>
+<script src="/js/util/hom.all.js?v=20260917"></script>
+<!-- 웹접근성 보완조치로 밑에도 추가-->
+<script src="/js/plugin/jquery-ui.min.js?v=20260917"></script>
+</body>
+</html>
+<!-- FOOTER END-->
+
+
+<form id="detailFrm" style="display:none;">
+	<input type="hidden" name="bizCd" 				id="bizCd" 				value="" >
+	<input type="hidden" name="rcritNmtm" 			id="rcritNmtm" 			value="" >
+	<input type="hidden" name="bizTyCd" 			id="bizTyCd" 			value="" >
+	<input type="hidden" name="gnrlDrwtYn" 			id="gnrlDrwtYn" 		value="" >
+	<input type="hidden" name="priorDrwtYn" 		id="priorDrwtYn" 		value="" >
+	<input type="hidden" name="gnrlDrwtGroupTyCd" 	id="gnrlDrwtGroupTyCd" 	value="" >
+	<input type="hidden" name="priorDrwtGroupTyCd" 	id="priorDrwtGroupTyCd" value="" >
+	<input type="hidden" name="splySlsrtCd" 		id="splySlsrtCd" 		value="" >
+	<input type="hidden" name="houseTyCd" 			id="houseTyCd" 			value="" >
+</form>
+
+<form id="imgFrm" style="display:none;">
+	<input type="hidden" name="bizCd" 					id="bizCd2" 		value="0211029" >
+	<input type="hidden" name="atchFileSn" 				id="atchFileSn" 	value="1720263" >
+	<input type="hidden" name="atchFileDtlSn" 			id="atchFileDtlSn" 	value="1" >
+	<input type="hidden" name="ver" 					id="ver" 			value="20260812190648" >
+</form>
+
+<script type="text/javascript">
+
+function open_map(obj, urI) {
+
+	var SuplyInfoUrl = urI;
+
+	// 사업지구별 공급정보
+	if(obj == "map01"){
+		if(SuplyInfoUrl == '' || SuplyInfoUrl == null){
+			alert('등록된 링크가 존재하지 않습니다.\n관리자에게 문의 바랍니다.');
+			return false;
+		}
+		window.open(SuplyInfoUrl, '_blank');
+	}
+
+	// 접수처
+	if(obj == "map02"){
+		var infofcUrl = urI;
+
+		if(infofcUrl == '' || infofcUrl == null){
+			alert('등록된 링크가 존재하지 않습니다.\n관리자에게 문의 바랍니다.');
+			return false;
+		}
+		window.open(infofcUrl, '_blank');
+	}
+}
+
+function tab_move(fg,obj){
+
+	// 공급유형 tab
+	if(fg == "suply"){
+
+		// tab 이동
+		var len = document.getElementsByClassName("pbancTab").length;
+	    for(var i=1; i<= len; i++) {
+	      if(i == obj) {
+	        document.getElementById("li"+i).className="active pbancTab";
+			document.getElementById("li"+i).querySelector("a").setAttribute("title","선택됨");
+	      } else {
+	        document.getElementById("li"+i).className="pbancTab";
+			document.getElementById("li"+i).querySelector("a").setAttribute("title","선택안됨");
+	      }
+	    }
+
+	    // 해당 tab의 content 숨김 처리
+	    for(var i=1; i<= len; i++) {
+	        if(i == obj) {
+	          document.getElementById("tab"+i).className="";
+	        } else {
+	          document.getElementById("tab"+i).className="hide";
+	        }
+	      }
+	}
+}
+
+//[SFR-006-002] .tab_box2 공급정보 6개씩 나열
+ function arrangeTabs(){
+
+	var tabBox = document.querySelector(".tab_box2");
+	var items = Array.from(tabBox.children);
+	var maxRow = 6;
+
+	var rowContainer = document.createElement("div");
+	rowContainer.classList.add("row");
+	tabBox.appendChild(rowContainer);
+
+	items.forEach(function (item, index){
+		rowContainer.appendChild(item);
+
+		//6개마다 줄바꿈
+		if((index+1) % maxRow === 0 && index !== items.length-1 ){
+			rowContainer = document.createElement("div");
+			rowContainer.classList.add("row");
+			tabBox.appendChild(rowContainer);
+		}
+	});
+}
+
+ arrangeTabs()
+
+
+function fn_imgDown(){
+	var bizCd = $("#bizCd2").val();
+	var atchFileSn = $("#atchFileSn").val();
+	var atchFileDtlSn = $("#atchFileDtlSn").val();
+	var ver = $("#ver").val();
+
+	var nextUrl = "https://apply-cdn.gh.or.kr/sr/sr7150/selectCtlgFileDown.do?bizCd="+bizCd+"&atchFileSn="+atchFileSn+"&ver="+ver+"&atchFileDtlSn="+atchFileDtlSn+"";
+
+	location.href=nextUrl
+}
+
+function fn_chgSn(bizCd,sn,dtlSn,ver){
+	$("#bizCd2").val(bizCd);
+	$("#atchFileSn").val(sn);
+	$("#atchFileDtlSn").val(dtlSn);
+	$("#ver").val(ver);
+}
+
+$(function() {
+	/* $('#sub_content tab_box').on('click', 'a', function() {
+	}); */
+
+	$('#btn_submit').on('click', function() {
+		$net.href("/sb/sr/sr7150/selectPbancRentHouseList.do");
+	});
+
+	// 주택형 상세
+	$('.tb_house_con').on('click', 'button', function() {
+
+		var bizCd = $(this).data('bizcd');
+		var rcritNmtm = $(this).data('rcritnmtm');
+		var bizTyCd = $(this).data('biztycd');
+		var gnrlDrwtYn = $(this).data('gnrldrwtyn');
+		var priorDrwtYn = $(this).data('priordrwtyn');
+		var gnrlDrwtGroupTyCd = $(this).data('gnrldrwtgrouptycd');
+		var priorDrwtGroupTyCd = $(this).data('priordrwtgrouptycd');
+		var splySlsrtCd = $(this).data('splyslsrtcd');
+		var houseTyCd = $(this).data('housetycd');
+
+		$('#bizCd').val(bizCd);
+		$('#rcritNmtm').val(rcritNmtm);
+		$('#bizTyCd').val(bizTyCd);
+		$('#gnrlDrwtYn').val(gnrlDrwtYn);
+		$('#priorDrwtYn').val(priorDrwtYn);
+		$('#gnrlDrwtGroupTyCd').val(gnrlDrwtGroupTyCd);
+		$('#priorDrwtGroupTyCd').val(priorDrwtGroupTyCd);
+		$('#splySlsrtCd').val(splySlsrtCd);
+		$('#houseTyCd').val(houseTyCd);
+
+		var oPopupOptions = new Object();
+		oPopupOptions.title = "주택형 조회";
+		oPopupOptions.url = "/sb/sr/sr7150/selectPblancHouseTyDetail.do";
+		oPopupOptions.clazz = "pop_w_700";
+		oPopupOptions.height = "450";
+		oPopupOptions.resizable = true;
+		oPopupOptions.formId = "detailFrm";
+		oPopupOptions.dialogArguments;
+
+		$pop.dialog(oPopupOptions);
+	});
+});
+</script>

@@ -1,0 +1,4955 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="LH청약플러스">
+	<meta property="og:description" content="LH청약플러스">
+	<meta property="og:url" content="https://apply.lh.or.kr">
+	<meta property="og:image" content="/00_common/images/layout/logo.png">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<!-- 230628 웹와치 수정 - 타이틀 영역에 메뉴 경로 출력 -->
+	<!-- 250922 웹접근성 타이틀 역순으로 처리-->
+	<title>
+		
+			공고문 &lt; 
+		
+		
+			분양주택 &lt; 
+		
+		
+		청약 &lt; 
+		LH청약플러스
+	</title>
+
+	<!-- favicon -->
+	<link rel="icon" type="image/png" href="/00_common/images/favicon.ico">
+
+	<meta name="keywords" content="LH청약플러스">
+	<meta name="description" content="청약, 사전청약, 부동산맵 등 한국토지주택공사 청약 및 고객 서비스를 한곳에서 제공합니다.">
+	
+	<link rel="stylesheet" href="/css/web/lhapply/sub.css?ver=1.5" media="all">
+	<link rel="stylesheet" href="/css/co/lo/common.css?v=1.1" media="all">
+	<link rel="stylesheet" href="/00_common/css/board.css?v=1.4" media="all">
+	
+	
+	<script src="/00_common/js/jquery.min.js"></script>
+	<script src="/00_common/js/jquery-ui.min.js"></script>
+	<script src="/00_common/js/layout.js?v=5.2"></script>
+	<script src="/00_common/js/modernizr-2.6.2.min.js"></script>
+	<script src="/00_common/js/slick.js"></script>
+	<script src="/00_common/js/con_com.js?v=0.9"></script>
+	<script src="/js/web/lhapply/sub.js?ver=3.8"></script>
+	<!-- <script src="/js/calendar.js"></script> -->
+	<!-- <link href="/css/co/na/ntt.css" rel="stylesheet"> -->
+	<script type="text/javascript" src="/js/jquery.showLoading.js"></script>
+	<script src="https://apply.lh.or.kr/netfunnel-statics/agents/client/javascript/netfunnel-javascript-agent.js"
+	 data-nf-server-url="https://wait.lh.or.kr"
+	 data-nf-setting-url="https://wait.lh.or.kr/assets/nf-setting/1/nf-setting.json"
+	 data-nf-vwr-page-url="https://apply.lh.or.kr/netfunnel-statics/assets/vwr-page/1/index.html"
+	 data-nf-error-page-url="https://apply.lh.or.kr/netfunnel-statics/assets/vwr-page/error/errorPage.html"
+	 data-nf-retry-count="0"
+	 data-nf-network-timeout="3000"
+	></script>
+	<script type="text/javascript" src="/js/common.js?v=2.7"></script> <!-- 팝업 -->
+ 	<!-- 디지털서비스개방시 당겨서새로고침 방어 -->
+	
+
+	
+	
+		
+		
+			<script type="text/javascript" src="/js/sbsc-util.js?v=1.5"></script> <!-- asis 함수 -->
+		
+	
+	
+
+	<link rel="stylesheet" href="/css/com/jquery/jquery-ui.min.css"/> <!-- 팝업  -->
+	<script type="text/javascript" src="/js/jquery-ui.min.js"></script> <!-- 팝업  -->
+	<script type="text/javascript" src="/js/jquery.form.min.js"></script><!-- ajaxSubmit function 사용-->
+	<script type="text/javascript" src="/js/jquery.bpopup.min.js"></script><!-- .bPopup({}) function 사용 -->
+
+	<!-- 운영용 카카오 API KEY (공고문 상세화면에서 지도 보기 시 필요)-->
+<!-- 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4a7ff4a19a944ff102ed7d4e7e16fc9b&libraries=services"></script> -->
+	<!-- 운영용 네이버 API KEY (공고문 상세화면에서 지도 보기 시 필요)-->
+	
+		
+			<!-- <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?govClientId=kc8w13tx5k&submodules=panorama,geocoder"></script> -->
+			<script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=qxwn5hc1g0&submodules=panorama,geocoder"></script>
+		
+	
+	<!-- START 전자점자 버튼 제어 -->
+	
+	
+		
+	
+	<!-- END 전자점자 버튼 제어 -->
+	
+	
+	
+
+	<!-- 1097 : 청약신청내역 및 결과조회 / 1246 : 청약신청 내역조회 / 1199 : 공동인증서 복사 / 1032 : 청약신청내역 / 1290 : 세대원본인인증 / 1111 : 사전청약당첨포기 / 1287 : 온라인 서류제출(판매) / 1201942:사전청약 당첨자 주택형 배정 결과 조회-->
+	
+	<!-- 2026.08.11 ACNS 점자스크립트 추가 -->
+	<script type="text/javascript" src="/sw/docubraille/js/docubraille-env-1.5.js?ver=1.0"></script>
+	<script type="text/javascript" src="/sw/docubraille/js/docubraille-1.5.min.js?ver=1.0"></script>
+	<script type="text/javascript" src="/sw/docubraille/js/docubraille-1.5-lh.js?ver=1.0"></script>
+</head>
+<body >
+	<!-- 공통 로딩바 -->
+	<div class="cmmloading" style="display:none;z-index:9999;"><p><object type="image/svg+xml" data="/00_common/images/layout/LH_loading.svg"></object></p></div>
+
+<!-- 간편인증 layer -->
+<div class="lyPop" id="simpleLayer" name="simpleLayer" style="z-index:9999;">
+	<div style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);">
+		<iframe id="simpleSign"></iframe>
+	</div>
+</div>
+<!-- 팝업 layer -->
+<div class="lyPop agrPop" id="addrLayer" name="addrLayer" style="z-index:9998;">
+	<div id="addrLayerinner" style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);">
+		<a href="javascript:;" style="top:0.45rem" class="agrClose"><span class="hid">닫기</span></a>
+		<iframe id="addrIframe" name="addrIframe"></iframe>
+	</div>
+</div>
+
+<!-- 바로가기 -->
+<div id="skipArea">
+	<a href="#subCntBody">본문으로 바로가기</a>
+	<a href="#gnb">메인메뉴 바로가기</a>
+</div>
+<!-- //바로가기 -->
+<div id="wrap" class="sub_wrap">
+	
+	
+
+
+
+
+
+<!-- 레이어 팝업  -->
+
+
+
+
+
+<link rel="stylesheet" href="/00_common/css/con_com.css" media="all"/>
+
+<script>
+
+	$(function(){
+		if(getCookieBigText("gWebAccYn") == "Y"){
+			$('#webAccMainY').hide();
+			$('#webAccMainN').show();
+		}else{
+			$('#webAccMainY').show();
+			$('#webAccMainN').hide();
+		}
+	});
+
+	//230731 웹접근성
+	function webAccChan_main(AccYn){
+
+		if(AccYn == "Y"){
+			fsWebAccSetCookie('gWebAccYn', '365','Y');	//웹접근성 모드 켜기 (쿠키)
+			$('#webAccMainY').hide();
+			$('#webAccMainN').show();
+		}else if(AccYn == "N"){
+			fsWebAccSetCookie('gWebAccYn', '','N');		//웹접근성 모드 끄기 (쿠키)
+			$('#webAccMainY').show();
+			$('#webAccMainN').hide();
+		}
+
+		//$('#popWebAccMain').hide();
+		$('#h_webacc').click();
+	}
+
+
+	//웹접근성 쿠키설정
+	function fsWebAccSetCookie(name, expiredays, webAccYn) {
+
+		if(webAccYn == "Y"){
+			setCookieBigText(name, "Y" , expiredays);
+		}else{
+			delCookieBigText(name);
+		}
+	}
+
+
+</script>
+
+
+
+	<!-- 웹접근성 안내 -->
+	<div class="lyPop" id="popWebAccMain" style="z-index:1000">
+		<div class="lyPop_wrap" >
+			<h2>웹접근성모드 안내</h2>
+			<div class="inner">
+				<h3 class="tit1">웹접근성 및 표준 준수 지침</h3>
+				<ul class="list_st1">
+					<li>국가표준(KICS)인 <span class="font_Fm">“한국형 웹 콘텐츠 지침 2.1(KICS.0T-10.0003/R2)"</span>을 준수하여 구축&middot;운영 하고 있습니다.</li>
+				</ul>
+
+				<h3 class="tit1">웹접근성 준수</h3>
+				<ul class="list_st1">
+					<li><span class="font_Fm">“과학기술정보통신부"</span> 웹접근성 품질마크 인증 기준에 맞게 구축</li>
+					<li>정보화진흥원 웹접근성 연구소<a href="https://www.wa.or.kr/" target="_blank" class="bu_link" title="새창">(https://www.wa.or.kr/)</a>의 웹콘텐츠 제작기법 참고</li>
+				</ul>
+
+				<h3 class="tit1">웹표준 및 웹 호환성 준수</h3>
+				<ul class="list_st1">
+					<li>웹표준 문법을 준수하여 구축하여야 함
+						<ul class="list_st2">
+							<li>W3C Markup Validation <a href="http://validator.w3.org" target="_blank" class="bu_link" title="새창">(http://validator.w3.org/)</a> 문법검사 통과</li>
+							<li>W3C CSS Validation <a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="bu_link" title="새창">(https://jigsaw.w3.org/css-validator/)</a> 문법검사 통과</li>
+							<li>문자(한글)부호화 준수, 제어 기능의 표준 준수, 비표준 기술제거</li>
+						</ul>
+					</li>
+					<li>웹호환성 확보로 크로스브라우징을 지원하여야 함
+						<ul class="list_st2">
+						<li>기능 호환성 확보 여부, 화면표시 호환성 확보 여부(4종 브라우저)</li>
+						<li class="bu_atte">4종 브라우저(Edge, Chrome, Whale, Firefox)</li>
+						</ul>
+					</li>
+				</ul>
+
+				<!-- 202408 추가 -->
+				<h3 class="tit1">웹접근성모드 활성화 안내</h3>
+				<ul class="list_st1">
+					<li>디지털취약계층을 위한 웹접근성 모드 기능입니다.</li>
+					<li>스크린리더 사용 시 웹접근성 모드를 활성화하시면, 청약 신청 등 일부 서비스에서 추가 음성 안내, 기능 등이 제공되어 LH청약플러스를 더욱 편리하게 이용하실 수 있습니다.</li>
+					<li>웹접근성모드 활성화 여부에 상관없이 LH청약플러스의 모든 서비스를 이용하실 수 있습니다. (활성화 여부에 따른 불이익이 없습니다.)</li>
+				</ul>
+
+
+				<h3 class="tit1">센스리더 설정 안내</h3>
+				<ul class="list_st1">
+					<li>윈도우 운영 프로그램에서 스크린리더(센스리더 제품)를 사용하시는 분들에게 LH청약플러스 이용에 보다 편리한 사용환경을 제공하기 위한 설정방법을 알려드립니다.</li>
+					<li>센스리더 프로그램에서 다음과 같이 환경설정을 하셔야 서비스의 내용을 제대로 이해하고 사용할 수 있습니다.</li>
+				</ul>
+				<h4 class="tit2">센스리더 설정 방법</h4>
+				<div class="box_st4">
+					<div class="inner">
+					<h5 class="tit3">가상커서 설정</h5>
+					<ol class="list_ol1">
+						<li><span class="num">1</span>가상커서 환경설정(ctrl + shift + F9)을 호출하여 숨긴 내용 읽기를 해제합니다.</li>
+						<li><span class="num">2</span>가상커서 설정에서 새 페이지 자동 읽기를 '읽지 않기' 또는 '간략하게 읽기'로 설정합니다.</li>
+						<li><span class="num">3</span>가상커서 설정에서 셀 주소 읽기를 뒤에 읽기로 설정합니다. 이렇게 하면 테이블 탐색시에 병합된 셀 파악이 가능합니다.</li>
+						<li><span class="num">4</span>Internet Explorer메뉴 &gt; 도구 &gt; 인터넷 옵션 &gt; 보안 탭에서 '인터넷 보호모드'사용을 해제하면 센스리더에서 제공하는 가상커서의 임시 해제(ctrl + 아래쪽화살표)를 사용할 수 있습니다.</li>
+					</ol>
+					<h5 class="tit3">구두점 읽기 설정</h5>
+					<ol class="list_ol1">
+						<li><span class="num">1</span>키보드의 [ Ctrl + \ ] 키를 눌러 센스리더 프로그램을 엽니다.</li>
+						<li><span class="num">2</span>음성설정 [ Alt + S ] ▶ 세부설정 [ D ] 메뉴를 선택합니다.</li>
+						<li><span class="num">3</span>구두점 읽기 목록 중 '문장+수학기호읽기'항목을 선택 후 [ 확인 ] 버튼을 선택하여 저장합니다.</li>
+					</ol>
+					<h5 class="tit3">음성출력 속도 조절하기</h5>
+					<ol class="list_ol1">
+						<li><span class="num">1</span>윈도우 하단의 [ 작업표시줄 ]에 있는 센스리더 아이콘()을 클릭합니다.</li>
+						<li><span class="num">2</span>센스리더 프로그램의 [ 파일 ] ▶ [ 환경 열기 ] 를 클릭합니다.</li>
+						<li><span class="num">3</span>XVSRD항목을 선택하고 [ 확인 ]을 클릭합니다.</li>
+					</ol>
+					</div>
+				</div>
+
+				<h4 class="tit2">센스리더 단축키 안내</h4>
+
+				<ul class="list_st1">
+					<li>센스리더 사용시 LH청약플러스의 키보드 이용 안내 및 이용 시 참고사항입니다.</li>
+				</ul>
+				<div class="box_st4">
+					<div class="inner">
+						<h4 class="tit2">↑ <span class="hid">위쪽 화살표</span><span class="fs16 pc_gray">or</span> ↓<span class="hid">아래쪽 화살표</span></h4>
+						<ul class="list_st2">
+							<li>가상커서의 이전 줄 또는 다음 줄 전체를 읽어줍니다.</li>
+						</ul>
+						<h4 class="tit2">← <span class="hid">왼쪽 화살표</span><span class="fs16 pc_gray">or</span> →<span class="hid">오른쪽 화살표</span></h4>
+						<ul class="list_st2">
+							<li>현재줄의 이전 또는 다음 글자를 읽어줍니다.</li>
+						</ul>
+
+						<h4 class="tit2">Ctrl + ← <span class="hid">왼쪽 화살표</span><span class="fs16 pc_gray">or</span> →<span class="hid">오른쪽 화살표</span></h4>
+						<ul class="list_st2">
+							<li>현재줄의 이전 또는 다음 단어를 읽어줍니다.</li>
+						</ul>
+						<h4 class="tit2">PGUP / PGDN</h4>
+						<ul class="list_st2">
+							<li>25줄 전/후로 이동합니다.</li>
+						</ul>
+						<h4 class="tit2">F11</h4>
+						<ul class="list_st2">
+							<li>현재 줄부터 문서 끝까지 자동으로 문서 내용을 읽어줍니다. 연속 읽기를 중단하려면 ESC 키를 누릅니다.</li>
+						</ul>
+						<h4 class="tit2">Tab <span class="fs16 pc_gray">or</span> Shift + Tab</h4>
+						<ul class="list_st2">
+							<li>링크를 포함한 다음 폼 콘트롤 또는 이전 폼 콘트롤로 이동합니다.</li>
+						</ul>
+						<h4 class="tit2">Enter</h4>
+						<ul class="list_st2">
+							<li>현재 위치한 링크나 버튼을 클릭합니다.</li>
+						</ul>
+						<h4 class="tit2">Ctrl + Shift + F11</h4>
+						<ul class="list_st2">
+							<li>가상커서를 켤 수 있습니다.</li>
+						</ul>
+						<h4 class="tit2">Ctrl + Shift + F12</h4>
+						<ul class="list_st2">
+							<li>가상커서를 끌 수 있습니다.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="btns ac">
+				<a href="javascript:webAccChan_main('Y');" class="btn_grL" style="display:none;" id="webAccMainY">웹접근성 활성화 전환 <i class="xi-angle-right" aria-hidden="true"></i></a>
+				<a href="javascript:webAccChan_main('N');" class="btn_grL" style="display:none;" id="webAccMainN">웹접근성 비활성화 전환 <i class="xi-angle-right" aria-hidden="true"></i></a>
+			</div>
+
+			<a id="h_webacc" href="#popWebAccMain" class="lyPopClose hashClose"><span class="hid">닫기</span><i class="xi-close" aria-hidden="true"></i></a>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<script>
+	var timer = null;
+
+		$(function(){
+			var loginYn = 'false';
+
+			if(loginYn == 'true'){ // 로그인 세션이 존재할경우만 실행
+				setTimer();
+			}
+		});
+
+		// 시간출력
+		function setTimeLabel(setTime){
+			min = parseInt((setTime/60)) < 10 ? "0"+parseInt((setTime/60)) : parseInt((setTime/60));
+			sec = setTime%60 < 10 ? "0"+setTime%60 : setTime%60;
+
+			if(setTime <= 300){
+				$("#loginTime_Confirm .time").html("남은시간 <span><em>"+min+"</em>분 <em>"+sec+"</em>초</span>");
+			}
+
+			$('.timerLabel').text(min+":"+sec);
+		}
+
+		// 시간 체크
+		function setTimer(setTime2){
+			var setTime = 3600; // 총 세션유지 시간(초)
+
+			setTimeLabel(setTime); // setInterVal이 실행되기 전에 1초간 공백이 출력되어 함수 실행 전 출력시켜줌.
+
+			if(setTime2 != ""){
+				$("#loginTime_Confirm").hide();
+				clearInterval(timer);
+			}
+
+			timer = setInterval(function(){
+				setTime--;
+
+				if(setTime == 300){
+					setTimeLabel(setTime);
+					$("#loginTime_Confirm").show();
+				}else if (setTime <= 0){
+					clearInterval(timer);
+					logout("sessionTimeOut");
+				}
+
+				setTimeLabel(setTime);
+
+			}, 1000);
+		}
+
+		function logout(type){
+
+			var openApiYn = "false";
+			$.ajax({
+				type : "post",
+				url : "/lhapply/lo/login/imsilogout.do",
+				success : function(data) {
+					var result = JSON.parse(data);
+					// OPENAPI 면 세션삭제후 window.close
+					if (openApiYn == 'true') {
+						alert("세션이 종료되었습니다.");
+						window.close();
+					}
+					
+						
+						
+							if(type == "sessionTimeOut"){
+								alert("세션이 종료되었습니다.");
+								location.reload();
+							}else{
+								location.href = "/lhapply/main.do?openlhapplyplus="+result.openlhapplyplus;
+							}
+						
+					
+				}
+			});
+
+		}
+	</script>
+
+
+	<!-- header-->
+	<header id="header">
+		<div class="container">
+			<h1 class="logo"><a href="/lhapply/main.do"><img src="/00_common/images/layout/logo.png" alt="LH청약플러스"></a></h1>
+			<input type="hidden" name="csrfToken" value="db9e078c-9562-4d57-a670-2f8d29ca8719" />
+
+			<div class="mobHeader">
+				<a href="javascript:history.back();"><i class="xi-arrow-left" aria-hidden="true"></i><span class="hid">뒤로가기</span></a>
+			</div>
+
+			<!-- gnb -->
+			<div id="nav">
+				<div id="gnb">
+					<div class="depth1">
+						<ul>
+						<!--START-->
+						<li><a href="/lhapply/apply/main.do?mi=1021"><span>청약</span></a>
+							<div class="depth2">
+								<ul>
+									<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026" ><span>임대주택</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026" ><span>공고문</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1201583&cntntsId=1201331" ><span>임대가이드</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1302&cntntsId=1230" ><span>청약연습하기</span></a></li>
+												<li><a href="/lhapply/apply/rtho/rtho01.do?mi=1204" ><span>청약신청</span></a></li>
+												<li><a href="/lhapply/csvc/lshs-sch/inq.do?mi=1353" ><span>임대주택검색</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPzwrBfhPwiAbaList.do?mi=1202002" ><span>사전청약 당첨자 주택형 배정 결과 조회</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1027" ><span>분양주택</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1027" ><span>공고문</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1178&cntntsId=1048" ><span>분양가이드</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1385&cntntsId=1250" ><span>청약연습하기</span></a></li>
+												<li><a href="/lhapply/apply/silh/silh01.do?mi=1060" ><span>청약신청</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPzwrBfhPwiAbaList.do?mi=1201942" ><span>사전청약 당첨자 주택형 배정 결과 조회</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=201547&cntntsId=201290" ><span>청약자격확인</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1062" ><span>토지</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1062" ><span>공고문</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1186&cntntsId=1054" ><span>분양/임대가이드</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=71381&cntntsId=111249" ><span>청약연습하기</span></a></li>
+												<li><a href="/lhapply/apply/lad/lad01.do?mi=1066" ><span>청약신청</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1321&cntntsId=1062" ><span>대표자선임계</span></a></li>
+												<li><a href="/lhapply/apply/gurt/bfhVrfList.do?mi=201422" ><span>보증서 유효성 사전검증</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1069" ><span>상가</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1069" ><span>공고문</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1193&cntntsId=1063" ><span>분양/임대가이드</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=101381&cntntsId=131249" ><span>청약연습하기</span></a></li>
+												<li><a href="/lhapply/apply/sps/spsPage.do?mi=1073" ><span>청약신청</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1323&cntntsId=1062" ><span>대표자선임계</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/pch/list.do?mi=1076" ><span>주택매도</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/pch/list.do?mi=1076" ><span>주택매입공고</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1296&cntntsId=1031" ><span>주택매입절차</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=111381&cntntsId=1047" ><span>주택매도연습하기</span></a></li>
+												<li><a href="/lhapply/apply/pch/pch01.do?mi=1078" ><span>주택매도신청</span></a></li>
+												<li><a href="/lhapply/apply/pch/rqsList.do?mi=1347" ><span>주택매도신청내역</span></a></li>
+												<li><a href="/lhapply/apply/pchPgrsStt/listView.do?mi=1201822" ><span>주택매도진행상태(기축)</span></a></li>
+												<li><a href="/lhapply/apply/pchPgrsStt/hsSllPgrsSsNewArcList.do?mi=1201923" ><span>주택매도진행상태(신축)</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/csvc/my--sbsc-inf/sbsc-rqs-dtls--and--rsl-inq/sbsc-rqs-dtls/inq.do?mi=1246" ><span>청약결과 확인</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/sbsc-rqs-dtls--and--rsl-inq/sbsc-rqs-dtls/inq.do?mi=1246" ><span>청약신청 내역조회</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPrzwinRdList.do?mi=1110" ><span>당첨/낙찰 결과조회</span></a></li>
+												<li><a href="/lhapply/apply/csvc/ppr/selectPanPprSbmList.do?mi=1249" ><span>서류제출대상자 명단</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPrzwinAnnoRdList.do?mi=1248" ><span>당첨/낙찰자 명단</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#?mi=1036" ><span>알려드려요</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/noti/an/list.do?slBbsKdCd=03&mi=1079" ><span>공지사항</span></a></li>
+												<li><a href="/lhapply/apply/noti/an/list.do?slBbsKdCd=05&mi=1330" ><span>입주안내</span></a></li>
+												<li><a href="/lhapply/apply/noti/mp/list.do?mi=1331" ><span>입주계획</span></a></li>
+												<li><a href="/lhapply/apply/noti/an/list.do?slBbsKdCd=02&mi=1080" ><span>자료실</span></a></li>
+												<li><a href="/lhapply/apply/noti/an/list.do?slBbsKdCd=01&mi=1081" ><span>FAQ</span></a></li>
+												<li><a href="/lhapply/apply/sc/list.do?mi=1312" ><span>청약캘린더</span></a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="/lhapply/pre/main.do?mi=1022"><span>사전청약</span></a>
+							<div class="depth2">
+								<ul>
+									<li><a href="/lhapply/apply/bfh/slpa/list.do?mi=1349" ><span>모집공고문</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/bfh/slpa/list.do?mi=1349" ><span>모집공고문</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1388&cntntsId=1190" ><span>인터넷 청약</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/bfh/sbscRqsList.do?mi=1032" ><span>청약신청내역</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#?mi=1275" ><span>당첨자 서비스</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/pr/przwin/selectPrePrzwinRdList.do?mi=1313" ><span>당첨 조회</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPrzwinInfoChgList.do?mi=1314" ><span>당첨자 연락처 변경</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPzwrPwiAba.do?mi=1111" ><span>당첨 포기 신청</span></a></li>
+												<li><a href="/lhapply/apply/bfh/qe/qeStnr.do?mi=1315" ><span>선호도 조사</span></a></li>
+												<li><a href="/lhapply/apply/sa/bfh/ps/crdc_issInq.do?mi=1317" ><span>증명서 발급</span></a></li>
+												<li><a href="/lhapply/apply/bfh/ci/crdcIss.do?mi=1318" ><span>증명서 진위확인</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPreEpzPplsXpnList.do?mi=201624" ><span>본청약 일정(변경) 안내문</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/noti/bfh/list.do?slBbsKdCd=03&mi=1276" ><span>공지사항</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/noti/bfh/list.do?slBbsKdCd=03&mi=1277" ><span>공지사항</span></a></li>
+												<li><a href="/lhapply/apply/noti/bfh/list.do?slBbsKdCd=01&mi=1278" ><span>FAQ</span></a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="/lhapply/land/main.do?mi=1040"><span>부동산맵</span></a>
+							<div class="depth2">
+								<ul>
+									<li><a href="/lhapply/land/main.do?mi=1041" ><span>부동산맵</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/land/main.do?mi=1041" ><span>임대주택</span></a></li>
+												<li><a href="/lhapply/land/main.do?mi=1043" ><span>분양주택</span></a></li>
+												<li><a href="/lhapply/land/main.do?mi=1044" ><span>토지</span></a></li>
+												<li><a href="/lhapply/land/main.do?mi=1088" ><span>상가</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/noti/sp/list.do?sUppAisTpCd=06&mi=1042" ><span>공급계획</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/noti/sp/list.do?sUppAisTpCd=06&mi=1042" ><span>임대주택</span></a></li>
+												<li><a href="/lhapply/apply/noti/sp/list.do?sUppAisTpCd=05&mi=201523" ><span>분양주택</span></a></li>
+												<li><a href="/lhapply/apply/noti/sp/list.do?sUppAisTpCd=01&amp;hyCd=99&mi=201524" ><span>토지</span></a></li>
+												<li><a href="/lhapply/apply/noti/sp/list.do?sUppAisTpCd=22&mi=201525" ><span>상가</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/bor_ctrt_psb_dst/0/lfn_getTabChange.do?mi=201527" ><span>선착순(수의)계약</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/bor_ctrt_psb_dst/0/lfn_getTabChange.do?mi=201527" ><span>토지</span></a></li>
+												<li><a href="/lhapply/apply/bor_ctrt_psb_dst/5/lfn_getTabChange.do?mi=1201802" ><span>임대주택</span></a></li>
+												<li><a href="/lhapply/apply/bor_ctrt_psb_dst/1/lfn_getTabChange.do?mi=201526" ><span>분양주택</span></a></li>
+												<li><a href="/lhapply/apply/bor_ctrt_psb_dst/2/lfn_getTabChange.do?mi=201529" ><span>분양전환임대주택</span></a></li>
+												<li><a href="/lhapply/apply/bor_ctrt_psb_dst/3/lfn_getTabChange.do?mi=201528" ><span>상가</span></a></li>
+												<li><a href="/lhapply/apply/bor_ctrt_psb_dst/4/lfn_getTabChange.do?mi=31381" ><span>임대상가</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/land/cwsttList.do?mi=1352" ><span>공사진행현황</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/land/cwsttList.do?mi=1352" ><span>공사진행현황</span></a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="/lhapply/csvc/csvcMain.do?mi=1045"><span>고객서비스</span></a>
+							<div class="depth2">
+								<ul>
+									<li><a href="/lhapply/csvc/myPage.do?mi=1363" ><span>나의 정보</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/csvc/myPage.do?mi=1363" ><span>마이페이지</span></a></li>
+												<li><a href="/lhapply/co/lo/itr/updateMberPage.do?mi=1291" ><span>관심공고 알리미</span></a></li>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/sbsc-rqs-dtls--and--rsl-inq/sbsc-rqs-dtls/inq.do?mi=1097" ><span>청약신청내역 및 결과조회</span></a></li>
+												<li><a href="/lhapply/csvc/selectCtrtList.do?mi=1098" ><span>계약정보조회</span></a></li>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/indv-inf-chg/selectDivCstMrFormAction.do?mi=1096" ><span>개인정보변경</span></a></li>
+												<li><a href="/lhapply/apply/csvc/qup/rnkList.do?mi=1113" ><span>예비입주자 순위</span></a></li>
+												<li><a href="/lhapply/apply/com/prgsSs.do?mi=1201722" ><span>전세임대 지원 진행내역</span></a></li>
+												<li><a href="/lhapply/apply/ytSt/prgsSs.do?mi=1201862" ><span>유스타트 지원 진행내역</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/csvc/sbscRqsList.do?mi=1287" ><span>온라인 신청</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/csvc/sbscRqsList.do?mi=1287" ><span>온라인서류제출</span></a></li>
+												<li><a href="/lhapply/apply/csvc/onlLoansList.do?mi=1104" ><span>대출추천서 신청</span></a></li>
+												<li><a href="/lhapply/apply/csvc/onlDepoList.do?mi=1105" ><span>전환보증금 신청</span></a></li>
+												<li><a href="/lhapply/csvc/selectListHsCtctrAotf.do?mi=1099" ><span>임대료 자동이체 신청/해지</span></a></li>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/rfe-bil-ntc-fmla-chg/selectListHsCtrtEmlBil.do?mi=1100" ><span>임대료 청구서 고지방식 변경</span></a></li>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/rqst-resident-guide/selectListLhResidentGuideInfo.do?mi=1201902" ><span>LH입주민안내서비스 신청</span></a></li>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/onl-cnct-rqs/rthoCnctRqsPage.do?mi=1102" ><span>임대주택 해약신청</span></a></li>
+												<li><a href="/lhapply/apply/csvc/la/selectRcpRfnmAcnRgs.do?mi=1201682" ><span>환불계좌 등록 및 조회</span></a></li>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/spce-optn--and--chc-lar-dcs/selectPzwrOptnChgList.do?mi=1101" ><span>공간옵션 및 선택품목 결정</span></a></li>
+												<li><a href="/lhapply/apply/csvc/qup/rgstList.do?mi=1114" ><span>예비입주자 동호수 추첨신청</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/srvy/step01_SlBrand.do?mi=1402" ><span>설문조사</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/srvy/step01_SlBrand.do?mi=1402" ><span>주택브랜드</span></a></li>
+												<li><a href="/lhapply/srvy/step01_HsSrvy.do?mi=1399" ><span>국공립어린이집</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/csvc/selectCtrtList.do?mi=1117" ><span>증명서 관리</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/csvc/selectCtrtList.do?mi=1117" ><span>증명서 발급</span></a></li>
+												<li><a href="/lhapply/csvc/crdc-adm/iss-dtls-inq/inq.do?mi=1118" ><span>증명서 발급내역조회</span></a></li>
+												<li><a href="/lhapply/csvc/crdc--adm/crdc--athn-cfm/inq.do?mi=1119" ><span>증명서 진위확인</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1198&cntntsId=1068" ><span>공동인증센터</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1198&cntntsId=1068" ><span>공동인증서발급 안내</span></a></li>
+												<li><a href="/lhapply/apply/ctf/cptnCtfCenterCopy.do?mi=1199" ><span>공동인증서 복사</span></a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<!--END-->
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="util_wrap">
+				<div class="topUtil">
+					<ul class="my">
+						
+							
+							
+							<li class="login"><a href="/lhapply/apply/lo/login/inLoginPage.do">로그인</a></li>
+						
+						
+					</ul>
+					<ul class="myLink">
+
+						
+						<li><a href='/lhapply/co/lo/itr/updateMberPage.do?mi=1291'><i class="xi-bell" aria-hidden="true"></i> 관심공고 알리미</a></li>
+						<li class="supSrv"><a href="https://help.lh.or.kr:18443/apply" target="_blank" title="새창"><i class="xi-desktop" aria-hidden="true"></i> 원격지원 서비스</a></li>
+						<li ><a href="#popWebAccMain" class="hash">웹접근성 안내 </a></li>
+						<li class="login"><a href="http://www.lh.or.kr" target="_blank" title="새창">LH홈페이지</a></li>
+						<!-- 2026.09.10 ACNS 추가 -->
+						
+							
+								<li class="login"><a href="javascript:showDocuBrailleBrfViewer()" title="점자뷰어">점자뷰어</a></li>
+								<li class="login"><a href="javascript:showDocuContentViewer()" title="점자음성">점자음성</a></li>
+							
+							
+						<!-- ACNS END -->
+					</ul>
+				</div>
+
+				<div class="util">
+					<div class="totalSearch">
+						<form name="totalSrchForm" id="totalSrchForm" method="post" action="/lhapply/srch.do" class="clearfix">
+							<fieldset>
+								<legend>통합검색</legend>
+								<div class="inner">
+									<!-- <select>
+										<option>통합검색</option>
+										<option>메뉴</option>
+										<option>내용</option>
+									</select> -->
+									<input type="hidden" name="srchType" id="srchType" value=""/>
+									<input type="search" name="totalSearch" id="totalSearch" value="" class="searchF" title="검색어 입력" placeholder="메뉴, 공고, 관심지역을 검색해보세요" style="ime-mode:active">
+									<a href="" class="searchBtn"><i class="xi-search"></i><em class="hid">통합검색버튼</em></a>
+								</div>
+
+								<!--자동완성-->
+								<div class="autoKeyWord">
+									<ul id="srchUl">
+										<li><a href="">임대주택 > 분양/임대<em>공고</em>문</a></li>
+										<li><a href="">분양주택 > 분양/임대<em>공고</em>문</a></li>
+										<li><a href="">토지 > 분양/임대<em>공고</em>문</a></li>
+										<li><a href="">상가 > 분양/임대<em>공고</em>문</a></li>
+									</ul>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+
+					<div class="callCenter">
+						<img class="row2" style="height: 40px;position: absolute;left: .5rem;" src="/images/web/main/main/vision_copy_row1.png" alt="슬로건:살고싶은집과 도시로 국민의 희망을 가꾸는 기업">
+						<h3>콜센터 <strong data-id="callCenterTelNo">1600-1004</strong></h3>
+						<p><span>평일 09:00~18:00</span> <span>점심시간 12:00~13:00</span> <span>토, 일, 공휴일 휴무</span></p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="header_btns">
+			<a href="" class="searchBtn mBtn"><em class="hid">통합검색 열기</em><i class="xi-search" aria-hidden="true"></i></a>
+			<a href="" class="sitemap" id="fullmenuOpen"><em class="hid">사이트맵 바로가기</em><span></span></a>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- fullMenu -->
+	<div id="fullMenuBox">
+		<div id="fullMenu">
+			<!-- <h2 class="logo"><a href="/lhapply/main.do"><img src="/00_common/images/layout/lh_logo.png" alt="LH 청약+"></a></h2> -->
+
+			<div class="topArea">
+				<h2 class="logo"><a href="/lhapply/main.do"><img src="/00_common/images/layout/logo.png" alt="LH청약플러스"></a></h2>
+				
+				<!-- 모바일 : 글자 확대/리셋 : 메인만 표출-->
+				<p class="fs_ctrl">
+					<!-- <a href="javascript:" id="mobZoomIn">가 <i class="xi-plus"></i><em class="hid">글자 확대</em></a>
+					<a href="javascript:" id="mobZoomReset">가 <i class="xi-refresh"></i><em class="hid">글자 기본보기</em></a> -->
+					<input type="checkbox" id="fsToggle" name="fsToggle" onclick="javascript:fsToggleSetCookie('fsToggle', 365);" hidden />
+					<label for="fsToggle" class="fsToggle">큰글씨 <span></span></label>
+				</p>
+				
+			</div>
+			<div class="snb"></div>
+			<div class="nav">
+				<div class="depth1">
+					<ul>
+						<!--START-->
+						<li><a href="/lhapply/apply/main.do?mi=1021"><span>청약</span></a>
+							<div class="depth2">
+								<ul>
+									<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026" ><span>임대주택</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026" ><span>공고문</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1201583&cntntsId=1201331" ><span>임대가이드</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1302&cntntsId=1230" ><span>청약연습하기</span></a></li>
+												<li><a href="/lhapply/apply/rtho/rtho01.do?mi=1204" ><span>청약신청</span></a></li>
+												<li><a href="/lhapply/csvc/lshs-sch/inq.do?mi=1353" ><span>임대주택검색</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPzwrBfhPwiAbaList.do?mi=1202002" ><span>사전청약 당첨자 주택형 배정 결과 조회</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1027" ><span>분양주택</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1027" ><span>공고문</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1178&cntntsId=1048" ><span>분양가이드</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1385&cntntsId=1250" ><span>청약연습하기</span></a></li>
+												<li><a href="/lhapply/apply/silh/silh01.do?mi=1060" ><span>청약신청</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPzwrBfhPwiAbaList.do?mi=1201942" ><span>사전청약 당첨자 주택형 배정 결과 조회</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=201547&cntntsId=201290" ><span>청약자격확인</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1062" ><span>토지</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1062" ><span>공고문</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1186&cntntsId=1054" ><span>분양/임대가이드</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=71381&cntntsId=111249" ><span>청약연습하기</span></a></li>
+												<li><a href="/lhapply/apply/lad/lad01.do?mi=1066" ><span>청약신청</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1321&cntntsId=1062" ><span>대표자선임계</span></a></li>
+												<li><a href="/lhapply/apply/gurt/bfhVrfList.do?mi=201422" ><span>보증서 유효성 사전검증</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1069" ><span>상가</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1069" ><span>공고문</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1193&cntntsId=1063" ><span>분양/임대가이드</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=101381&cntntsId=131249" ><span>청약연습하기</span></a></li>
+												<li><a href="/lhapply/apply/sps/spsPage.do?mi=1073" ><span>청약신청</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1323&cntntsId=1062" ><span>대표자선임계</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/pch/list.do?mi=1076" ><span>주택매도</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/pch/list.do?mi=1076" ><span>주택매입공고</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1296&cntntsId=1031" ><span>주택매입절차</span></a></li>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=111381&cntntsId=1047" ><span>주택매도연습하기</span></a></li>
+												<li><a href="/lhapply/apply/pch/pch01.do?mi=1078" ><span>주택매도신청</span></a></li>
+												<li><a href="/lhapply/apply/pch/rqsList.do?mi=1347" ><span>주택매도신청내역</span></a></li>
+												<li><a href="/lhapply/apply/pchPgrsStt/listView.do?mi=1201822" ><span>주택매도진행상태(기축)</span></a></li>
+												<li><a href="/lhapply/apply/pchPgrsStt/hsSllPgrsSsNewArcList.do?mi=1201923" ><span>주택매도진행상태(신축)</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/csvc/my--sbsc-inf/sbsc-rqs-dtls--and--rsl-inq/sbsc-rqs-dtls/inq.do?mi=1246" ><span>청약결과 확인</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/sbsc-rqs-dtls--and--rsl-inq/sbsc-rqs-dtls/inq.do?mi=1246" ><span>청약신청 내역조회</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPrzwinRdList.do?mi=1110" ><span>당첨/낙찰 결과조회</span></a></li>
+												<li><a href="/lhapply/apply/csvc/ppr/selectPanPprSbmList.do?mi=1249" ><span>서류제출대상자 명단</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPrzwinAnnoRdList.do?mi=1248" ><span>당첨/낙찰자 명단</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#?mi=1036" ><span>알려드려요</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/noti/an/list.do?slBbsKdCd=03&mi=1079" ><span>공지사항</span></a></li>
+												<li><a href="/lhapply/apply/noti/an/list.do?slBbsKdCd=05&mi=1330" ><span>입주안내</span></a></li>
+												<li><a href="/lhapply/apply/noti/mp/list.do?mi=1331" ><span>입주계획</span></a></li>
+												<li><a href="/lhapply/apply/noti/an/list.do?slBbsKdCd=02&mi=1080" ><span>자료실</span></a></li>
+												<li><a href="/lhapply/apply/noti/an/list.do?slBbsKdCd=01&mi=1081" ><span>FAQ</span></a></li>
+												<li><a href="/lhapply/apply/sc/list.do?mi=1312" ><span>청약캘린더</span></a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="/lhapply/pre/main.do?mi=1022"><span>사전청약</span></a>
+							<div class="depth2">
+								<ul>
+									<li><a href="/lhapply/apply/bfh/slpa/list.do?mi=1349" ><span>모집공고문</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/bfh/slpa/list.do?mi=1349" ><span>모집공고문</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1388&cntntsId=1190" ><span>인터넷 청약</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/bfh/sbscRqsList.do?mi=1032" ><span>청약신청내역</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#?mi=1275" ><span>당첨자 서비스</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/pr/przwin/selectPrePrzwinRdList.do?mi=1313" ><span>당첨 조회</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPrzwinInfoChgList.do?mi=1314" ><span>당첨자 연락처 변경</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPzwrPwiAba.do?mi=1111" ><span>당첨 포기 신청</span></a></li>
+												<li><a href="/lhapply/apply/bfh/qe/qeStnr.do?mi=1315" ><span>선호도 조사</span></a></li>
+												<li><a href="/lhapply/apply/sa/bfh/ps/crdc_issInq.do?mi=1317" ><span>증명서 발급</span></a></li>
+												<li><a href="/lhapply/apply/bfh/ci/crdcIss.do?mi=1318" ><span>증명서 진위확인</span></a></li>
+												<li><a href="/lhapply/apply/pr/przwin/selectPreEpzPplsXpnList.do?mi=201624" ><span>본청약 일정(변경) 안내문</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/noti/bfh/list.do?slBbsKdCd=03&mi=1276" ><span>공지사항</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/noti/bfh/list.do?slBbsKdCd=03&mi=1277" ><span>공지사항</span></a></li>
+												<li><a href="/lhapply/apply/noti/bfh/list.do?slBbsKdCd=01&mi=1278" ><span>FAQ</span></a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="/lhapply/land/main.do?mi=1040"><span>부동산맵</span></a>
+							<div class="depth2">
+								<ul>
+									<li><a href="/lhapply/land/main.do?mi=1041" ><span>부동산맵</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/land/main.do?mi=1041" ><span>임대주택</span></a></li>
+												<li><a href="/lhapply/land/main.do?mi=1043" ><span>분양주택</span></a></li>
+												<li><a href="/lhapply/land/main.do?mi=1044" ><span>토지</span></a></li>
+												<li><a href="/lhapply/land/main.do?mi=1088" ><span>상가</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/noti/sp/list.do?sUppAisTpCd=06&mi=1042" ><span>공급계획</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/noti/sp/list.do?sUppAisTpCd=06&mi=1042" ><span>임대주택</span></a></li>
+												<li><a href="/lhapply/apply/noti/sp/list.do?sUppAisTpCd=05&mi=201523" ><span>분양주택</span></a></li>
+												<li><a href="/lhapply/apply/noti/sp/list.do?sUppAisTpCd=01&amp;hyCd=99&mi=201524" ><span>토지</span></a></li>
+												<li><a href="/lhapply/apply/noti/sp/list.do?sUppAisTpCd=22&mi=201525" ><span>상가</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/bor_ctrt_psb_dst/0/lfn_getTabChange.do?mi=201527" ><span>선착순(수의)계약</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/bor_ctrt_psb_dst/0/lfn_getTabChange.do?mi=201527" ><span>토지</span></a></li>
+												<li><a href="/lhapply/apply/bor_ctrt_psb_dst/5/lfn_getTabChange.do?mi=1201802" ><span>임대주택</span></a></li>
+												<li><a href="/lhapply/apply/bor_ctrt_psb_dst/1/lfn_getTabChange.do?mi=201526" ><span>분양주택</span></a></li>
+												<li><a href="/lhapply/apply/bor_ctrt_psb_dst/2/lfn_getTabChange.do?mi=201529" ><span>분양전환임대주택</span></a></li>
+												<li><a href="/lhapply/apply/bor_ctrt_psb_dst/3/lfn_getTabChange.do?mi=201528" ><span>상가</span></a></li>
+												<li><a href="/lhapply/apply/bor_ctrt_psb_dst/4/lfn_getTabChange.do?mi=31381" ><span>임대상가</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/land/cwsttList.do?mi=1352" ><span>공사진행현황</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/land/cwsttList.do?mi=1352" ><span>공사진행현황</span></a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="/lhapply/csvc/csvcMain.do?mi=1045"><span>고객서비스</span></a>
+							<div class="depth2">
+								<ul>
+									<li><a href="/lhapply/csvc/myPage.do?mi=1363" ><span>나의 정보</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/csvc/myPage.do?mi=1363" ><span>마이페이지</span></a></li>
+												<li><a href="/lhapply/co/lo/itr/updateMberPage.do?mi=1291" ><span>관심공고 알리미</span></a></li>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/sbsc-rqs-dtls--and--rsl-inq/sbsc-rqs-dtls/inq.do?mi=1097" ><span>청약신청내역 및 결과조회</span></a></li>
+												<li><a href="/lhapply/csvc/selectCtrtList.do?mi=1098" ><span>계약정보조회</span></a></li>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/indv-inf-chg/selectDivCstMrFormAction.do?mi=1096" ><span>개인정보변경</span></a></li>
+												<li><a href="/lhapply/apply/csvc/qup/rnkList.do?mi=1113" ><span>예비입주자 순위</span></a></li>
+												<li><a href="/lhapply/apply/com/prgsSs.do?mi=1201722" ><span>전세임대 지원 진행내역</span></a></li>
+												<li><a href="/lhapply/apply/ytSt/prgsSs.do?mi=1201862" ><span>유스타트 지원 진행내역</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/apply/csvc/sbscRqsList.do?mi=1287" ><span>온라인 신청</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/apply/csvc/sbscRqsList.do?mi=1287" ><span>온라인서류제출</span></a></li>
+												<li><a href="/lhapply/apply/csvc/onlLoansList.do?mi=1104" ><span>대출추천서 신청</span></a></li>
+												<li><a href="/lhapply/apply/csvc/onlDepoList.do?mi=1105" ><span>전환보증금 신청</span></a></li>
+												<li><a href="/lhapply/csvc/selectListHsCtctrAotf.do?mi=1099" ><span>임대료 자동이체 신청/해지</span></a></li>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/rfe-bil-ntc-fmla-chg/selectListHsCtrtEmlBil.do?mi=1100" ><span>임대료 청구서 고지방식 변경</span></a></li>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/rqst-resident-guide/selectListLhResidentGuideInfo.do?mi=1201902" ><span>LH입주민안내서비스 신청</span></a></li>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/onl-cnct-rqs/rthoCnctRqsPage.do?mi=1102" ><span>임대주택 해약신청</span></a></li>
+												<li><a href="/lhapply/apply/csvc/la/selectRcpRfnmAcnRgs.do?mi=1201682" ><span>환불계좌 등록 및 조회</span></a></li>
+												<li><a href="/lhapply/csvc/my--sbsc-inf/spce-optn--and--chc-lar-dcs/selectPzwrOptnChgList.do?mi=1101" ><span>공간옵션 및 선택품목 결정</span></a></li>
+												<li><a href="/lhapply/apply/csvc/qup/rgstList.do?mi=1114" ><span>예비입주자 동호수 추첨신청</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/srvy/step01_SlBrand.do?mi=1402" ><span>설문조사</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/srvy/step01_SlBrand.do?mi=1402" ><span>주택브랜드</span></a></li>
+												<li><a href="/lhapply/srvy/step01_HsSrvy.do?mi=1399" ><span>국공립어린이집</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/csvc/selectCtrtList.do?mi=1117" ><span>증명서 관리</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/csvc/selectCtrtList.do?mi=1117" ><span>증명서 발급</span></a></li>
+												<li><a href="/lhapply/csvc/crdc-adm/iss-dtls-inq/inq.do?mi=1118" ><span>증명서 발급내역조회</span></a></li>
+												<li><a href="/lhapply/csvc/crdc--adm/crdc--athn-cfm/inq.do?mi=1119" ><span>증명서 진위확인</span></a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1198&cntntsId=1068" ><span>공동인증센터</span></a>
+										<div class="depth3">
+											<ul>
+												<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1198&cntntsId=1068" ><span>공동인증서발급 안내</span></a></li>
+												<li><a href="/lhapply/apply/ctf/cptnCtfCenterCopy.do?mi=1199" ><span>공동인증서 복사</span></a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<!--END-->
+					</ul>
+				</div>
+			</div>
+
+			<div class="hiddenfooter" style="display: flex; height: 6rem; flex-wrap: wrap;background: #fff;padding-top: 1rem;">
+				<div style="width: 50%;padding-top: .3rem;padding-left: 0.5rem;">
+				    <img class="row2" style="height: auto;width: 110%;" src="/images/web/main/main/vision_copy_row1.png" alt="슬로건:살고싶은집과 도시로 국민의 희망을 가꾸는 기업"></div>
+				<div style="width: 50%;padding-left: 1.7rem;">
+					<h3 style="font-size: .9rem;font-weight: 700;color: #000;">콜센터 <strong data-id="callCenterTelNo" style=" color: #a2182f;">1600-1004</strong></h3>
+					<p style="font-size: 12px;line-height: 1.2;">
+						<span style=" color: #777; display: inline-block;">평일 09:00~18:00</span>
+						<span style=" color: #777; display: inline-block;">점심시간 12:00~13:00</span>
+						<span style=" color: #777; display: inline-block;">토, 일, 공휴일 휴무</span>
+				    </p>
+				</div>
+			</div>
+
+			<a href="#fullMenuBox" class="hashSlide bodyFixClsoe" id="fullmenuClose" aria-label="닫기"><i class="xi-close" aria-label="닫기"></i></a>
+
+			<div class="ico_wa">
+				<img src="/00_common/images/layout/img_WA_Mark_Mob.gif" alt="모바일 접근성 인증마크 한국장애인단체총연합회 한국웹접근성인증평가원">
+				<span>모바일 앱 접근성 인증</span>
+			</div>
+		</div>
+	</div>
+	<!-- //fullMenu -->
+
+	<div class="lyPop" id="loginTime_Confirm">
+		<div class="lyPop_wrap loginTime">
+			<h2>자동로그아웃안내</h2>
+			<div class="inner ac">
+				<div class="time">
+					남은시간 <span><em>00</em>분 <em>00</em>초</span>
+				</div>
+
+				<div class="txt">
+					<p>고객님의 안전한 개인정보를 위해 자동로그아웃을 합니다.</p>
+					<p>로그인 시간을 연장하시겠습니까?</p>
+				</div>
+
+				<p class="btns">
+					<a href="javascript:setTimer(3600);" class="btn_bl1">연장하기 <i class="xi-clock-o" aria-hidden="true"></i></a>
+					<a href="javascript:logout();" class="btn_bl1">로그아웃 <i class="xi-log-out" aria-hidden="true"></i></a>
+				</p>
+			</div>
+			<a href="#loginTime_Confirm" class="lyPopClose hashClose"><span class="hid">닫기</span><i class="xi-close" aria-hidden="true"></i></a>
+		</div>
+	</div>
+
+
+	<script type='module' src='/js/nfu/la/lhapply/header.js'></script>
+
+	<script>
+
+	//*** 웹접근성 안내 팝업
+	function popWebAccYn() {
+
+		$('#popWebAccMain').show();
+		$('#popWebAccMain').css("z-index", 1000);//모바일버젼에서 화면 앞으로 처리
+		//document.getElementById("popWebAccMain").style.zIndex = 1000;
+
+		//alert(getCookieBigText("gWebAccYn"));
+
+		if(getCookieBigText("gWebAccYn") == "Y"){
+			$('#webAccMainY').hide();
+			$('#webAccMainN').show();
+		}else{
+			$('#webAccMainY').show();
+			$('#webAccMainN').hide();
+		}
+
+	}
+
+	// 불러오기 유형에 따라 파라미터 활용
+	// type : 사전청약 bfh
+	// listSql : 임시저장 목록 쿼리
+	// delSql : 임시저장 삭제 쿼리
+	// url : 불러오기 클릭시 이동할 url
+	// 사전청약(type bhf)은 임시저장 정보의 키값으로 sbscRqsNo를 사용하며 sql를 통해 불러온 쿼리에서 val1으로 가져온다.
+	 function gfn_popAplLoad(type, url, listSql, delSql) {
+		 var usrSsnDs = "";
+		 if(usrSsnDs=="OSD" || usrSsnDs=="APR") {
+			 alert("인증서 로그인 하신 후에 이용하시기 바랍니다.");
+			 return false;
+		 }
+
+	 		$.ajax({
+	 			type : "POST",
+	 			datatype : "json",
+	 			async : false,
+	 			data : {sql : listSql},
+	 			url : "/lhapply/apply/selectTmpSbscRqsList.do",
+	 			success : function(result){
+	 				var result = JSON.parse(result);
+	 				if(result.resultAt == "N"){
+	 					alert(result.mssage);
+	 				}else {
+	 					$("#aplyLoadOl").empty();
+	 					// 레이어폼에 그리기 시작
+	 					for(var i=0;i<result.selectTmpSbscRqsList.length;i++) {
+	 						var child = "<li>"
+							+ "<p class='cate'>"
+							+ "	<span class='stt ing'>"+result.selectTmpSbscRqsList[i].panSs+"</span>"
+							+ "	<span class='col1'>"+result.selectTmpSbscRqsList[i].aisTpCdNm+"</span>";
+							if(result.selectTmpSbscRqsList[i].ccrCnntSysDsCd == '03'){
+								var sVal3 = result.selectTmpSbscRqsList[i].val3;
+								var sApxTpDtlCd = result.selectTmpSbscRqsList[i].apxTpDtlCd;
+								var sGbnNm = result.selectTmpSbscRqsList[i].gbnNm;
+								var sHhGbnNm = result.selectTmpSbscRqsList[i].hhGbnNm;
+								if(sGbnNm != undefined){
+									var sBgnNmArry = sGbnNm.split("-");
+								}
+								if(sVal3 != undefined){
+									var sLsPrslDsCd = sVal3.substring(1,3);
+								}
+
+								// 전세형건설임대 추가 20.12.08 김소연
+								var sArrVal = result.selectTmpSbscRqsList[i].val1;
+								sArrVal = sArrVal.split("-");
+								var sLtrmNleLohSplYn = sArrVal[6];	// LTRM_NLE_LOH_SPL_YN 장기미임대전세공급여부
+
+								// 귀농귀촌 추가 21.07.15 김소연
+								var sVal1 = result.selectTmpSbscRqsList[i].val3;
+								var arrPk = "";
+								if(sVal1 != undefined ){
+									arrPk = sVal1.split("-");
+								}
+								var sPelsPrslTpCd = "";
+								if(arrPk.length == 7 || arrPk.length > 7) {
+									sPelsPrslTpCd = arrPk[7]; 		// 국민임대우선공급유형코드
+								}
+								var sRcrDsCd = "";
+								if(arrPk.length == 8 || arrPk.length > 8) {
+									sRcrDsCd = arrPk[8]; // 모집구분코드
+								}
+
+								var sPelsShtYn = result.selectTmpSbscRqsList[i].pelsShtYn;
+								// 국민임대고령자복지주택 추가 21.11.08 김소연
+								var sLsLtrFmlaCd = result.selectTmpSbscRqsList[i].lsLtrFmlaCd;
+								if (!isNull(sVal3)) {
+									var sRnk = sVal3.substr(1,2);
+									if (sRnk == "AC") {
+										sGbnNm = "1순위";
+									} else if (sRnk == "AD") {
+										sGbnNm = "2순위";
+									} else if (sRnk == "AE") {
+										sGbnNm = "3순위";
+									}
+								}
+
+								if(sLsLtrFmlaCd == "34" || sLsLtrFmlaCd == "35"){ //통합공공임대
+
+								}else if (sLtrmNleLohSplYn == "Y") {	// 전세형건설임대 추가 20.12.08 김소연
+									sGbnNm =  "전세형";
+								} else if (sPelsPrslTpCd == "01" && sRcrDsCd != "02") {	// 귀농귀촌 추가 21.07.15 김소연
+									sGbnNm =  "귀농귀촌-일반공급";
+								} else if (sPelsPrslTpCd == "02" && sLsLtrFmlaCd == "33") {	// 국민임대고령자복지주택 추가 21.11.08 김소연
+									//this.dsTmpSbscList.setColumn(i , "GBN_NM" , sGbnNm);
+								} else {
+									// 기존 GBN_NM처리
+									if(!isNull(sLsPrslDsCd) && !isNull(sApxTpDtlCd)) {
+										//2018개정 2018.03.09 곽혁재 추가 ... lfn_getApxTpData2018
+										sGbnNm = sHhGbnNm + $("input[class=dsApxTpDtl][data-lsPrslDsCd='"+sLsPrslDsCd+"'][data-apxTpDtlCd='"+sApxTpDtlCd+"']").attr("data-apxTpDtlCdNm");
+									}
+								}
+
+								if(sGbnNm != undefined){
+									child += "	<span class='col2'>"+sGbnNm+"</span>";
+								}
+							} else {
+								if(result.selectTmpSbscRqsList[i].gbnNm != undefined){
+									child += "	<span class='col2'>"+result.selectTmpSbscRqsList[i].gbnNm+"</span>";
+								}
+							}
+							child += "</p>"
+							+ "<ul class='list_st2 col-flex col-2'>"
+							+ "	<li>"+result.selectTmpSbscRqsList[i].bzdtNm+"</li>"
+							+ "	<li>저장일시 : "+result.selectTmpSbscRqsList[i].updDttm+"</li>"
+							+ "</ul>";
+
+							child += "<div class='btn'>";
+
+							//모바일/웹 삭제/불러오기 순서 변경
+							
+								
+
+
+
+
+										//웹 일경우
+
+
+									if(result.selectTmpSbscRqsList[0].nwhtYn == "Y" && $("#ccrCnntSysDsCd").val() == "03"){
+										child += "	<a href='#load' onClick='javascript:gfn_load(\""+type+"\", \""+url+"\", \""+result.selectTmpSbscRqsList[i].val1+"-Y"+"\", \""+result.selectTmpSbscRqsList[i].val3+"\", \""+result.selectTmpSbscRqsList[i].prslYn+"\",\""+result.selectTmpSbscRqsList[i].ltstAdmNo+"\",\""+result.selectTmpSbscRqsList[i].lsLtrFmlaCd+"\",\""+result.selectTmpSbscRqsList[i].apxTpDtlCd+"\",\""+result.selectTmpSbscRqsList[i].pelsShtYn+"\")' class='btn_blL mini'>불러오기</a>"
+										+ "	<a href='#del' onClick='javascript:gfn_delTmp(\""+type+"\", \""+url+"\", \""+result.selectTmpSbscRqsList[i].val1+"\", \""+result.selectTmpSbscRqsList[i].val3+"\", \""+listSql+"\", \""+delSql+"\")' class='btn_gr mini'>삭제</a>";
+									}else if(result.selectTmpSbscRqsList[i].ccrCnntSysDsCd == "03" && result.selectTmpSbscRqsList[i].aisTpCd == "05"){
+
+										//해당값 고정
+										var s_type = "rtho";
+										var s_url = "/apply/slcv/slcv04.do";
+										var s_listSql = "sa_silh.selectTmpSbscRqsList";
+										var s_delSql = "sa_rtho.deleteTmpLsSbscInfo";
+
+										child += "	<a href='#load' onClick='javascript:gfn_load(\""+s_type+"\", \""+s_url+"\", \""+result.selectTmpSbscRqsList[i].val1+"\", \""+result.selectTmpSbscRqsList[i].val3+"\", \""+result.selectTmpSbscRqsList[i].prslYn+"\",\""+result.selectTmpSbscRqsList[i].ltstAdmNo+"\",\""+result.selectTmpSbscRqsList[i].lsLtrFmlaCd+"\",\""+result.selectTmpSbscRqsList[i].apxTpDtlCd+"\",\""+result.selectTmpSbscRqsList[i].pelsShtYn+"\")' class='btn_blL mini'>불러오기</a>"
+										+ "	<a href='#del' onClick='javascript:gfn_delTmp(\""+s_type+"\", \""+s_url+"\", \""+result.selectTmpSbscRqsList[i].val1+"\", \""+result.selectTmpSbscRqsList[i].val3+"\", \""+s_listSql+"\", \""+s_delSql+"\")' class='btn_gr mini'>삭제</a>";
+
+									}else{
+
+
+										if(		result.selectTmpSbscRqsList[i].ccrCnntSysDsCd == "02" 			// 02 : 판매주택
+											 && result.selectTmpSbscRqsList[i].aisTpCd == "06" 					// 06 : 임대주택 - 매물유형코드 (값을가져올때 상위매물유형코드가져옴)
+											 ){
+
+											//해당값 고정
+											var s_type = "silh";
+											var s_url = "/apply/silh/silh04.do";
+											var s_listSql = "sa_rtho.selectTmpSbscRqsList";		//삭제 후 reload 시 쿼리
+											var s_delSql = "sa_silh.deleteTmpSbscRqsM";			//삭제 쿼리
+
+
+											child += "	<a href='#load' onClick='javascript:gfn_load(\""+s_type+"\", \""+s_url+"\", \""+result.selectTmpSbscRqsList[i].val1+"\", \""+result.selectTmpSbscRqsList[i].val3+"\", \""+result.selectTmpSbscRqsList[i].prslYn+"\",\""+result.selectTmpSbscRqsList[i].ltstAdmNo+"\",\""+result.selectTmpSbscRqsList[i].lsLtrFmlaCd+"\",\""+result.selectTmpSbscRqsList[i].apxTpDtlCd+"\",\""+result.selectTmpSbscRqsList[i].pelsShtYn+"\")' class='btn_blL mini'>불러오기</a>"
+											+ "	<a href='#del' onClick='javascript:gfn_delTmp(\""+s_type+"\", \""+s_url+"\", \""+result.selectTmpSbscRqsList[i].val1+"\", \""+result.selectTmpSbscRqsList[i].val3+"\", \""+s_listSql+"\", \""+s_delSql+"\")' class='btn_gr mini'>삭제</a>";
+
+										}else if(		result.selectTmpSbscRqsList[i].ccrCnntSysDsCd == "02" 			// 02 : 판매주택
+											 && result.selectTmpSbscRqsList[i].aisTpCd == "54" 					// 06 : 임대주택 - 매물유형코드 (값을가져올때 상위매물유형코드가져옴)
+										 ){
+
+											//해당값 고정
+											var s_type = "shar";
+											var s_url = "/apply/shar/shar04.do";
+											var s_listSql = "sa_shar.selectTmpSbscRqsList";		//삭제 후 reload 시 쿼리
+											var s_delSql = "sa_shar.deleteTmpSbscRqsM";			//삭제 쿼리
+
+
+											child += "	<a href='#load' onClick='javascript:gfn_load(\""+s_type+"\", \""+s_url+"\", \""+result.selectTmpSbscRqsList[i].val1+"\", \""+result.selectTmpSbscRqsList[i].val3+"\", \""+result.selectTmpSbscRqsList[i].prslYn+"\",\""+result.selectTmpSbscRqsList[i].ltstAdmNo+"\",\""+result.selectTmpSbscRqsList[i].lsLtrFmlaCd+"\",\""+result.selectTmpSbscRqsList[i].apxTpDtlCd+"\",\""+result.selectTmpSbscRqsList[i].pelsShtYn+"\")' class='btn_blL mini'>불러오기</a>"
+											+ "	<a href='#del' onClick='javascript:gfn_delTmp(\""+s_type+"\", \""+s_url+"\", \""+result.selectTmpSbscRqsList[i].val1+"\", \""+result.selectTmpSbscRqsList[i].val3+"\", \""+s_listSql+"\", \""+s_delSql+"\")' class='btn_gr mini'>삭제</a>";
+
+										}else if(		result.selectTmpSbscRqsList[i].ccrCnntSysDsCd == "02" 			// 02 : 판매주택
+											 && result.selectTmpSbscRqsList[i].aisTpCd == "05" 					// 06 : 임대주택 - 매물유형코드 (값을가져올때 상위매물유형코드가져옴)
+										 ){
+
+											//해당값 고정
+											var s_type = "silh";
+											var s_url = "/apply/silh/silh04.do";
+											var s_listSql = "sa_silh.selectTmpSbscRqsList";		//삭제 후 reload 시 쿼리
+											var s_delSql = "sa_silh.deleteTmpSbscRqsM";			//삭제 쿼리
+
+											child += "	<a href='#load' onClick='javascript:gfn_load(\""+s_type+"\", \""+s_url+"\", \""+result.selectTmpSbscRqsList[i].val1+"\", \""+result.selectTmpSbscRqsList[i].val3+"\", \""+result.selectTmpSbscRqsList[i].prslYn+"\",\""+result.selectTmpSbscRqsList[i].ltstAdmNo+"\",\""+result.selectTmpSbscRqsList[i].lsLtrFmlaCd+"\",\""+result.selectTmpSbscRqsList[i].apxTpDtlCd+"\",\""+result.selectTmpSbscRqsList[i].pelsShtYn+"\")' class='btn_blL mini'>불러오기</a>"
+											+ "	<a href='#del' onClick='javascript:gfn_delTmp(\""+s_type+"\", \""+s_url+"\", \""+result.selectTmpSbscRqsList[i].val1+"\", \""+result.selectTmpSbscRqsList[i].val3+"\", \""+s_listSql+"\", \""+s_delSql+"\")' class='btn_gr mini'>삭제</a>";
+
+										}else{
+
+											child += "	<a href='#load' onClick='javascript:gfn_load(\""+type+"\", \""+url+"\", \""+result.selectTmpSbscRqsList[i].val1+"\", \""+result.selectTmpSbscRqsList[i].val3+"\", \""+result.selectTmpSbscRqsList[i].prslYn+"\",\""+result.selectTmpSbscRqsList[i].ltstAdmNo+"\",\""+result.selectTmpSbscRqsList[i].lsLtrFmlaCd+"\",\""+result.selectTmpSbscRqsList[i].apxTpDtlCd+"\",\""+result.selectTmpSbscRqsList[i].pelsShtYn+"\")' class='btn_blL mini'>불러오기</a>"
+											+ "	<a href='#del' onClick='javascript:gfn_delTmp(\""+type+"\", \""+url+"\", \""+result.selectTmpSbscRqsList[i].val1+"\", \""+result.selectTmpSbscRqsList[i].val3+"\", \""+listSql+"\", \""+delSql+"\")' class='btn_gr mini'>삭제</a>";
+
+										}
+
+
+									}
+
+
+								
+							
+
+							child += "</div>"
+								  + "</li>";
+
+							$("#aplyLoadOl").append(child);
+
+	 					}
+	 					$("#popAplLoadLy").show().find('.lyPop_wrap').focus();
+	 				}
+	 			}, error : function(result){
+	 				alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+	 			}
+	 		});
+
+ 	}
+
+	// 불러오기 링크 이동
+	function gfn_load(type, url, val1, val3, prslYn, ltstAdmNo, lsLtrFmlaCd, apxTpDtlCd, pelsShtYn) {
+		if(confirm("선택한 임시저장 정보를 불러오시겠습니까?")) {
+			var array = val1.split("-");
+			var chkStr = "Y";
+
+			if(array.length > 3) {
+				if(array[3] == "07" || array[3] == "09" || array[3] == "10" || array[3] == "11" || array[3] == "27") { //국민임대,영구임대,행복주택,장기전세,신축다세대 일때
+					$.ajax({
+			 			type : "POST",
+			 			datatype : "json",
+			 			async : false,
+			 			data : {ltrUntNo : array[0], ltrNot : array[1], acpNo : array[2]},
+			 			url : "/lhapply/apply/selectTmpSbscRqsListChk.do",
+			 			success : function(result){
+			 				var result = JSON.parse(result);
+			 				if(result.chkSize > 0) {
+			 					alert("이미 신청한 공고 또는 잘못된 접근입니다.");
+			 					chkStr = "N";
+			 					return false;
+			 				}
+			 			},
+			 			error : function(result) {
+			 				alert("오류가 발생했습니다. 관리자에게 문의해주세요.");
+			 				chkStr = "N";
+			 				return false;
+			 			}
+					});
+				}
+			}
+			if(chkStr == "N"){
+				$(".popAplLoadLyCls").click();
+				return false;
+			}
+
+
+			// 사전청약의 sbscRqsNo는 val1으로 쿼리해옴 유형에 맞게 변경
+			if(type == "silh" || type == "shar") {
+
+				/*
+				    판매 공공임대 - 임대에서 호출 시 rthoFrame.jsp 참조
+					아래 값이 없음으로 없을때 element 생성 후
+					해당 값 셋팅
+				*/
+				if(document.getElementById("sbscRqsNo") == null){
+
+					var frameForm = document.getElementById('frameForm');
+
+					var f_modify = document.createElement('input');
+					f_modify.type = "hidden";
+					f_modify.name = "modify";
+					f_modify.id = "modify";
+					frameForm.appendChild(f_modify);
+
+					var f_sbscRqsNo = document.createElement('input');
+					f_sbscRqsNo.type = "hidden";
+					f_sbscRqsNo.name = "sbscRqsNo";
+					f_sbscRqsNo.id = "sbscRqsNo";
+					frameForm.appendChild(f_sbscRqsNo);
+
+					var f_hsSbscAcpTrgCd = document.createElement('input');
+					f_hsSbscAcpTrgCd.type = "hidden";
+					f_hsSbscAcpTrgCd.name = "hsSbscAcpTrgCd";
+					f_hsSbscAcpTrgCd.id = "hsSbscAcpTrgCd";
+					frameForm.appendChild(f_hsSbscAcpTrgCd);
+
+					/* 판매 임대 고정
+					  -- silhFrame.jsp 에서 aisTpCd의 값으로 확인함
+					  -- (aisTpCd을 가져오긴하나 uppAisTpCd를 변환해서 가져오게 되어 있어서 해당값으로 고정 처리)
+					*/
+					$("#aisTpCdRf").val("08");		// name:aisTpCd 값으로 셋팅되어 있음
+				}
+
+				//필요 parameter
+				$("#sbscRqsNo").val(val1);
+				$("#hsSbscAcpTrgCd").val(val3);
+				$("#modify").val("T");
+
+			}else if(type == "bfh") {
+				$("#sbscRqsNo").val(val1);
+			}else if(type == "lad"){
+
+				$("#stepGubun").val("Y");
+
+				if(val3 == "01" || val3 == "02"){
+					$("#bidRqsAdmNo").val(val1);
+					$("#bltrRqsDsCd").val(val3);
+				}else {
+					$("#ltrRqsAdmNo").val(val1);
+					$("#bltrRqsDsCd").val(val3);
+				}
+			}else if(type == "sps"){
+
+				$("#stepGubun").val("Y");
+				$("#bidRqsAdmNo").val(val1);
+				$("#bltrRqsDsCd").val(val3);
+			}else if(type == "rtho"){
+
+
+					if (val1.indexOf("-") < 0){
+
+					}
+					var arrPk = val1.split("-");
+					var sLtrUntNo = arrPk[0];	//추첨단위번호
+					var sLtrNot = arrPk[1]; 	//추첨횟수
+					var sAcpNo = arrPk[2];		//접수번호
+					var sSplTpCd = arrPk[3];	//신청형구분코드
+					var sVal3Gbn = val3.substr(0, 1);
+					var sVal3Val = val3.substr(1, val3.length);
+					var sHhTpCd	  = arrPk[4]    //(HH_TP_CD 행복주택유형코드) 2017.07.11 곽혁재추가
+					var sHhSplDsCd = arrPk[5];	// HH_SPL_DS_CD 행복주택공급구분코드 20.10.22 김소연추가
+					var sLtrmNleLohSplYn = arrPk[6];	// LTRM_NLE_LOH_SPL_YN 장기미임대전세공급여부 20.12.08 김소연추가
+					var sPelsPrslTpCd = arrPk[7]; 		// PELS_PRSL_TP_CD 국민임대우선공급유형코드 21.07.15 김소연추가
+					var sRcrDsCd = arrPk[8];			// RCR_DS_CD  모집구분코드 21.11.22 김소연추가
+					var nwhtYn = arrPk[9];
+
+					$("#ltrUntNoRf").val(sLtrUntNo);
+					$("#ltrNotRf").val(sLtrNot);
+					$("#acpNoRf").val(sAcpNo);
+					$("#hhTpCdRf").val(sHhTpCd);
+					$("#hhSplDsCdRf").val(sHhSplDsCd);
+					$("#lsPrslDsCdRf").val(sVal3Val);
+					$("#apxTpDtlCdRf").val(apxTpDtlCd);
+					$("#ltrmNleLohSplYnRf").val(sLtrmNleLohSplYn);
+					$("#pelsPrslTpCdRf").val(sPelsPrslTpCd);
+					$("#rcrDsCdRf").val(sRcrDsCd);
+					$("#aisTpCdRf").val(sSplTpCd);
+					$("#prslYnRf").val(prslYn);
+					$("#pelsShtYnRf").val(pelsShtYn); //국민임대 간소화
+
+					if("48" == sSplTpCd){
+						$("#ltstAdmNoRf").val(ltstAdmNo);
+						$("#lsLtrFmlaCdRf").val(lsLtrFmlaCd);
+					} else if("09" == sSplTpCd){
+						$("#aisTpCd").val(sSplTpCd);
+						$("#ltstAdmNo").val(ltstAdmNo);
+						$("#prslYn").val(prslYn);
+						$("#lsLtrFmlaCd").val(lsLtrFmlaCd);
+						if(lsLtrFmlaCd == '32'){
+							url = '/apply/rtho/rthoRqfrmPclsAgd.do';
+						} else {
+							url = '/apply/rtho/rthoRqfrmPcls.do';
+						}
+
+						if(sLtrmNleLohSplYn == "Y"){//전세형건설임대
+	 						var frameForm = document.getElementById('frameForm');
+							var modify = document.createElement('input');
+
+							// modify가 Y일 경우 4단계 화면에 데이터를 세팅함.
+							modify.type = "hidden";
+							modify.name = "modifyY";
+							modify.value = "Y";
+
+							frameForm.appendChild(modify);
+							url = '/apply/rtho/rthoCruLes04_1.do';
+						}
+					} else if(("07" == sSplTpCd || "11" == sSplTpCd || "27" == sSplTpCd) && nwhtYn != "Y"){
+						$("#lsLtrFmlaCdRf").val(lsLtrFmlaCd); //국민임대 주거약자
+						url = '/apply/rtho/rthoLs04.do';
+
+						if(sLtrmNleLohSplYn == "Y"){//전세형건설임대
+							url = '/apply/rtho/rthoCruLes04_1.do';
+						}
+
+						$("#lsLtrFmlaCdRf").val(lsLtrFmlaCd);
+						if(lsLtrFmlaCd == '22'){
+							//국민임대 - 도시재생
+							url = '/apply/rtho/rthoCr04.do';
+						}
+
+ 						var frameForm = document.getElementById('frameForm');
+						var modify = document.createElement('input');
+
+						// modify가 Y일 경우 4단계 화면에 데이터를 세팅함.
+						modify.type = "hidden";
+						modify.name = "modifyY";
+						modify.value = "Y";
+
+						frameForm.appendChild(modify);
+					}else if("08" == sSplTpCd){ //공공임대 50년
+						url = '/apply/rtho/rthoPule04.do';
+					}else if("10" == sSplTpCd){ // 행복주택
+						if("10" == apxTpDtlCd){
+							url = '/apply/rtho/rthoRqfrmUstGnrSuy.do';	//대학생
+						} else if("11" == apxTpDtlCd) {
+							url = '/apply/rtho/rthoRqfrmEmpyPrpa.do';	//취업준비생
+						}else if (sHhTpCd == "17" && sHhSplDsCd == "03" && (apxTpDtlCd == "22" || sVal3Val == "53" || apxTpDtlCd == "80")) {	// 청년,신혼부부계층,장기근속자
+							url = "/apply/rtho/rthoHpho04_2900.do";
+						}else if(sVal3Val == "55") {	//고령자
+							if(lsLtrFmlaCd == "33"){
+								url = "/apply/rtho/rthoHpho04_2450.do";
+							}else{
+								url = "/apply/rtho/rthoHpho04_2400.do";
+							}
+// 							url = "/apply/rtho/rthoHpho04_2400.do";
+						}else if("22" == apxTpDtlCd) {
+							url = '/apply/rtho/rthoHpho04_2200.do';	//청년
+						}else if("20" == apxTpDtlCd) {
+							url = '/apply/rtho/rthoHpho04_2250.do';	//사회초년생
+						}else if("40" == apxTpDtlCd) {
+							url = '/apply/rtho/rthoHpho04_2500.do';	//주거급여수급자
+						}else if("60" == apxTpDtlCd) {
+							url = '/apply/rtho/rthoHpho04_2600.do';	//산업단지근로자
+						}else if("50" == sVal3Val || "36" == sVal3Val) {
+							url = '/apply/rtho/rthoRqfrmLegaRsidntn.do';	//기존거주자, 임시사용자
+						}else if("66" == apxTpDtlCd) {
+							url = '/apply/rtho/rthoHpho04_2800.do';	//일반
+						}else if(apxTpDtlCd == "36"){ // 한부모가족 2018.11.01 곽혁재 추가 ... apxTpDtlCd 미정의
+							var frameForm = document.getElementById('frameForm');
+							var modify = document.createElement('input');
+
+							// modify가 Y일 경우 4단계 화면에 데이터를 세팅함.
+							modify.type = "hidden";
+							modify.name = "modifyY";
+							modify.value = "Y";
+
+							frameForm.appendChild(modify);
+							url = '/apply/rtho/rthoHpho04_2350.do';
+	 					}else if(apxTpDtlCd == "36" || apxTpDtlCd == "32" || apxTpDtlCd == "30"){ // 신혼부부
+	 						var frameForm = document.getElementById('frameForm');
+							var modify = document.createElement('input');
+
+							// modify가 Y일 경우 4단계 화면에 데이터를 세팅함.
+							modify.type = "hidden";
+							modify.name = "modifyY";
+							modify.value = "Y";
+
+							frameForm.appendChild(modify);
+	 						url = '/apply/rtho/rthoHpho04_2300.do';
+	 					}else if("57" == sVal3Val || "60" == sVal3Val) {// 1인창조기업 '창업인' 계층,'지역전략산업 종사자' 계층
+	 						var frameForm = document.getElementById('frameForm');
+							var modify = document.createElement('input');
+
+							// modify가 Y일 경우 4단계 화면에 데이터를 세팅함.
+							modify.type = "hidden";
+							modify.name = "modifyY";
+							modify.value = "Y";
+
+							frameForm.appendChild(modify);
+							url = '/apply/rtho/rthoHpho04_2650.do';
+						}
+
+						if(sLtrmNleLohSplYn == "Y"){//전세형건설임대
+	 						var frameForm = document.getElementById('frameForm');
+							var modify = document.createElement('input');
+
+							// modify가 Y일 경우 4단계 화면에 데이터를 세팅함.
+							modify.type = "hidden";
+							modify.name = "modifyY";
+							modify.value = "Y";
+
+							frameForm.appendChild(modify);
+							url = '/apply/rtho/rthoCruLes04_1.do';
+						}
+					}else if(nwhtYn == "Y"){//임대주택 신희타
+						url = '/apply/rtho/rthoNwht04.do';
+
+// 						if(sLtrmNleLohSplYn == "Y"){//전세형건설임대
+// 	 						var frameForm = document.getElementById('frameForm');
+// 							var modify = document.createElement('input');
+
+// 							// modify가 Y일 경우 4단계 화면에 데이터를 세팅함.
+// 							modify.type = "hidden";
+// 							modify.name = "modifyY";
+// 							modify.value = "Y";
+
+// 							frameForm.appendChild(modify);
+// 							url = '/apply/rtho/rthoCruLes04_1.do';
+// 						}
+					}
+			}else if(type == "nwht"){
+				var nwht = "";
+				if("33" == val3){nwht = "Newl";}
+				else if("32" == val3){nwht = "PreNewl";}
+				else if("34" == val3){nwht = "Spa";}
+				else if("36" == val3){nwht = "Nork";}
+				else if("37" == val3){nwht = "Rklt";}
+				else if("38" == val3){nwht = "BffPzw";}
+				url = "/apply/nwht/nwhtRqfrm" + nwht +".do";
+				$("#sbscRqsNo").val(val1);
+			}
+
+
+			$("#frameForm").attr('action', "/lhapply"+url).submit();
+		}
+ 	}
+
+	// 임시저장 삭제
+	// 불러오기 유형에 따라 파라미터 활용
+	// type : 사전청약 bfh
+	// listSql : 삭제후 리로드하기 위해 호출할 임시저장 목록 쿼리
+	// delSql : 삭제쿼리
+	// 사전청약(type bhf)은 임시저장 정보의 키값으로 sbscRqsNo를 사용하며 sql를 통해 불러온 쿼리에서 val1으로 가져온다.
+	function gfn_delTmp(type, url, val1, val3, listSql, delSql) {
+		if(confirm("선택하신 임시청약내역을 삭제하시겠습니까?")) {
+
+			// 현재 진행중인 신청건은 삭제할 수 없음
+			if("bfh" == type) {
+				if($("#sbscRqsNo").val() == val1) {
+					alert("현재 작성중인 임시저장 신청서는 삭제할 수 없습니다.");
+					return;
+				}
+			}
+
+			if ("rtho" == type){
+
+				var aisTpCd = "06";
+				// 50년공공임대외 공공임대는 분양주택 삭제프로세스
+				if(val1.indexOf("-") < 0){
+					aisTpCd = "05";
+				}
+
+				var arrPk =val1.split("-");
+				var sLtrUntNo = arrPk[0];	//추첨단위번호
+				var sLtrNot = arrPk[1]; 	//추첨횟수
+				var sAcpNo = arrPk[2];		//접수번호
+
+				$.ajax({
+		 			type : "POST",
+		 			datatype : "json",
+		 			async : false,
+		 			data : {sql : delSql,
+		 					ltrUntNo : sLtrUntNo,
+		 					ltrNot : sLtrNot,
+		 					acpNo : sAcpNo,
+		 					sbscRqsNo : val1,
+		 					aisTpCd : aisTpCd,
+		 					val3 : val3
+		 				},
+		 			url : "/lhapply/apply/deleteTmpBfhSbscRqs.do",
+		 			success : function(result){
+		 				var result = JSON.parse(result);
+		 				if(result.resultAt == "N"){
+		 					alert(result.mssage);
+		 				}else {
+		 					alert("정상적으로 삭제되었습니다.");
+		 					gfn_popAplLoad(type, url, listSql, delSql)
+		 				}
+		 			}, error : function(result){
+		 				alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+		 			}
+		 		});
+			}else{
+				$.ajax({
+		 			type : "POST",
+		 			datatype : "json",
+		 			async : false,
+		 			data : {sql : delSql,
+		 					sbscRqsNo : val1,
+		 					val3 : val3
+		 				},
+		 			url : "/lhapply/apply/deleteTmpBfhSbscRqs.do",
+		 			success : function(result){
+		 				var result = JSON.parse(result);
+		 				if(result.resultAt == "N"){
+		 					alert(result.mssage);
+		 				}else {
+		 					alert("정상적으로 삭제되었습니다.");
+		 					gfn_popAplLoad(type, url, listSql, delSql)
+		 				}
+		 			}, error : function(result){
+		 				alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+		 			}
+		 		});
+			}
+		}
+ 	}
+
+	// 관심공고 등록
+	function saveItrPan() {
+		$.ajax({
+  			type : "POST",
+  			datatype : "json",
+  			async : false,
+  			data : $('#wrtancViewForm').serialize(),
+  			url : "/lhapply/apply/wt/wrtanc/itrPan.do",
+  			success : function(result){
+  				var result = JSON.parse(result);
+  				if(result.resultAt == "N"){
+  					alert(result.mssage);
+  				} else if(result.resultAt == "L") {
+  					if(confirm(result.message)) {
+  						if($("#panId").val()) {
+	  						var todayDate = new Date();
+	 					    todayDate.setTime(todayDate.getTime() + (10*60*1000)); //현재에서 10분
+	  						document.cookie = "itrPanId=" + $("#panId").val() + "; path=/; expires=" + todayDate.toUTCString() + ";"
+	  						document.cookie = "itrPanCcr=" + $("#ccrCnntSysDsCd").val() + "; path=/; expires=" + todayDate.toUTCString() + ";"
+  						}
+  						location.href = "/lhapply/apply/lo/login/inLoginPage.do?itrShwAt=Y";
+  					}
+  				} else if(result.resultAt == "J") {
+  					if(result.message) {
+  						alert(result.message);
+  					} else {
+  						location.href = "/lhapply/apply/lo/login/itrMberLoginPage.do";
+  					}
+  				} else {
+  					alert("관심공고로 등록되었습니다.");
+  				}
+  			}, error : function(result){
+  				alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+  			}
+  		});
+	}
+
+	// 검색페이지 이동
+	function totalSrchEvent(srchType, srchBtnYn) {
+		if(srchType!="pan" && (gfn_isEmpty($("#totalSearch").val()) || $("#totalSearch").val().length < 2)) {
+			alert("두자 이상의 검색어를 입력해주세요.");
+			return;
+		}
+		if(gfn_isEmpty(srchType)) {
+			srchType = "all";
+		}
+		$("#srchType").val(srchType);
+
+		var startD = $("#srchStartDt").val();
+		if (gfn_isEmpty(startD)) {
+			startD = $("#startDt").val();
+		}
+		var endD = $("#srchEndDt").val();
+		if (gfn_isEmpty(endD)) {
+			endD = $("#endDt").val();
+		}
+
+		var srchR = $("#srchEnterRadio").val();
+		if (gfn_isEmpty(srchR)) {
+			srchR = $("input[type='radio'][name='srchRadio']:checked").val();
+		}
+
+		if(srchType == "pan") {
+			$("#totalSrchForm").attr('action', "/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026&viewType=srch&panNm="+$("#totalSearch").val()+"&startDt="+startD+"&endDt="+endD).submit();
+		} else if  (srchType == "pch") {
+			$("#totalSrchForm").attr('action', "/lhapply/apply/pch/list.do?mi=1076&viewType=srch&panNm="+$("#totalSearch").val()+"&startDt="+startD+"&endDt="+endD).submit();
+		} else {
+			var srchInFormData = $("form[name='srchInForm']");
+
+			if (srchInFormData.length > 0) {
+				$.each(srchInFormData.serializeArray(), function(i, field) {
+					$("<input>").attr("type", "hidden").attr("name", field.name).attr("value", field.value).appendTo("#totalSrchForm");
+				});
+				if (srchBtnYn != "Y") {
+					$("form[name='totalSrchForm'] input[name='startDt']").val(startD);
+					$("form[name='totalSrchForm'] input[name='endDt']").val(endD);
+					$("form[name='totalSrchForm'] input[name='srchRadio']").val(srchR);
+				}
+			}
+
+			$("#totalSrchForm").attr('action', "/lhapply/srch.do").submit();
+		}
+	}
+
+	//큰글씨 쿠키설정
+	function fsToggleSetCookie(name, expiredays) {
+		var ceckAt = $("#fsToggle").prop("checked");
+
+		if(ceckAt == true){
+			setCookieBigText(name, "done" , expiredays);
+		}else{
+			delCookieBigText(name);
+		}
+	}
+
+
+	$(document).ready(function(){
+		//모바일 1차메뉴 사전청약 클릭 시 대표콜센터 번호 변경 처리
+		$(document).on('click', '#fullMenu .depth1 > ul > li > a', function(e){
+			var menuNm = $(e.target).text();
+
+			//if(menuNm == "사전청약"){
+			//	$("[data-id=callCenterTelNo]").text("1670-4007");
+			//}else{
+				$("[data-id=callCenterTelNo]").text("1600-1004");
+			//}
+		});
+
+		// 검색
+		$('#totalSrchForm a.searchBtn').on('click', function(){
+			totalSrchEvent();
+			return false;
+		});
+
+		// 검색 ( 엔터 )
+		$("#totalSearch").keydown(function(event){
+		    if ( event.which == 13 ) {
+		    	totalSrchEvent();
+		        return false;
+		    }
+		});
+
+		$("#totalSearch").keyup(function () {
+			if(checkHangul($("#totalSearch").val())) {
+				return;
+			}
+			doSrch();
+		});
+
+		// $("#totalSearch").blur(function () {
+		// 	$(".autoKeyWord").hide();
+		// });
+
+
+		$("#totalSearch").focusin(function () {
+			doSrch();
+		});
+
+		//청약캘린더 진입 시 로딩바를 먼저 보여주기 위해 추가(2023.09.01 김민우)
+		$(".depth3").find("ul > li > a").bind("click", function(e){
+			var strHref = $(this).attr("href");
+			if(strHref.indexOf("/apply/sc/list.do") > 0){
+				$(".cmmloading").show();
+			}
+		});
+
+		//큰글씨 설정 여부 확인
+		var fsToggleAt = getCookieBigText("fsToggle");
+
+		if(fsToggleAt) {
+			var ceckAt = $("#fsToggle").prop("checked");
+
+			if(ceckAt != true){
+				$("#fsToggle").click();
+			}
+		}
+
+		function doSrch() {
+			var keyword = $("#totalSearch").val();
+
+			if(keyword.length < 2) {
+				return;
+			}
+
+			$.ajax({
+	  			type : "POST",
+	  			datatype : "json",
+	  			async : false,
+	  			data : $('#totalSrchForm').serialize(),
+	  			url : "/lhapply/apply/autoKeyword.do",
+	  			success : function(result){
+	  				var result = JSON.parse(result);
+	  				if(result.resultAt == "N"){
+	  					alert(result.mssage);
+	  				} else {
+	  					$("#srchUl").empty();
+	  					var rsltTxt = "";
+	  					var menuUrl = "";
+
+	  					for(var i=0;i<result.autoMenuList.length;i++) {
+	  						if(result.autoMenuList[i].menuUrl.indexOf("?") > -1){
+	  							menuUrl = result.autoMenuList[i].menuUrl+"&mi="+result.autoMenuList[i].menuId;
+	  						}else{
+	  							menuUrl = result.autoMenuList[i].menuUrl+"?mi="+result.autoMenuList[i].menuId;
+	  						}
+
+	  						if(result.autoMenuList[i].cntntsId != undefined){
+	  							menuUrl += "&cntntsId="+result.autoMenuList[i].cntntsId;
+	  						}
+
+	  						var menuNm = result.autoMenuList[i].menuNm;
+	  						var upperMenuNm = result.autoMenuList[i].upperMenuNm;
+	  						var topMenu = result.autoMenuList[i].topMenu;
+
+	  						rsltTxt += "<li><a href='#auroSrch' onclick='javascript:autoSrch(\""+menuUrl+"\")'>"+topMenu+" > "+upperMenuNm+" > "+menuNm+"</a></li>";
+	  					}
+	  					$("#srchUl").append(rsltTxt);
+	  					if(result.autoMenuList.length > 0) {
+	  						$(".autoKeyWord").show();
+	  					}
+	  				}
+	  			}, error : function(result){
+	  				alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+	  			}
+	  		});
+		}
+	});
+
+	function autoSrch(val) {
+		location.href = val;
+	}
+
+	 //한글 유효성 검사
+	function checkHangul( value )
+	{
+		var re = new RegExp("[\u3130-\u318F\u1100-\u11FF]", "g");
+	    var r = value.match(re);
+	    if(r != null) { // 한글자모가 존재하는 경우
+			return true;
+	    } else {
+			return false;
+	    }
+	}
+
+	/* 
+	function checkKey(sId,aId,ret){
+		  $.ajax({
+				type : "POST",
+				url : "/lhapply/apply/bfh/checkBfhKey.do",
+				data : {
+					key : ret,
+					serviceId : sId,
+	                actionId : aId,
+	                bfhServiceId : bfhServiceId
+				},
+				async : false,
+				success : function(result) {
+					NetFunnel_Complete({});
+					var result = JSON.parse(result);
+					if(result.resultAt != "Y"){
+	                    if(result.redirect != "Y"){                    	
+	                        alert(result.msg);
+	                        rtnCheckKey = "N"; 
+	                    }else{ 
+	                        alert(result.msg);	                        
+	                        location.href="/lhapply/main.do";
+	                    }
+	                }else{
+	                	rtnCheckKey = "Y";
+	                }
+				},
+				error : function(result) {
+					NetFunnel_Complete({});
+					alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+				}
+			});
+
+	} */
+	</script>
+
+	
+
+	
+	<!-- 모바일 NAV -->
+	<div id="mNav">
+		<ul>
+			<li><a href="/lhapply/main.do"><p class="ico home">
+				<svg id="appNavHome" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="75px" height="75px" viewBox="0 0 75 75" enable-background="new 0 0 75 75" xml:space="preserve">
+<polyline fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	12.418,27.793 37.329,14.497 61.918,27.793 "/>
+<polyline fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	18.086,31.939 18.086,59.861 31.918,59.861 31.918,44.261 43.521,44.261 43.521,59.861 56.25,59.861 56.25,31.382 "/>
+</svg>
+
+				<!-- <object type="image/svg+xml" data="/00_common/images/layout/app_nav_home.svg"></object> -->
+			</p><span>홈</span></a></li>
+			<li><a href="/lhapply/apply/main.do?mi=1021"><p class="ico apply">
+				<svg id="appNavApply" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="75px" height="75px" viewBox="0 0 75 75" enable-background="new 0 0 75 75" xml:space="preserve">
+<g>	
+		<polygon fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		18.514,13.425 18.514,60.814 57.504,60.814 57.504,21.75 50.035,13.222 	"/>
+	
+		<polyline fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		57.504,21.75 49.617,21.75 49.617,13.222 	"/>
+</g>
+<g>	
+		<line fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="27.675" y1="30.396" x2="48.343" y2="30.396"/>
+		<line fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="27.675" y1="39.021" x2="48.343" y2="39.021"/>
+		<line fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="27.675" y1="47.646" x2="48.343" y2="47.646"/>
+</g>
+</svg>
+
+				<!-- <object type="image/svg+xml" data="/00_common/images/layout/app_nav_apply.svg"></object> -->
+			</p><span>청약</span></a></li>
+			<li><a href="/lhapply/pre/main.do?mi=1022"><p class="ico pre">
+				<svg id="appNavPre" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="75px" height="75px" viewBox="0 0 75 75" enable-background="new 0 0 75 75" xml:space="preserve">
+<path fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M33.398,15.021c0,0-13.65-0.45-13.65,12.846c0,11.154,0,14.658,0,14.658l-7.157,11.55h43.802L50.38,43.297"/>
+<path fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M40.716,54.928c0,3.439-2.785,6.227-6.224,6.227s-6.226-2.786-6.226-6.227"/>
+<circle fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="49.789" cy="28.917" r="13.264"/>
+<polyline fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	54.953,30.268 48.996,30.268 48.996,24.086 "/>
+</svg>
+				<!-- <object type="image/svg+xml" data="/00_common/images/layout/app_nav_pre.svg"></object> -->
+			</p><span>사전청약</span></a></li>
+			<li><a href="/lhapply/land/main.do?mi=1041"><p class="ico lad">
+				<svg id="appNavLad" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="75px" height="75px" viewBox="0 0 75 75" enable-background="new 0 0 75 75" xml:space="preserve">
+<polyline fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	17.786,58.479 17.786,37.597 30.75,30.686 43.082,37.811 43.082,58.479 58.222,58.479 58.222,15.546 23.796,15.546 23.796,28.511 
+	"/>
+<rect x="31.211" y="22.028" fill="#231815" width="6.546" height="2.454"/>
+<rect x="43.907" y="22.028" fill="#231815" width="6.546" height="2.454"/>
+<rect x="43.907" y="31.028" fill="#231815" width="6.546" height="2.454"/>
+<rect x="43.907" y="40.028" fill="#231815" width="6.546" height="2.454"/>
+<rect x="43.907" y="49.028" fill="#231815" width="6.546" height="2.454"/>
+<polyline fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	26.357,58.479 26.357,50.25 34.479,50.25 34.479,58.479 "/>
+</svg>
+
+				<!-- <object type="image/svg+xml" data="/00_common/images/layout/app_nav_lad.svg"></object> -->
+			</p><span>부동산맵</span></a></li>
+			<li><a href="/lhapply/csvc/myPage.do?mi=1363"><p class="ico my">
+				<svg id="appNavMy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="75px" height="75px" viewBox="0 0 75 75" enable-background="new 0 0 75 75" xml:space="preserve">
+<circle fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="38.004" cy="25.693" r="10.082"/>
+<path fill="none" stroke="#231815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M16.671,58.414c0-9.718,9.546-17.604,21.333-17.604c11.785,0,21.332,7.886,21.332,17.604H16.671z"/>
+</svg>
+
+				<!-- <object type="image/svg+xml" data="/00_common/images/layout/app_nav_my.svg"></object> -->
+			</p><span>MY</span></a></li>
+		</ul>
+	</div>
+	
+	<!-- 컨테이너 -->
+	<div id="container" class="sub_container">
+		
+		
+
+
+
+
+<nav id="lnb">
+<!--START-->
+	
+		<h2>청약</h2>
+			<ul class="lnb_dep1">
+				<li ><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026" ><span>임대주택</span></a>
+					<ul class="lnb_dep2">
+						<li ><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026" ><span>공고문</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1201583&cntntsId=1201331" ><span>임대가이드</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1302&cntntsId=1230" ><span>청약연습하기</span></a></li>
+						<li ><a href="/lhapply/apply/rtho/rtho01.do?mi=1204" ><span>청약신청</span></a></li>
+						<li ><a href="/lhapply/csvc/lshs-sch/inq.do?mi=1353" ><span>임대주택검색</span></a></li>
+						<li ><a href="/lhapply/apply/pr/przwin/selectPzwrBfhPwiAbaList.do?mi=1202002" ><span>사전청약 당첨자 주택형 배정 결과 조회</span></a></li>
+					</ul>
+				</li>
+				<li  class="active"><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1027" ><span>분양주택</span></a>
+					<ul class="lnb_dep2">
+						<li  class="active"><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1027" ><span>공고문</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1178&cntntsId=1048" ><span>분양가이드</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1385&cntntsId=1250" ><span>청약연습하기</span></a></li>
+						<li ><a href="/lhapply/apply/silh/silh01.do?mi=1060" ><span>청약신청</span></a></li>
+						<li ><a href="/lhapply/apply/pr/przwin/selectPzwrBfhPwiAbaList.do?mi=1201942" ><span>사전청약 당첨자 주택형 배정 결과 조회</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=201547&cntntsId=201290" ><span>청약자격확인</span></a></li>
+					</ul>
+				</li>
+				<li ><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1062" ><span>토지</span></a>
+					<ul class="lnb_dep2">
+						<li ><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1062" ><span>공고문</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1186&cntntsId=1054" ><span>분양/임대가이드</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=71381&cntntsId=111249" ><span>청약연습하기</span></a></li>
+						<li ><a href="/lhapply/apply/lad/lad01.do?mi=1066" ><span>청약신청</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1321&cntntsId=1062" ><span>대표자선임계</span></a></li>
+						<li ><a href="/lhapply/apply/gurt/bfhVrfList.do?mi=201422" ><span>보증서 유효성 사전검증</span></a></li>
+					</ul>
+				</li>
+				<li ><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1069" ><span>상가</span></a>
+					<ul class="lnb_dep2">
+						<li ><a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1069" ><span>공고문</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1193&cntntsId=1063" ><span>분양/임대가이드</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=101381&cntntsId=131249" ><span>청약연습하기</span></a></li>
+						<li ><a href="/lhapply/apply/sps/spsPage.do?mi=1073" ><span>청약신청</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1323&cntntsId=1062" ><span>대표자선임계</span></a></li>
+					</ul>
+				</li>
+				<li ><a href="/lhapply/apply/pch/list.do?mi=1076" ><span>주택매도</span></a>
+					<ul class="lnb_dep2">
+						<li ><a href="/lhapply/apply/pch/list.do?mi=1076" ><span>주택매입공고</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1296&cntntsId=1031" ><span>주택매입절차</span></a></li>
+						<li ><a href="/lhapply/cm/cntnts/cntntsView.do?mi=111381&cntntsId=1047" ><span>주택매도연습하기</span></a></li>
+						<li ><a href="/lhapply/apply/pch/pch01.do?mi=1078" ><span>주택매도신청</span></a></li>
+						<li ><a href="/lhapply/apply/pch/rqsList.do?mi=1347" ><span>주택매도신청내역</span></a></li>
+						<li ><a href="/lhapply/apply/pchPgrsStt/listView.do?mi=1201822" ><span>주택매도진행상태(기축)</span></a></li>
+						<li ><a href="/lhapply/apply/pchPgrsStt/hsSllPgrsSsNewArcList.do?mi=1201923" ><span>주택매도진행상태(신축)</span></a></li>
+					</ul>
+				</li>
+				<li ><a href="/lhapply/csvc/my--sbsc-inf/sbsc-rqs-dtls--and--rsl-inq/sbsc-rqs-dtls/inq.do?mi=1246" ><span>청약결과 확인</span></a>
+					<ul class="lnb_dep2">
+						<li ><a href="/lhapply/csvc/my--sbsc-inf/sbsc-rqs-dtls--and--rsl-inq/sbsc-rqs-dtls/inq.do?mi=1246" ><span>청약신청 내역조회</span></a></li>
+						<li ><a href="/lhapply/apply/pr/przwin/selectPrzwinRdList.do?mi=1110" ><span>당첨/낙찰 결과조회</span></a></li>
+						<li ><a href="/lhapply/apply/csvc/ppr/selectPanPprSbmList.do?mi=1249" ><span>서류제출대상자 명단</span></a></li>
+						<li ><a href="/lhapply/apply/pr/przwin/selectPrzwinAnnoRdList.do?mi=1248" ><span>당첨/낙찰자 명단</span></a></li>
+					</ul>
+				</li>
+				<li ><a href="#?mi=1036" ><span>알려드려요</span></a>
+					<ul class="lnb_dep2">
+						<li ><a href="/lhapply/apply/noti/an/list.do?slBbsKdCd=03&mi=1079" ><span>공지사항</span></a></li>
+						<li ><a href="/lhapply/apply/noti/an/list.do?slBbsKdCd=05&mi=1330" ><span>입주안내</span></a></li>
+						<li ><a href="/lhapply/apply/noti/mp/list.do?mi=1331" ><span>입주계획</span></a></li>
+						<li ><a href="/lhapply/apply/noti/an/list.do?slBbsKdCd=02&mi=1080" ><span>자료실</span></a></li>
+						<li ><a href="/lhapply/apply/noti/an/list.do?slBbsKdCd=01&mi=1081" ><span>FAQ</span></a></li>
+						<li ><a href="/lhapply/apply/sc/list.do?mi=1312" ><span>청약캘린더</span></a></li>
+						</ul>
+					</li>
+				</ul>
+	
+	
+	
+	
+<!--END-->
+
+	<!-- 하자보수처리 게시판 추가
+	
+	 -->
+</nav>
+
+		
+		<div id="subCntBody" class="subCntBody">
+			
+			
+
+
+
+
+
+<div class="subHeader">
+	<h2 id="pageTit">공고문</h2>
+</div>
+
+<div class="subLocation">
+	<ul>
+		<li>
+			<a href="/lhapply/main.do">
+				<i class="xi-home" aria-hidden="true"></i><em class="hid">HOME</em>
+			</a>
+		</li>
+		<li>
+			
+				<!-- 청약 -->
+					<a href="/lhapply/apply/main.do?mi=1021" >청약</a>
+				
+				
+				
+				
+			
+			
+		</li>
+
+
+<!-- 		3메뉴가 2단계 까지 있을 경우 1027--1024-11-lhapply-22- -->
+		
+
+<!-- 	MENU==LINKsadad 3 	1024메뉴가 3단계 까지 있을 경우 1024===1024-->
+		
+			<li>
+			
+					
+					
+					
+						<a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1027" >분양주택</a>
+					
+					
+			
+
+			</li>
+			<li>
+			
+				
+					
+					
+					
+						<a href="/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1027" ><strong>공고문</strong></a>
+					
+					
+				
+			
+			
+			
+			</li>
+		
+	</ul>
+	
+	
+		
+	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+		
+	
+	<!-- 2026.08.20 ACNS 점자버튼 추가  -->
+	<div class="braill">
+		<button class="braille_viwer" type="button" title="점자뷰어" onclick="javascript:showDocuBrailleBrfViewer()"><img src="/00_common/images/common/bra_viewer.png" alt="점자뷰어아이콘"><em>점자뷰어</em></button>
+		<button class="braille_sound" type="button" title="점자음성" onclick="javascript:showDocuContentViewer()"><img src="/00_common/images/common/bra_sound.png" alt="점자음성아이콘"><em>점자음성</em></button>
+	</div>
+	<!-- ACNS END -->
+	<!-- sns -->
+	<div class="snsBox">
+		<a href="javascript:void(0);" onclick="goSns('app');" class="btnShare mobCnt" aria-label="모바일 APP 안에서만 기능제공 앱공유"><i class="xi-share-alt" aria-hidden="true"></i><em class="hid">앱공유</em></a> <!-- 앱공유 -->
+		<a href="#snsMore" class="btnShare hashToggle mobHid" title="닫힘"><i class="xi-share-alt" aria-hidden="true"></i><em class="hid">SNS 공유</em></a><!-- PC SNS공유 -->
+		<div class="sns_more" id="snsMore">
+			<a href="javascript:void(0);" onclick="goSns('fbook');" class="snsF" title="새창"><i class="xi-facebook" aria-hidden="true"></i><em class="hid">페이스북 공유</em></a>
+			<a href="javascript:void(0);" onclick="goSns('twt');" class="snsT" title="새창"><i class="xi-twitter" aria-hidden="true"></i><em class="hid">트위터 공유</em></a>
+			<a href="javascript:void(0);" onclick="goSns('blog');" class="snsN" title="새창"><i class="xi-naver" aria-hidden="true"></i><em class="hid">네이버 공유</em></a>
+			<a href="javascript:void(0);" onclick="goSns('kkot');" class="snsK" title="새창"><i class="xi-kakaotalk" aria-hidden="true"></i><em class="hid">카카오톡 공유</em></a>
+<!-- 			<a href="javascript:void(0);" onclick="goSns('twt');" class="snsIn" title="새창"><i class="xi-instagram" aria-hidden="true"></i><em class="hid">인스타그램 공유</em></a> -->
+<!-- 			<a href="#snsMore" class="snsClose hashClose"><i class="xi-close" aria-hidden="true"></i><em class="hid">SNS공유영역 닫기</em></a> -->
+		</div>
+		<button class="btnPrint" type="button" title="인쇄"><i class="xi-print" aria-hidden="true"></i><em class="hid">인쇄</em></button>
+	</div>
+	<!-- //sns -->
+</div>
+
+<script>
+
+var KakaoInitYN = 'N';
+
+//게시물 공유
+function goSns(shareTy){
+	var htmlTitle = 'LH청약플러스';
+	var title = ''; // 메뉴타이틀의 경우 스크립트 추가되어 오류  ;
+	var menuTitle = '공고문';
+	var mi = '1027';
+	var _br2 = encodeURIComponent('\n');
+	var linkUrl = location.href;
+
+	//공고 상세
+	if (linkUrl.indexOf('wrtanc/selectWrtancInfo.do') > -1 || linkUrl.indexOf('bfh/slpa/slpaInfo.do') > -1) {
+		//post 방식일때만 적용
+		if (linkUrl.indexOf('ccrCnntSysDsCd') == -1 ) {
+			linkUrl = linkUrl + '?ccrCnntSysDsCd=' + '02' + '&panId=' + '0000061183' + '&aisTpCd=' + '05' +
+					'&uppAisTpCd=' + '05' + '&mi=' + '1027' +
+					'&panKdCd=' + '' + '&otxtPanId=' + '';
+		}
+	}
+
+	//공사진행현황 상세
+	if (linkUrl.indexOf('land/cwsttInfo.do') > -1 ) {
+		//post 방식일때만 적용
+		if (linkUrl.indexOf('bzdtCd') == -1 ) {
+			linkUrl = linkUrl + '?bzdtCd=' + '' + '&hcBlkCd=' + '' + '&seBzdtNm=' + '' +
+					'&cnpNm=' + '' + '&mi=' + '' + '&bnm=' + '';
+		}
+	}
+
+	//주택매입공고
+	if (linkUrl.indexOf('pch/view.do') > -1 ) {
+		//post 방식일때만 적용
+		if (linkUrl.indexOf('pchPanSn') == -1 ) {
+			linkUrl = linkUrl + '?pchPanSn=' + '' + '&mi=' + '1027';
+		}
+	}
+
+	//알려드려요
+	if (linkUrl.indexOf('an/view.do') > -1 ) {
+		//post 방식일때만 적용
+		if (linkUrl.indexOf('bbsSn') == -1 ) {
+			linkUrl = linkUrl + '?bbsSn=' + '' + '&ccrCnntSysDsCd=' + '02' + '&mi=' + '1027';
+		}
+	}
+
+	console.log(linkUrl);
+
+	if(menuTitle != '메뉴명없음') {
+		title = htmlTitle + ' : ' + menuTitle;
+	} else {
+		title = htmlTitle;
+	}
+
+	title = encodeURIComponent(title);
+
+ 	if(linkUrl.indexOf('#none') > -1){
+ 		linkUrl = linkUrl.replace('#none','');
+ 	}
+
+	if(linkUrl.indexOf('?') > -1) {
+		if(linkUrl.indexOf('mi=') < 0) {
+			linkUrl = linkUrl + '&mi=' +mi;
+		}
+	} else {
+		if(linkUrl.indexOf('mi=') < 0) {
+			linkUrl = linkUrl + '?mi=' +mi;
+		}
+	}
+
+	if(linkUrl.includes('selectNttInfo')){
+		if(linkUrl.indexOf("bbsId=") < 0){
+			linkUrl = linkUrl + "&bbsId=" + document.nttViewForm.bbsId.value;
+		}
+		if(linkUrl.indexOf("nttSn=") < 0){
+			linkUrl = linkUrl + "&nttSn=" + document.nttViewForm.nttSn.value;
+		}
+
+		title = $("#nttViewForm h3:eq(0)").text();
+
+		if(title == "") {
+			title = document.title;
+		}
+	}
+
+	if(linkUrl.includes('insert') || linkUrl.includes('update')){
+		alert("공유가 불가능한 페이지입니다.");
+		return false;
+	}
+
+	linkUrl = encodeURIComponent(linkUrl);
+	var linkUrlBase64 = btoa(linkUrl); //base64로 인코딩
+
+	if(shareTy == "fbook") {
+		window.open('https://www.facebook.com/sharer/sharer.php?u='+ linkUrl, 'facebook', 'width=626,height=436');
+	} else if(shareTy == "twt") {
+		window.open('https://twitter.com/intent/tweet?url='+ linkUrl + '&text=' + title, 'twitter', 'width=626,height=436');
+	} else if(shareTy == "kkot") {
+
+			if(KakaoInitYN == 'N'){
+				/*kakao developer에 어플리케이션 등록 후 키 변경  필요*/
+				Kakao.init('4a7ff4a19a944ff102ed7d4e7e16fc9b'); //운영
+// 				Kakao.init('8ee797c4e7483812fe78d2d476487fb2'); //개발
+ 				KakaoInitYN = 'Y';
+			}
+
+			var description = '#LH청약플러스 #'+ 'LH청약플러스';
+
+			linkUrl = decodeURIComponent(linkUrl);
+
+			if(!linkUrl.includes('selectNttInfo')){
+				title = decodeURIComponent(title);
+			}
+
+			Kakao.Share.sendDefault({
+				objectType: 'feed',
+				content: {
+					title: title, //제목
+					description: description, // 로고 title 값(sysNM), 설명
+					imageUrl: location.origin+'/00_common/images/common/logo.png', //이미지URL
+					link: {
+						mobileWebUrl: linkUrl, //공유할 URL
+						webUrl: linkUrl //공유할 URL
+					}
+				},
+				buttons: [
+				  	{
+				  		title: '자세히보기',
+				  		link: {
+				  			mobileWebUrl: linkUrl,
+				  			webUrl: linkUrl
+				  		}
+				  	}
+				 ]
+		    });
+
+	} else if(shareTy == "kkots") {
+		window.open('https://story.kakao.com/s/share?url='+ linkUrl + '&text=' + title, 'kakaostory', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');
+	} else if(shareTy == "band") {
+		window.open('http://band.us/plugin/share?body='+ title + _br2 + linkUrl + '&route=' + linkUrl, 'band', 'width=410, height=540, resizable=no');
+	} else if(shareTy == "blog") {
+		linEncode = encodeURI(linkUrl);
+		titEncode = encodeURI(decodeURIComponent(title));
+		window.open('https://share.naver.com/web/shareView?url='+ linEncode + '&title='+titEncode, 'blog', 'width=410, height=540, resizable=no');
+	} else if(shareTy == "app") {
+		location.href = "lhapply://share?title="+title+"&content=&link="+linkUrlBase64;
+	}
+}
+</script>
+			
+			
+			<div id="sub_container">
+			<!-- 서브컨텐츠 -->
+				
+					
+				
+				
+
+
+
+
+
+
+
+
+
+
+	<script>
+
+		window.onload=function(){
+
+			//NetFunnel_Complete({});
+			nfStop({
+				projectKey : "service_1",
+				segmentKey : "act_11"
+			});
+
+			var sNetbgn = "";
+			var panId = '0000061183';
+
+			//공고리스트 에서 선택해서 넘어옴(이미 넷퍼넬 적용받음)
+			if(sNetbgn == "prwrt"){
+
+				//***** 당첨, 예비자조회
+				selectPrzwin(panId);
+
+			}else{
+
+				//*** 넷퍼넬
+		    	nfStart({
+					projectKey : "service_1",   // project_key
+					segmentKey : "act_11"  		// segment_key
+					}, function(response) {
+
+						if(response.status == 'Success'){
+
+							//***** 당첨, 예비자조회
+							selectPrzwin(panId);
+
+						}else{
+
+							var sNetfMsg = "";
+
+							if(response.status == 'Close'){
+								sNetfMsg = "대기를 취소하였습니다.";
+
+								//KB조회
+								
+
+								$("#wrtancViewForm").attr('action', "/lhapply/apply/wt/wrtanc/selectWrtancList.do").submit();
+
+							}else if(response.status == 'Error'){
+								sNetfMsg = "오류가 발생하였습니다.";
+
+								//KB조회
+								
+
+								$("#wrtancViewForm").attr('action', "/lhapply/apply/wt/wrtanc/selectWrtancList.do").submit();
+							}else if(response.status == 'NetworkError'){
+								sNetfMsg = "네트워크 요청을 실패하였습니다.";
+							}else if(response.status == 'Block'){
+								sNetfMsg = "진입이 차단된 페이지입니다.";
+							}else if(response.status == 'IpBlock'){
+								sNetfMsg = "반복된 요청으로 차단되었습니다.";
+							}else{
+								sNetfMsg = "오류가 발생하였습니다.\n관리자에게 문의하세요. "+response.status + "[" + response.statusCode + "]" ;
+							}
+
+							//alert(sNetfMsg);
+						}
+
+				});
+
+				/*
+				NetFunnel.TS_SERVICE_ID	= "service_1";
+				NetFunnel.TS_ACTION_ID	= "act_11";
+
+				NetFunnel_Action({},{
+
+					success:function(ev,ret){
+						// 당첨, 예비자조회
+						selectPrzwin(panId);
+					},
+					stop:function(ev,ret){
+
+						//KB조회
+						
+
+						$("#wrtancViewForm").attr('action', "/lhapply/apply/wt/wrtanc/selectWrtancList.do").submit();
+
+					},
+					error:function(ev,ret){
+
+						//KB조회
+						
+
+						$("#wrtancViewForm").attr('action', "/lhapply/apply/wt/wrtanc/selectWrtancList.do").submit();
+					}
+
+				});
+
+				*/
+
+
+
+
+
+
+
+			}
+
+
+
+		};
+	</script>
+
+	<form name="wrtancViewForm" id="wrtancViewForm" method="post">
+		<input type="hidden" name="mi" value="1027">
+		<input type="hidden" name="listCo" value="">
+		<input type="hidden" name="aisTpCd" value="05">
+		<input type="hidden" name="srchAisTpCd" value="">
+		<input type="hidden" name="srchUppAisTpCd" value="">
+		<input type="hidden" name="uppAisTpCd" id="uppAisTpCd" value="05">
+		<input type="hidden" name="startDt" value="">
+		<input type="hidden" name="endDt" value="">
+		<input type="hidden" name="currPage" value="">
+		<input type="hidden" name="panNm" value="">
+		<input type="hidden" name="mvinQf" value="">
+		<input type="hidden" name="schTy" value="">
+		<input type="hidden" name="cnpCd" value="">
+		<input type="hidden" name="panSs" value="">
+		<input type="hidden" name="viewType" value="">
+		<input type="hidden" name="ccrCnntSysDsCd" id="ccrCnntSysDsCd" value="02">
+		<input type="hidden" name="panKdCd" id="panKdCd" value="">
+		<input type="hidden" name="panId" id="panId" value="0000061183">
+		<input type="hidden" name="otxtPanId" id="otxtPanId" value="">
+	</form>
+
+	<script>
+		function goList(){
+			var chkOs = getCookie("d");
+			if("ios" ==chkOs) {
+				$("#wrtancViewForm").attr('method', 'get');
+			}
+
+			$("#wrtancViewForm").attr('action', "/lhapply/apply/wt/wrtanc/selectWrtancList.do").submit();
+		}
+	</script>
+
+	<section>
+		<div class="infoUtil">
+			
+			<div>
+				<!-- 비활성화 -->
+				<!-- <a href="" class="btn_grL mini dis">입주안내</a>
+				<a href="" class="btn_grn mini dis">당첨자조회</a> -->
+				<!-- 활성화 -->
+<!-- 				<a href="/lhapply/apply/noti/an/list.do?mi=1330&slBbsKdCd=05" class="btn_grL mini">입주안내</a> -->
+				<a href="javascript:goPrzDetail('1');" class="btn_bl3 mini" id="conf" style="display:none;">당첨자조회 <i class="xi-search" aria-hidden="true"></i></a>
+				<a href="javascript:goPrzDetail('2');" class="btn_bl3 mini" id="resrv" style="display:none;">예비자조회 <i class="xi-search" aria-hidden="true"></i></a>
+			</div>
+			
+			<!-- 공고이력조회 or 정정공고 or 취소공고 버튼-->
+			<div class="btn">
+				<a href="javascript:GoHistory();" class="btn_bl2 mini" id="slpaHistory" style="display:none;" title="새창이동">공고이력조회 <i class="xi-arrow-right" aria-hidden="true"></i></a>
+				<a href="javascript:GoCrc();" class="btn_red mini" id="btn_goGrc1" style="display:none;">정정공고 바로가기 <i class="xi-arrow-right" aria-hidden="true"></i></a>
+				<a href="javascript:GoCrc();" class="btn_red mini" id="btn_goGrc2" style="display:none;">취소공고 바로가기 <i class="xi-arrow-right" aria-hidden="true"></i></a>
+				
+				<a href="javascript:goList();" class="btn_bl1 mini">목록</a>
+				
+			</div>
+		</div>
+
+		<!-- <div class="tit_util">
+			<div class="util">
+				<a href="#popInnmvl" class="btn_bl1 mini hash"><i class="xi-info-o" aria-hidden="true"></i> 소득계산방법</a>
+			</div>
+		</div> -->
+
+		<div class="bbs_ViewA">
+			<h3>[정정공고]인천가정2 B2블록 공공분양 잔여세대 추가 입주자모집공고</h3>
+
+ 			<!-- 정정공고 or 취소공고 -->
+			<ul id="goGrcUl" class="bbsV_data" style="display:none;">
+				<li><strong>유의사항</strong><span class="pc_red" id="panAttnFcts">본 공고문에 대한 정정 공고문이 있습니다. 정정공고바로가기 버튼을 눌러 확인하여 주시기 바랍니다.</span></li>
+			</ul>
+
+			<!-- 게시글 정보 -->
+			<ul class="bbsV_data">
+				<li><strong>공고상태</strong><span class="pc_navy">접수중</span></li>
+				
+					<li><strong>공고일</strong>2026.09.23 </li>
+					<li><strong>마감일</strong>2026.10.07 </li>
+					<li><strong>유형</strong>분양주택 </li>
+					<li><strong>담당부서</strong>인천지역본부 </li>
+					<li><strong>문의처</strong>1600-1004 </li>
+				
+				
+			</ul>
+
+			<!-- 첨부파일 -->
+			<div class="bbsV_atchmnfl">
+				<dl  class="col_red" >
+					<dt class="pc_red">공고문</dt>
+					<dd>
+						<ul class="bbsV_link file">
+							
+
+								<!-- 특정공고 바로보기 삭제 -->
+								
+
+								
+									<li><a href="javascript:fileDownLoad('68804502');">(정정)인천가정2B2블록잔여세대추가입주자모집공고문.hwpx</a><a href="javascript:void(0);" onclick="docViewer('P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58uCdrqn1khnB74pppI%2Bf3QLS3zM8AGUzCAZHd5HfMaTMw%3D%3D', 'CPJ6D31qg2gHwtbx4MbXPImHOes65yij15N%2BU0Iq9L9L9sGN09WQ7OOR3nt%2B78264UsIAkk40uJo5roorW36%2FIMSCvctHioylXk9roELeyA%3D', 'PIPeIqgT7BKGTIVSgYeaZw%3D%3D');" class="btn_grL preview pdf" title="새창이동">바로보기</a>
+									<!-- 2026.08.11 ACNS 점자버튼 추가 -->
+									<a href="javascript:void(0);" onclick="javascript:viewAttachFileBraille( 'P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58uCdrqn1khnB74pppI%2Bf3QLS3zM8AGUzCAZHd5HfMaTMw%3D%3D', '(정정)인천가정2B2블록잔여세대추가입주자모집공고문.hwpx' );" class="btn_grL preview pdf" title="점자뷰어">점자뷰어</a>
+									<a href="javascript:void(0);" onclick="javascript:viewAttachFileBraille4Speech( 'P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58uCdrqn1khnB74pppI%2Bf3QLS3zM8AGUzCAZHd5HfMaTMw%3D%3D', '(정정)인천가정2B2블록잔여세대추가입주자모집공고문.hwpx' );" class="btn_grL preview pdf" title="점자음성">점자음성</a>
+									<!-- ACNS END -->
+									</li>
+								
+
+							
+
+								<!-- 특정공고 바로보기 삭제 -->
+								
+
+								
+									<li><a href="javascript:fileDownLoad('68804506');">(정정)인천가정2B2블록잔여세대추가입주자모집공고문.pdf</a><a href="javascript:void(0);" onclick="docViewer('P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58uCdrqn1khnB74pppI%2Bf3QLq%2FbSxCL%2BGRcpelu8JPzgbw%3D%3D', 'CPJ6D31qg2gHwtbx4MbXPImHOes65yij15N%2BU0Iq9L9L9sGN09WQ7OOR3nt%2B78264UsIAkk40uJo5roorW36%2FFWC8txG6hZbdSlL%2BSu4PB4%3D', 'fmTeTHgEYAY6Q6iY9%2FtApA%3D%3D');" class="btn_grL preview pdf" title="새창이동">바로보기</a>
+									<!-- 2026.08.11 ACNS 점자버튼 추가 -->
+									<a href="javascript:void(0);" onclick="javascript:viewAttachFileBraille( 'P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58uCdrqn1khnB74pppI%2Bf3QLq%2FbSxCL%2BGRcpelu8JPzgbw%3D%3D', '(정정)인천가정2B2블록잔여세대추가입주자모집공고문.pdf' );" class="btn_grL preview pdf" title="점자뷰어">점자뷰어</a>
+									<a href="javascript:void(0);" onclick="javascript:viewAttachFileBraille4Speech( 'P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58uCdrqn1khnB74pppI%2Bf3QLq%2FbSxCL%2BGRcpelu8JPzgbw%3D%3D', '(정정)인천가정2B2블록잔여세대추가입주자모집공고문.pdf' );" class="btn_grL preview pdf" title="점자음성">점자음성</a>
+									<!-- ACNS END -->
+									</li>
+								
+
+							
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>다운로드</dt>
+					<dd>
+						<ul class="bbsV_link file">
+							
+								<li><a href="javascript:fileDownLoad('68804520');">인천가정2B2블록공공분양팸플릿.pdf</a><a href="javascript:void(0);" onclick="docViewer('P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58v2k%2B2lBTDC0nOShkL55CDGiq9WcHXjQxmdQvoQtgvjag%3D%3D', '1qvsha6qEQHLXos7O05OKJudvBQoiXz%2F%2Btxv%2BcPwrJL5ymOaZXhE7KQ7znBCyD02', 'fmTeTHgEYAY6Q6iY9%2FtApA%3D%3D');" class="btn_grL preview pdf" title="새창이동">바로보기</a>
+								<!-- 2026.08.11 ACNS 점자버튼 추가 -->
+								<a href="javascript:void(0);" onclick="javascript:viewAttachFileBraille( 'P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58v2k%2B2lBTDC0nOShkL55CDGiq9WcHXjQxmdQvoQtgvjag%3D%3D', '인천가정2B2블록공공분양팸플릿.pdf' );" class="btn_grL preview pdf" title="점자뷰어">점자뷰어</a>
+								</li>
+							
+							
+								<li><a href="javascript:fileDownLoad('68804534');">1.위임장.hwpx</a><a href="javascript:void(0);" onclick="docViewer('P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58tK41BiZezj7KqLeoqfRokJe8cAPP8GRhil7ycQtqidtw%3D%3D', '2%2FlH3Ty7uRMB8WqbtJpn15ix0RIBSVazMip81%2BdTFYw%3D', 'PIPeIqgT7BKGTIVSgYeaZw%3D%3D');" class="btn_grL preview pdf" title="새창이동">바로보기</a>
+								<!-- 2026.08.11 ACNS 점자버튼 추가 -->
+								<a href="javascript:void(0);" onclick="javascript:viewAttachFileBraille( 'P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58tK41BiZezj7KqLeoqfRokJe8cAPP8GRhil7ycQtqidtw%3D%3D', '1.위임장.hwpx' );" class="btn_grL preview pdf" title="점자뷰어">점자뷰어</a>
+								</li>
+							
+								<li><a href="javascript:fileDownLoad('68804536');">2.개인정보수집이용및제3자제공동의서.hwpx</a><a href="javascript:void(0);" onclick="docViewer('P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58tK41BiZezj7KqLeoqfRokJgzmlaQ4TF4ZF8MqeINXyJA%3D%3D', 'ijvxagusrbJC3YcVJtxqSCeTQemW5aUEDUTS3iX3lVJaX6vlauAy0r9yP%2Bcgq1CKmIfz5V2yhZwoP3FWyvEKAg%3D%3D', 'PIPeIqgT7BKGTIVSgYeaZw%3D%3D');" class="btn_grL preview pdf" title="새창이동">바로보기</a>
+								<!-- 2026.08.11 ACNS 점자버튼 추가 -->
+								<a href="javascript:void(0);" onclick="javascript:viewAttachFileBraille( 'P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58tK41BiZezj7KqLeoqfRokJgzmlaQ4TF4ZF8MqeINXyJA%3D%3D', '2.개인정보수집이용및제3자제공동의서.hwpx' );" class="btn_grL preview pdf" title="점자뷰어">점자뷰어</a>
+								</li>
+							
+								<li><a href="javascript:fileDownLoad('68804529');">인천가정2B2블록잔여세대배치도.pdf</a><a href="javascript:void(0);" onclick="docViewer('P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58v2k%2B2lBTDC0nOShkL55CDG3AOnXIAejKXhK68MhAnQ%2FQ%3D%3D', '1qvsha6qEQHLXos7O05OKDLcBi2LkJQUiB2CmyHCXI2jPVgWZVZPoYuI%2FfN9z2ak', 'fmTeTHgEYAY6Q6iY9%2FtApA%3D%3D');" class="btn_grL preview pdf" title="새창이동">바로보기</a>
+								<!-- 2026.08.11 ACNS 점자버튼 추가 -->
+								<a href="javascript:void(0);" onclick="javascript:viewAttachFileBraille( 'P6YXl5MgPcH6JL4EFvwz%2F%2FDArWWoC9xu1OGc82hl58v2k%2B2lBTDC0nOShkL55CDG3AOnXIAejKXhK68MhAnQ%2FQ%3D%3D', '인천가정2B2블록잔여세대배치도.pdf' );" class="btn_grL preview pdf" title="점자뷰어">점자뷰어</a>
+								</li>
+							
+						</ul>
+					</dd>
+				</dl>
+				<dl class="wtViewer">
+					<dt>문서뷰어다운로드</dt>
+					<dd>
+						<p class="viewerIco">
+							<a href="https://www.hancom.com/cs_center/csDownload.do" class="btn_grL mini icoHwp" target="_blank" title="새창">한컴오피스 뷰어 <i class="xi-download" aria-hidden="true"></i></a>
+							<a href="https://acrobat.adobe.com/kr/ko/products/pdf-reader.html" class="btn_grL mini icoPdf" target="_blank" title="새창">Acrobat Reader <i class="xi-download" aria-hidden="true"></i></a>
+<!-- 							<a href="/lhapply/apply/noti/an/view.do?slBbsKdCd=02&mi=1080&bbsSn=5000015380&ccrCnntSysDsCd=01" class="btn_grL mini icoCad" target="_blank" title="새창">AutoCAD <i class="xi-download" aria-hidden="true"></i></a> -->
+							<button type="button" class="btn_grL mini icoCad" onclick="cadDownLoad()" title="새창">DWG 뷰어 <i class="xi-download" aria-hidden="true"></i></button>
+						</p>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- 내용 -->
+		    <!-- 광양창덕에버빌2 85이하(일반1,2순위) 지역우선공급 테스트 공고 - 공고내용 영역 삭제 요청 20230803  -->
+			
+			<div class="bbsV_cont">
+				<dl>
+					<dt>공고내용</dt>
+					<dd>
+						
+						
+							<pre>※정정사항 : 입주자모집공고문
+
+■ 입주자모집공고문
+- 6페이지 : 74A 선택품목 상 18번(월패드 13인치)의 계약금, 1차 중도금 ~ 3차 중도금, 잔금 변경
+(당초) 계약금 68천원, 1차 중도금 ~ 3차 중도금 136천원, 잔금 203천원
+(변경) 계약금 24천원, 1차 중도금 ~ 3차 중도금 49천원, 잔금 73천원
+----------------------------------------------------------------
+■ 공급위치 : 인천광역시 서해구 가정동, 청라동 일원 인천가정2 공공주택지구 내 B2블록
+
+■ 공급대상 : 공공분양주택 308세대 중 252세대 (전용 74㎡ 18세대, 전용 84㎡ 234세대)
+                                          
+■ 이 주택의 입주자모집공고일은 2026.09.23.(수)이며, 이는 청약자격(청약신청, 자격조건의 기간, 나이, 세대구성원, 주택소유 등)의 판단기준일이 됩니다.
+
+■ 신청접수 시 신청자격을 검증하지 않고 신청자의 입력(기재)사항만으로 당첨자를 결정하므로 공고문의 공급유형별 신청자격(주택 등)을 사전에 반드시 확인하시기 바랍니다.
+
+■  인터넷 청약을 원칙으로 하오니, 인터넷 청약을 위하여 신청접수일전에 인증서(공동인증서, 네이버인증서,  금융인증서, 토스인증서, KB금융인증서 중 택1)를 미리 발급 받으시기 바라며, 공급구분별 신청접수일이 다르므로 반드시 해당 접수일에  LH 청약플러스(apply.lh.or.kr) 에서 청약신청하시기 바랍니다.
+
+■  기타 자세한 사항은 입주자모집공고문, 팸플릿, 사이버 모델하우스를 확인하시기 바랍니다.
+
+■  사이버모델하우스 : https://hanaro.lh.or.kr/g2b2</pre>
+						
+					</dd>
+				</dl>
+			</div>
+			
+		</div>
+	</section>
+
+	
+		
+			<section>
+				<h3 class="tit1">공급정보</h3>
+				
+				
+					
+					
+						
+
+
+
+
+	
+		<div id="wrtancSbdTab0"  class="aplyEl">
+			<div class="tit_util">
+				<h4 class="tit2">인천가정2 B2</h4>
+				<div class="util">
+					
+						
+							
+								<a href="https://hanaro.lh.or.kr/g2b2" class="btn_bl3 mini" target="_blank" title="새 창 열림">사이버모델하우스 <i class="xi-angle-right" aria-hidden="true"></i></a>
+							
+							
+						
+					
+					<!-- <a href="/lhapply/land/main.do?mi=1040" class="btn_gr mini" target="_blank" title="새 창 열림">매물정보조회 <i class="xi-angle-right" aria-hidden="true"></i></a> -->
+
+				</div>
+			</div>
+			<div class="box_st4">
+				<div class="inner">
+					<ul class="list_st1 li_w25">
+						<li class="w100">소재지 : 인천광역시 서해구 가정동 인천가정2  공동지구내 B2블록</li> <!-- TO-BE -->
+						<li>전용면적(㎡) : 74.95 ~ 84.99</li>
+						<li>총 세대수 : 308</li>
+						<li>난방방식 : 지역난방</li>
+						<li>입주예정일 : 2028년 07월</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 지도보기 팝업 파라미터 -->
+			<form name="openGisForm_0" id="openGisForm_0" method="post">
+				<input type="hidden" name="panId" id="panId" value="0000061183"> <!-- 공고문 ID -->
+				<input type="hidden" name="ccrCnntSysDsCd" id="ccrCnntSysDsCd" value="02"> <!-- 시스템구분코드 -->
+				<input type="hidden" name="srchUppAisTpCd" value=""> <!-- 공급유형코드 -->
+				<input type="hidden" name="aisInfSn" value="304627"> <!-- 매물정보일련번호 -->
+				<input type="hidden" name="bzdtCd" value="105083"> <!-- 사업지구코드 -->
+				<input type="hidden" name="hcBlkCd" value="04"> <!-- 주택건설블록코드 -->
+			</form>
+
+			<script>
+				function goGis0(){
+					var pop_title = "지도보기";
+
+					var popupWidth = 1200;
+					var popupHeight = 800;
+					var popupX = (window.screen.width / 2) - (popupWidth / 2);
+					var popupY= (window.screen.height / 2) - (popupHeight / 2);
+
+					// 듀얼모니터의 경우 팝업창이 화면 좌측에 붙어서 좌측 화면 사이즈 추가
+					popupX += window.screenLeft;
+					var option = "width=" + popupWidth + ", height=" + popupHeight + ", left=" + popupX + ", top=" + popupY;
+
+					window.open("", pop_title, option);
+					var frmData = document.getElementById("openGisForm_0");
+					frmData.target = pop_title;
+					frmData.action = "/lhapply/land/mapPop.do";
+					frmData.submit();
+				}
+			</script>
+
+			<h4 class="tit2">단지 관련 이미지 정보</h4>
+			<div class="infoUtil imgInfo0">
+				<p class="info" id="imgInfoPtag0">다운로드 버튼을 클릭하여 이미지 파일 다운로드가 가능합니다.</p>
+				<p class="btn" id="imgFileDown0">
+					<a href="javascript:fileDownLoad2();" class="btn_bl2 mini">다운로드 <i class="xi-download" aria-hidden="true"></i></a>
+				</p>
+			</div>
+
+			
+				<div class="tab_st03_1 tabDom Tab_w20">
+					<ul>
+						
+							
+							
+								
+									<li id="tabPlanli00"class="on"><a href="javascript:onchangeImageTab('0','0');" id="tabPlanA00"class="select">토지이용계획도</a></li>
+								
+									<li id="tabPlanli01"><a href="javascript:onchangeImageTab('0','1');" id="tabPlanA01">단지배치도</a></li>
+								
+									<li id="tabPlanli02"><a href="javascript:onchangeImageTab('0','2');" id="tabPlanA02">지역위치도</a></li>
+								
+									<li id="tabPlanli03"><a href="javascript:onchangeImageTab('0','3');" id="tabPlanA03">단지조감도</a></li>
+								
+									<li id="tabPlanli04"><a href="javascript:onchangeImageTab('0','4');" id="tabPlanA04">동호배치도</a></li>
+								
+							
+						
+					</ul>
+				</div>
+			
+			<!-- 이미지영역 -->
+			<div class="box_st3 ac" id="wrtancImageContainer_0" >
+				<p class="rsp_img"><img src="" id="image_0" alt="" onerror="this.alt='이미지가 없습니다'; this.src='/00_common/images/con_com/noimg.png'"></p>
+				<label id="imageLb_0"></label>
+			</div>
+			<!-- 평면도이미지 -->
+
+
+<!-- 				<a href="" class="planImgToggle">펼쳐보기</a> -->
+<!-- 				<div class="list"> -->
+
+<!-- 						<dlv class="item"> -->
+
+
+<!-- 							<p class="btn"> -->
+
+
+
+<!-- 								<a href="#popPlanVideo" class="btn_bl2 hash videoView" aria-controls="/images/web/lhapply/sub/video_a1_51a.mp4">동영상보기</a> -->
+<!-- 							</p> -->
+<!-- 						</dlv> -->
+
+<!-- 				</div> -->
+<!-- 			</div> -->
+
+			<!-- 평면도 + 투시도 + 동영상 -->
+			
+			<p class="bu_atte">상기 이미지는 소비자의 이해를 돕기 위해 제작된 것으로 실제와 다를 수 있습니다.</p>
+			<div class="tit_util">
+				<h4 class="tit2">단지 관련 위치 정보</h4>
+				<div class="util">
+					
+
+					
+				</div>
+			</div>
+			<!-- 지도영역 -->
+			<div class="box_st3 ac" id="wrtancMapContainer_0">
+				
+					
+						<script>
+							var lat_0 = "37.5357383"; //X좌표 37.5357383
+							var lng_0 = "126.6680565"; //Y좌표 126.6680565
+
+							$(".tabDom li#tabli0>a").on("click", function(){
+								window.setTimeout(function() {
+									map_0.setSize(new naver.maps.Size($("#wrtancMapContainer_0").width() - 1, $("#wrtancMapContainer_0").height() - 1));
+
+								    map_0.setCenter( new naver.maps.LatLng(lat_0, lng_0) );
+
+								    infowindow_0.close();
+								    infowindow_0.open(map_0, marker_0);
+
+								    $("#wrtancMapContainer_0").css("height", "500px");
+								    $("#wrtancMapContainer_0").css("width", $("#sub_container").width());
+								}, 10);
+							});
+
+							$("#wrtancMapContainer_0").css("height", "500px");
+
+							var coord_0 = new naver.maps.LatLng(lat_0, lng_0),
+						    map_0 = new naver.maps.Map('wrtancMapContainer_0', { // 지도를 표시할 div
+						        center: coord_0, // 지도의 중심좌표
+						        zoom: 15
+						    }),
+						    marker_0 = new naver.maps.Marker({ // 마커를 생성합니다
+						        map: map_0, // 마커가 지도 위에 표시되도록 설정합니다
+						        position: coord_0 // 마커가 표시될 위치입니다
+						    });
+
+						    var contentString_0 = '<div style=\"padding:5px; white-space:nowrap\">인천광역시 서해구 가정동 인천가정2  공동지구내 B2블록</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+
+						    var infowindow_0 = new naver.maps.InfoWindow({ // 인포윈도우를 생성합니다
+						        content: contentString_0
+						    });
+
+						    infowindow_0.open(map_0, marker_0); // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+						</script>
+					
+					
+				
+			</div>
+
+			<h4 class="tit2">단지 특장점</h4>
+			<div class="tbl_st tbl_rsp">
+				<table>
+					<caption>단지 특장점 : 교통여건, 교육환경, 편의시설, 부대시설에 대한 정보를 제공합니다</caption>
+					<colgroup>
+						<col style="width:25%">
+						<col style="width:auto">
+					</colgroup>
+					<tbody>
+						
+							<tr>
+								<th>교통여건</th>
+								<td class="al">공고문 및 팸플릿 확인</td>
+							</tr>
+						
+						
+							<tr>
+								<th>교육환경</th>
+								<td class="al">공고문 및 팸플릿 확인</td>
+							</tr>
+						
+						
+							<tr>
+								<th>편의시설</th>
+								<td class="al">공고문 및 팸플릿 확인</td>
+							</tr>
+						
+						
+							<tr>
+								<th>부대시설</th>
+								<td class="al">공고문 및 팸플릿 확인</td>
+							</tr>
+						
+					</tbody>
+				</table>
+			</div>
+			
+				<div class="tit_util">
+					<h4 class="tit2">주택형 안내(공공분양)</h4>
+				 	<div class="util">
+						<a href="#popApplyHome" class="btn_gr mini hash">청약자격 사전확인 바로가기 <i class="xi-angle-right" aria-hidden="true"></i></a>
+						<a href="javascript:GoCrc();" class="btn_red mini" id="btn_goGrc30" style="display:none;">정정공고 바로가기 <i class="xi-angle-right" aria-hidden="true"></i></a>
+						<a href="javascript:GoCrc();" class="btn_red mini" id="btn_goGrc40" style="display:none;">취소공고 바로가기 <i class="xi-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="tbl_st tbl_rsp tyCross tymBtn">
+					<table>
+						<caption>주택형 안내 : 주택형, 전용면적(㎡), 세대수, 금회공급 세대수, 평균분양가격(원), 인터넷청약, 주택형안내에 대한 정보를 제공합니다</caption>
+						<colgroup>
+							<col style="width:auto" span="5">
+							<col style="width:145px" span="2">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>주택형</th>
+								<th>전용면적(㎡)</th>
+								<th>세대수</th>
+								<th>금회공급 세대수</th>
+								<th>평균분양가격(원)</th>
+								<th>인터넷청약</th>
+								<th>주택형안내</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+								<tr>
+									<th class="pc_red">74.9500A</th>
+									<td>74.95</td>
+									<td>41</td>
+									<td>18</td>
+									<td class="amt">549,777,000</td>
+									
+										<td class="mBtn"><a href="javascript:goSbsc('02','304627','0000061183','105083','인천가정2 (B2)','04','02','01','74.9500A','74.95', '0', '05');" class="btn_red mini">청약신청하기 <i class="xi-angle-right" aria-hidden="true"></i></a></td>
+									
+									
+									<td class="mBtn"><a href="javascript:GoHtyInfo('02','304627','0000061183','105083','04','01','74.95', '0', '05');" class="btn_bl1 mini" title="새창">상세보기 <i class="xi-angle-right" aria-hidden="true"></i></a></td>
+								</tr>
+							
+								<tr>
+									<th class="pc_red">84.0000A</th>
+									<td>84.53</td>
+									<td>187</td>
+									<td>154</td>
+									<td class="amt">613,425,000</td>
+									
+										<td class="mBtn"><a href="javascript:goSbsc('02','304627','0000061183','105083','인천가정2 (B2)','04','02','02','84.0000A','84.53', '1', '05');" class="btn_red mini">청약신청하기 <i class="xi-angle-right" aria-hidden="true"></i></a></td>
+									
+									
+									<td class="mBtn"><a href="javascript:GoHtyInfo('02','304627','0000061183','105083','04','02','84.53', '1', '05');" class="btn_bl1 mini" title="새창">상세보기 <i class="xi-angle-right" aria-hidden="true"></i></a></td>
+								</tr>
+							
+								<tr>
+									<th class="pc_red">84.0000B</th>
+									<td>84.59</td>
+									<td>58</td>
+									<td>58</td>
+									<td class="amt">612,884,000</td>
+									
+										<td class="mBtn"><a href="javascript:goSbsc('02','304627','0000061183','105083','인천가정2 (B2)','04','02','03','84.0000B','84.59', '2', '05');" class="btn_red mini">청약신청하기 <i class="xi-angle-right" aria-hidden="true"></i></a></td>
+									
+									
+									<td class="mBtn"><a href="javascript:GoHtyInfo('02','304627','0000061183','105083','04','03','84.59', '2', '05');" class="btn_bl1 mini" title="새창">상세보기 <i class="xi-angle-right" aria-hidden="true"></i></a></td>
+								</tr>
+							
+								<tr>
+									<th class="pc_red">84.9800C</th>
+									<td>84.98</td>
+									<td>22</td>
+									<td>22</td>
+									<td class="amt">622,521,000</td>
+									
+										<td class="mBtn"><a href="javascript:goSbsc('02','304627','0000061183','105083','인천가정2 (B2)','04','02','04','84.9800C','84.98', '3', '05');" class="btn_red mini">청약신청하기 <i class="xi-angle-right" aria-hidden="true"></i></a></td>
+									
+									
+									<td class="mBtn"><a href="javascript:GoHtyInfo('02','304627','0000061183','105083','04','04','84.98', '3', '05');" class="btn_bl1 mini" title="새창">상세보기 <i class="xi-angle-right" aria-hidden="true"></i></a></td>
+								</tr>
+							
+							
+						</tbody>
+					</table>
+				</div>
+			
+
+			
+
+
+			
+
+			
+
+			<div class="box_gr">
+				<p class="bu_wnrn">안내사항</p>
+				<ul class="list_st3">
+					<!-- 사전청약일정이 있을 경우 -->
+					<pre id="Tab05_02_bfhInfo" style="display:none;">
+						<font style="color: red; font-weight: bold;">※ 사전청약당첨자의 경우 사전청약으로 당첨된 주택형을 기준으로 임의로 1개의 주택형을 선택한 후, 다음 단계에서 본인의 주택형 선호 순위를 입력합니다.
+							　(예시) 사전청약 당시 59형에 당첨된 경우, 59.0000Aㆍ59.0000Bㆍ59.0000C 등 임의로 1개 선택 후, 다음 단계에서 선호 순위 입력
+						</font>
+					</pre>
+					<!-- 기본 안내 사항 -->
+					<pre> </pre>
+				</ul>
+			</div>
+		</div>
+	
+					
+				
+			</section>
+		
+
+	<section>
+	<h3 class="tit1">공급일정 </h3>
+		
+		
+			
+			
+				<div class="tbl_st">
+					<table>
+						<caption>공급일정 : 구분, 신청일시, 신청방법에 대한 정보 제공</caption>
+						<colgroup>
+							<col style="width:25%;">
+							<col style="width:50%;">
+							<col style="width:25%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>구분</th>
+								<th>신청일시</th>
+								<th>신청방법</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+								<tr>
+									<td>
+										무순위
+										
+											
+											
+										
+									</td>
+									<td>2026.10.06 10:00 ~ 2026.10.07 17:00</td>
+									<td>인터넷접수</td>
+								</tr>
+
+								<!-- 사전청약당첨자(22, 74) 공고일 경우 주택형안내>안내사항 추가 -->
+								
+							
+						</tbody>
+					</table>
+				</div>
+
+				<ul class="list_st1">
+					<li><span class="pc_navy font_Fm">당첨자발표일자</span> : <label id="sta_PzwrAncDt">
+					 
+					 2026.10.08
+					 
+					  
+					 </label></li>
+					<li><span class="pc_navy font_Fm">당첨자 서류제출기간</span> : <label id="sta_PzwrPprSbmDt">
+					
+					2026.10.10 ~ 2026.10.11
+					
+					
+					</label></li>
+					<li><span class="pc_navy font_Fm">계약체결기간</span> : <label id="sta_ctrtStDt">
+					
+					2026.11.02 ~ 2026.11.05
+					
+					
+					</label></li>
+				</ul>
+
+				<div class="box_gr">
+					<p class="bu_wnrn">안내사항</p>
+					<ul class="list_st3">
+						<pre></pre>
+					</ul>
+				</div>
+			
+		
+	</section>
+
+	
+
+	<section>
+		<h3 class="tit1">접수처정보</h3>
+		<div class="box_st4">
+			<div class="inner">
+				<ul class="list_st1 li_w50">
+					
+					<li class="w100">소재지 :
+					
+					인천광역시 서해구 청라동 92-7 인천가정2 B2 주택전시관
+					
+					
+					</li>
+					<li>전화번호 :
+					
+					(032)567-4564
+					
+					
+					</li>
+					<li>운영기간 :
+						
+						
+							<span id="sta_OpnTr"></span>
+						
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="tit_util">
+			<h4 class="tit2">접수처 관련 위치 정보</h4>
+			<div class="util">
+			</div>
+		</div>
+		<!-- 지도영역 -->
+		<div class="box_st3 ac" id="ctrtPlcMapContainer">
+			
+				
+				
+					
+						
+							<script>
+								try {
+									var address = "인천광역시 서해구 청라동 92-7 인천가정2 B2 주택전시관";
+
+									naver.maps.Service.geocode({query: address}, function(status, response) {
+										if (status == naver.maps.Service.Status.OK) {
+											var result = response.v2, // 검색 결과의 컨테이너
+							            		items = result.addresses; // 검색 결과의 배열
+
+								            if(items.length > 0) {
+												var coord = new naver.maps.LatLng(items[0].y, items[0].x); // 마커가 표시될 위치입니다
+
+												$("#ctrtPlcMapContainer").css("height", "500px");
+
+												map = new naver.maps.Map('ctrtPlcMapContainer', {
+											        center: coord,
+											        zoom: 15
+											    }),
+											    marker = new naver.maps.Marker({ // 마커를 생성합니다
+											        map: map, // 마커가 지도 위에 표시되도록 설정합니다
+											        position: coord
+											    });
+
+													var contentString = '<div style=\"padding:5px; white-space:nowrap\">인천광역시 서해구 청라동 92-7 인천가정2 B2 주택전시관</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+
+											    var infowindow = new naver.maps.InfoWindow({ // 인포윈도우를 생성합니다
+											        content: contentString
+											    });
+
+											    infowindow.open(map, marker); // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+								            } else {
+												$("#ctrtPlcMapContainer").text("표시할 위치정보가 없습니다.");
+							            	}
+										}
+									});
+								} catch (e){
+									$("#ctrtPlcMapContainer").text("표시할 위치정보가 없습니다.");
+								}
+							</script>
+						
+						
+					
+				
+			
+		</div>
+
+		<div class="box_gr">
+			<p class="bu_wnrn">안내사항</p>
+			<ul class="list_st3">
+				<pre>- '26.10.02(금) 10시 부터 관람이 가능 하오며, 주택전시관 내 견본주택은 단위세대 84A형이 설치되어있으므로 방문에 참고하시기 바랍니다.
+
+- 방문 청약접수는 불가하며, 인터넷 청약접수만 가능합니다.</pre>
+			</ul>
+		</div>
+	</section>
+
+		
+			<section>
+				<h3 class="tit1">기타사항</h3>
+				<div class="box_grL">
+					<ul class="list_st2">
+						<pre></pre>
+					</ul>
+				</div>
+			</section>
+		
+	
+	
+	<div class="btns ar">
+		<!-- 기본버튼 -->
+		<a href="javascript:saveItrPan();" class="btn_bl3">관심공고등록 <i class="xi-check" aria-hidden="true"></i></a>
+		<a href="javascript:goList();" class="btn_bl1">목록</a>
+	</div>
+	
+
+	<!-- 공고이력조회 팝업 파라미터 -->
+	<form id="openHistoryPopupForm" method="post">
+		<input type="hidden" name="mi" value="1027">
+		<input type="hidden" name="listCo" value="">
+		<input type="hidden" name="aisTpCd" value="05">
+		<input type="hidden" name="srchAisTpCd" value="">
+		<input type="hidden" name="srchUppAisTpCd" value="">
+		<input type="hidden" name="uppAisTpCd" id="uppAisTpCd" value="05">
+		<input type="hidden" name="startDt" value="">
+		<input type="hidden" name="endDt" value="">
+		<input type="hidden" name="currPage" value="">
+		<input type="hidden" name="panNm" value="">
+		<input type="hidden" name="mvinQf" value="">
+		<input type="hidden" name="schTy" value="">
+		<input type="hidden" name="cnpCd" value="">
+		<input type="hidden" name="panSs" value="">
+		<input type="hidden" name="panId" value='0000061183'>
+		<input type="hidden" name="ccrCnntSysDsCd" value='02'>
+	</form>
+
+	<!-- 공급정보 상세보기 팝업 파라미터 -->
+	<form id="openHtyInfoPopupForm" method="post">
+		<input type="hidden" name="mi" id="mi" value="1027">
+		<input type="hidden" name="listCo" value="">
+		<input type="hidden" name="aisTpCd" value="05">
+		<input type="hidden" name="srchAisTpCd" value="">
+		<input type="hidden" name="srchUppAisTpCd" value="">
+		<input type="hidden" name="uppAisTpCd" id="uppAisTpCd" value="05">
+		<input type="hidden" name="startDt" value="">
+		<input type="hidden" name="endDt" value="">
+		<input type="hidden" name="currPage" value="">
+		<input type="hidden" name="panNm" value="">
+		<input type="hidden" name="mvinQf" value="">
+		<input type="hidden" name="schTy" value="">
+		<input type="hidden" name="cnpCd" value="">
+		<input type="hidden" name="panSs" value="">
+
+		<input type="hidden" id="HtyInfoPanId" name="panId" value="">
+		<input type="hidden" id="HtyInfoCcrCnntSysDsCd" name="ccrCnntSysDsCd" value="">
+		<input type="hidden" id="HtyInfoAisInfSn" name="aisInfSn" value="">
+		<input type="hidden" id="HtyInfoBzdtCd" name="bzdtCd" value="">
+		<input type="hidden" id="HtyInfoHcBlkCd" name="hcBlkCd" value="">
+		<input type="hidden" id="HtyInfoHtyCd" name="htyCd" value="">
+		<input type="hidden" id="HtyInfoDdoAr" name="ddoAr" value="">
+		<input type="hidden" id="HtyInfoSplTpCd" name="splTpCd" value="">
+
+
+		<!-- 분양전환일반매각 -->
+		<input type="hidden" id="HtyInfoLtrUntNo" name="ltrUntNo" value="">
+		<input type="hidden" id="HtyInfoLtrNot" name="ltrNot" value="">
+		<input type="hidden" id="HtyInfoBzdtNm" name="bzdtNm" value="">
+		<input type="hidden" id="HtyInfoAcpStNo" name="acpStNo" value="">
+		<input type="hidden" id="HtyInfoAcpNo" name="acpNo" value="">
+		<input type="hidden" id="HtyInfoLtstAdmNo" name="ltstAdmNo" value="">
+
+		<!--  -->
+		<input type="hidden" id="idx" name="idx" value="">
+		<input type="hidden" id="listNo" name="listNo" value="">
+		<!-- 청약신청하기에 사용 -->
+		<input type="hidden" id="sbscRqsNo" name="sbscRqsNo" value="">
+		<input type="hidden" id="mobYn" name="mobYn" value="">
+		<input type="hidden" id="inetSbscRqsStepCd" name="inetSbscRqsStepCd" value="">
+		<input type="hidden" id="titBzdtNm" name="titBzdtNm" value="">
+		<input type="hidden" id="htyNm" name="htyNm" value="">
+
+	</form>
+<!--
+	<div class="lyPop" id="popInnmvl">
+		<div class="lyPop_wrap">
+			<h2>소득계산방법 살펴보기</h2>
+			<div class="inner">
+				<h4 class="tit2">소득 심사 대상</h4>
+				<div class="indent">
+					<p class="bu_st1">세대주 본인 + 배우자 + 만 19세 이상의 세대원(세대주의 직계존비속) 소득 합산</p>
+					<p class="bu_wnrn">세대주와 동일한 주민등록등본상 등재되어 있지 아니한 배우자와 배우자와 동일한 주민등록등본상 등재되어 있는 세대주의 직계존비속 포함</p>
+				</div>
+				<h4 class="tit2">소득조사 항목</h4>
+				<div class="indent">
+					<p class="bu_st1">근로소득(상시근로&middot;일용근로&middot;자활근로&middot;공공일자리), 사업소득(농업&middot;임업&middot;어업&middot;기타사업), 재산소득(임대&middot;이자&middot;연금), 기타소득(공적이전소득)</p>
+					<p class="bu_wnrn">자세한 사항은 공고문을 확인하시기 바랍니다.</p>
+				</div>
+				<h4 class="tit2">소득금액 조사방법</h4>
+				<div class="indent">
+					<p class="bu_st1">사회보장정보시스템에서 제공되는 국가 또는 공공기관이 보유한 공적 소득자료를 근거로 월평균 소득을 산정함</p>
+					<p class="bu_wnrn">사회보장정보시스템이란?<br>
+						사회보장수급권자 선정 및 급여 관리 등에 관한 정보를 통합&middot;연계하여 처리&middot;기록 및 관리하는 시스템(사회보장기본법 제37조)
+					</p>
+				</div>
+			</div>
+			<a href="#popInnmvl" class="lyPopClose hashClose"><span class="hid">닫기</span><i class="xi-close" aria-hidden="true"></i></a>
+		</div>
+	</div>
+ -->
+	<script>
+	var wrtancFloorplan = JSON.parse('[[]]');
+	var tabIdx = 0;
+
+		$(function(){
+
+			var ccrCnntSysDsCd = '02';
+			var panId = '0000061183';
+
+			if(ccrCnntSysDsCd != '03'){
+				var sOfcDt = '2026.10.02~2026.10.05 (10:00~17:00)()';
+				var tskScdCts = '';
+
+				var dStDt = '2026.10.02 10:00';
+				var dEdDt = '2026.10.05 17:00';
+
+				var resultTxt = "";
+
+				if(dStDt != "" && dEdDt != ""){
+					resultTxt = sOfcDt;
+				}else if(dEdDt != ""){
+					resultTxt = dEdDt.substr(0,10) + " (" + tskScdCts + ")";
+				}else if(dStDt != ""){
+					resultTxt = dStDt.substr(0,10) + " (" + tskScdCts + ")";
+				}
+
+				resultTxt = gfn_replace(resultTxt,'()','','');
+
+				if(isEmpty(resultTxt)) {
+					resultTxt ="등록된 내용이 없습니다.";
+				}
+
+				$('#sta_OpnTr').text(resultTxt);
+
+				var currPanId = '0000061183';
+				var panKdCd = '02';
+				var currPanKdCd = '02';
+				var oTxtPanId = '';
+
+				var size = '1';
+
+				// 정정공고, 취소공고
+				if(currPanKdCd != "01" && panId != currPanId){
+					$('#goGrcUl').show();
+
+					if(currPanKdCd == "02"){ // 정정공고
+						$('#btn_goGrc1').show();
+						for(var i = 0 ; i < size ; i++){
+							showBtn([3,5,7], i);
+						}
+						$('#panAttnFcts').text('본 공고문에 대한 정정 공고문이 있습니다. 정정공고 바로가기 버튼을 눌러 확인하여 주시기 바랍니다.');
+					}else if(currPanKdCd == "03"){ // 취소공고
+						$('#btn_goGrc2').show();
+						for(var i = 0 ; i < size ; i++){
+							showBtn([4,6,8], i);
+						}
+						$('#panAttnFcts').text('본 공고문에 대한 취소 공고문이 있습니다. 취소공고 바로가기 버튼을 눌러 확인하여 주시기 바랍니다.');
+					}
+				}
+
+				// 공고이력조회
+				if(currPanKdCd != "01" && panId == currPanId){
+					$('#slpaHistory').show();
+				}
+			}
+
+			for(var i = wrtancFloorplan.length-1 ; i >= 0 ; i--){
+				tabIdx = i;
+				if(wrtancFloorplan[i].length == 0){
+					var yn = document.getElementById('tabPlanA'+i+'0');
+					if(!isEmpty(yn)){
+						$('#tabPlanA'+i+'0').get(0).click();
+					}
+				}else{
+					if(isEmpty(wrtancFloorplan[i][0].cmnAhflSn)){
+						var yn = document.getElementById('tabPlanA'+i+'0');
+						if(!isEmpty(yn)){
+							$('#tabPlanA'+i+'0').get(0).click();
+						}
+					}else{
+						$('#imgInfoPtag'+i).text('이미지를 클릭하시면 큰 화면으로 보실 수 있습니다.');
+						$('#imgFileDown'+i).hide();
+						onClickPlanInnerTab('0');
+					}
+				}
+			}
+		});
+
+		function cadDownLoad() {
+			var downloadPopup = window.open("https://kr.dwgfastview.com/cloud/download", "_blank");
+
+	        console.log(downloadPopup);
+
+	        setTimeout(function(){
+	            downloadPopup.location.replace("https://kr.dwgfastview.com/cloud/download");
+	            console.log('location replaced');
+	        }, 1000)
+		}
+
+		function showBtn(id, num){
+			for(var i = 0 ; i < id.length ; i++){
+				var btnNm = "#btn_goGrc" + id[i] + "" + num;
+				$(btnNm).show();
+			}
+		}
+
+		// 원본공고에서 정정/취소 공고 바로가기
+		function GoCrc(){
+				var ccrCnntSysDsCd = '02';
+				var panKdCd = '02';
+				var panId = '0000061183';
+				var sOtxtPanId = '';
+
+				if(sOtxtPanId == null || sOtxtPanId == ""){
+					sOtxtPanId = '0000061183';
+				}
+
+				$('#ccrCnntSysDsCd').val(ccrCnntSysDsCd);
+				$('#panKdCd').val(panKdCd);
+				$('#panId').val(panId);
+				$('#otxtPanId').val(sOtxtPanId);
+
+				var chkOs = getCookie("d");
+				if("ios" ==chkOs) {
+					$("#wrtancViewForm").attr('method', 'get');
+				}
+
+				$("#wrtancViewForm").attr('action', "/lhapply/apply/wt/wrtanc/selectWrtancInfo.do").submit();
+		}
+
+		// 평면도 내의 탭 선택시
+		function onClickPlanInnerTab(idx){
+			$('#fpHtyNna'+tabIdx).text(wrtancFloorplan[tabIdx][idx].htyNna);
+			$('#fpImage1'+tabIdx).attr('src',getFilePath(wrtancFloorplan[tabIdx][idx].cmnAhflSn));
+			$('#fpImage1'+tabIdx).attr('alt',wrtancFloorplan[tabIdx][idx].imgAhflDesc);
+
+			if(wrtancFloorplan[tabIdx][idx].perspective == 'Y'){
+				$('#fpImage2'+tabIdx).show();
+				$('#fpImage2'+tabIdx).attr('src',getFilePath(wrtancFloorplan[tabIdx][idx].persCmnAhflSn));
+				$('#fpImage2'+tabIdx).attr('alt',wrtancFloorplan[tabIdx][idx].imgAhflDesc);
+			}else{
+				$('#fpImage2'+tabIdx).hide();
+			}
+		}
+
+		// 평면도 탭 선택
+		function onClickPlanTab(idx){
+			$('#imgInfoPtag'+idx).text('이미지를 클릭하시면 큰 화면으로 보실 수 있습니다.');
+			$('#imgFileDown'+idx).hide();
+			$('#fileid').val('');
+			$('#planImg'+idx).show();
+
+			if($('#planImg'+idx).find('.list.slick-slider').length > 0){
+				$('#planImg'+idx).find('.list').slick('refresh');
+			}
+
+			$('#wrtancImageContainer_'+idx).hide();
+
+			document.getElementById('tabPlanli'+idx).className = "on";
+			document.getElementById('tabPlanA'+idx).className = "select";
+			document.getElementById('tabPlanA'+idx).title = "선택된 페이지";
+
+			var ccrCnntSysDsCd = '02';
+
+			// 평면도 탭 제외 전부 숨김처리
+			var tabSize = 0;
+			if(ccrCnntSysDsCd == '03'){
+				var list = new Array();
+				
+
+				tabSize = list.length;
+			}else{
+				var list = new Array();
+				
+					
+						list.push("{cmnAhflSn=68804418, slPanAhflDsCd=10, ccrCnntSysDsCd=02, panId=0000061183, bzdtCd=105083, hcBlkCd=04, cmnAhflNm=토지이용계획도.jpg, cmnPhyAhflNm=2026041466442000.jpg, cmnAhflSz=4432513, cmnAhflPth=/Files/upload/2026/HSL/09/30/, slPanAhflDsCdNm=토지이용계획도, imgAhflDesc=null}");
+					
+						list.push("{cmnAhflSn=68804419, slPanAhflDsCd=12, ccrCnntSysDsCd=02, panId=0000061183, bzdtCd=105083, hcBlkCd=04, cmnAhflNm=단지배치도.jpg, cmnPhyAhflNm=2026041466442001.jpg, cmnAhflSz=4838268, cmnAhflPth=/Files/upload/2026/HSL/09/30/, slPanAhflDsCdNm=단지배치도, imgAhflDesc=null}");
+					
+						list.push("{cmnAhflSn=68804420, slPanAhflDsCd=14, ccrCnntSysDsCd=02, panId=0000061183, bzdtCd=105083, hcBlkCd=04, cmnAhflNm=교통망도.jpg, cmnPhyAhflNm=2026041466442002.jpg, cmnAhflSz=4679619, cmnAhflPth=/Files/upload/2026/HSL/09/30/, slPanAhflDsCdNm=지역위치도, imgAhflDesc=null}");
+					
+						list.push("{cmnAhflSn=68804421, slPanAhflDsCd=15, ccrCnntSysDsCd=02, panId=0000061183, bzdtCd=105083, hcBlkCd=04, cmnAhflNm=단지조감도.jpg, cmnPhyAhflNm=2026041466442005.jpg, cmnAhflSz=4235595, cmnAhflPth=/Files/upload/2026/HSL/09/30/, slPanAhflDsCdNm=단지조감도, imgAhflDesc=null}");
+					
+						list.push("{cmnAhflSn=68804422, slPanAhflDsCd=24, ccrCnntSysDsCd=02, panId=0000061183, bzdtCd=105083, hcBlkCd=04, cmnAhflNm=동호배치도.jpg, cmnPhyAhflNm=2026041466442006.jpg, cmnAhflSz=2172202, cmnAhflPth=/Files/upload/2026/HSL/09/30/, slPanAhflDsCdNm=동호배치도, imgAhflDesc=null}");
+					
+				
+
+				tabSize = list.length;
+			}
+
+			for(var i = 0 ; i < tabSize ; i++){
+				liNm = "tabPlanli" + idx + "" + i;
+				document.getElementById(liNm).className = "";
+
+				aNm = "tabPlanA" + idx + "" + i;
+				document.getElementById(aNm).className = "";
+				document.getElementById(aNm).title = "";
+			}
+		}
+
+		// 단지 이미지정보 탭 변경시
+		function onchangeImageTab(no1,no2){
+			$('#imgInfoPtag'+no1).text('다운로드 버튼을 클릭하여 이미지 파일 다운로드가 가능합니다.');
+			$('#imgFileDown'+no1).show();
+			// 평면도탭은 활성화된 class명 삭제
+			if(document.getElementById('tabPlanli'+no1) != undefined){
+				document.getElementById('tabPlanli'+no1).className = "";
+				document.getElementById('tabPlanA'+no1).className = "";
+				document.getElementById('tabPlanA'+no1).title = "";
+				// 평면도영역 숨김
+				$('#planImg'+no1).hide();
+			}
+
+			// 이미지영역 보임
+			$('#wrtancImageContainer_'+no1).show();
+
+			var liNm = "tabPlanli"+no1+""+no2;
+			var aNm = "tabPlanA"+no1+""+no2;
+// 			var mapNm = "tabMap"+no1+""+no2;
+
+			document.getElementById(liNm).className = "on";
+			document.getElementById(aNm).className = "select";
+			document.getElementById(aNm).title = "선택된 페이지";
+// 			document.getElementById(mapNm).className = "on";
+
+			var ccrCnntSysDsCd = '02';
+
+			// 선택되지 않은 탭은 전부 숨김처리
+			var tabSize = 0;
+			if(ccrCnntSysDsCd == '03'){
+				var list = new Array();
+				
+
+				tabSize = list.length;
+			}else{
+				var list = new Array();
+				
+					
+						if(0 == no1){
+							list.push({
+								cmnAhflSn :  "68804418",
+								cmnPhyAhflNm :  "2026041466442000.jpg",
+								ahflDesc :  "" ,
+								cmnAhflPth : "/Files/upload/2026/HSL/09/30/" ,
+								imgAhflDesc :  "" //이미지 대체텍스트
+							});
+						}
+					
+						if(0 == no1){
+							list.push({
+								cmnAhflSn :  "68804419",
+								cmnPhyAhflNm :  "2026041466442001.jpg",
+								ahflDesc :  "" ,
+								cmnAhflPth : "/Files/upload/2026/HSL/09/30/" ,
+								imgAhflDesc :  "" //이미지 대체텍스트
+							});
+						}
+					
+						if(0 == no1){
+							list.push({
+								cmnAhflSn :  "68804420",
+								cmnPhyAhflNm :  "2026041466442002.jpg",
+								ahflDesc :  "" ,
+								cmnAhflPth : "/Files/upload/2026/HSL/09/30/" ,
+								imgAhflDesc :  "" //이미지 대체텍스트
+							});
+						}
+					
+						if(0 == no1){
+							list.push({
+								cmnAhflSn :  "68804421",
+								cmnPhyAhflNm :  "2026041466442005.jpg",
+								ahflDesc :  "" ,
+								cmnAhflPth : "/Files/upload/2026/HSL/09/30/" ,
+								imgAhflDesc :  "" //이미지 대체텍스트
+							});
+						}
+					
+						if(0 == no1){
+							list.push({
+								cmnAhflSn :  "68804422",
+								cmnPhyAhflNm :  "2026041466442006.jpg",
+								ahflDesc :  "" ,
+								cmnAhflPth : "/Files/upload/2026/HSL/09/30/" ,
+								imgAhflDesc :  "" //이미지 대체텍스트
+							});
+						}
+					
+				
+
+				tabSize = list.length;
+			}
+
+			var rowData = list[no2];
+
+			$('#fileid').val(rowData.cmnAhflSn);
+
+// 			var filePath = rowData.cmnAhflPth;
+// 			if(isEmpty(filePath)){
+// 				filePath = getFilePath(rowData.cmnAhflSn);
+// 			}
+
+// 			$('#image_'+no1).attr('src',filePath+rowData.cmnPhyAhflNm);
+			if(!isEmpty(rowData.cmnAhflSn)){
+				$('#image_'+no1).attr('src',getFilePath(rowData.cmnAhflSn));
+				$('#image_'+no1).attr('alt',rowData.imgAhflDesc);
+				$('#image_'+no1).next('a').attr('href',getFilePath(rowData.cmnAhflSn));
+			}
+
+			for(var i = 0 ; i < tabSize ; i++){
+				if(i==no2){
+					continue;
+				}
+
+				liNm = "tabPlanli" + no1 + "" + i;
+				document.getElementById(liNm).className = "";
+
+				aNm = "tabPlanA" + no1 + "" + i;
+				document.getElementById(aNm).className = "";
+				document.getElementById(aNm).title = "";
+
+// 				aNm = "tabMap" + no1 + "" + i;
+// 				document.getElementById(aNm).className = "box";
+			}
+		}
+
+		// 공급정보 탭 변경시
+		function changeTab(num) {
+			tabIdx = num;
+
+			var tabNm = "#wrtancSbdTab" + num;
+			var liNm = "tabli" + num;
+			var aNm = "tagA" + num;
+
+			$(tabNm).show();
+			if($(tabNm).find('.planImg .list.slick-slider').length > 0){
+				$(tabNm).find('.planImg .list').slick('refresh');
+			}
+			document.getElementById(liNm).className = "on";
+			document.getElementById(aNm).className = "select";
+			document.getElementById(aNm).title = "선택된 페이지";
+
+			var ccrCnntSysDsCd = '02';
+
+			// 선택되지 않은 탭은 전부 숨김처리
+			var tabSize = 0;
+			if (ccrCnntSysDsCd == '03') {
+				tabSize = '0';
+			} else {
+				tabSize = '1';
+			}
+
+			var i = 0;
+			var planId = 'tabPlanA'+num+'0';
+
+			if(wrtancFloorplan[num].length > 0){
+				// 평면도 여부 체크. 평면도일 경우 첫번째 데이터 클릭하도록
+				if(isEmpty(wrtancFloorplan[num][0].cmnAhflSn)){
+					do{
+						if($('#tabPlanA'+num+i).attr('class') == 'select'){
+							planId = 'tabPlanA'+num+i;
+							break;
+						}
+						i++;
+					}while(!isEmpty(document.getElementById('tabPlanA'+num+i)));
+
+					if(!isEmpty(document.getElementById(planId))){
+						$('#'+planId).get(0).click();
+					}
+				}else{
+					if(isEmpty($('#tabPlanA'+num).attr('class'))){
+						do{
+							if($('#tabPlanA'+num+i).attr('class') == 'select'){
+								planId = 'tabPlanA'+num+i;
+								break;
+							}
+							i++;
+						}while(!isEmpty(document.getElementById('tabPlanA'+num+i)));
+
+						if(!isEmpty(document.getElementById(planId))){
+							$('#'+planId).get(0).click();
+						}
+					}else{
+						$('#imgInfoPtag'+num).text('이미지를 클릭하시면 큰 화면으로 보실 수 있습니다.');
+						$('#imgFileDown'+num).hide();
+						onClickPlanInnerTab('0');
+					}
+				}
+			}else{
+				do{
+					if($('#tabPlanA'+num+i).attr('class') == 'select'){
+						planId = 'tabPlanA'+num+i;
+						break;
+					}
+					i++;
+				}while(!isEmpty(document.getElementById('tabPlanA'+num+i)));
+
+				if(!isEmpty(document.getElementById(planId))){
+					$('#'+planId).get(0).click();
+				}
+			}
+
+			for (var i = 0; i < tabSize; i++) {
+				if (i == num) {
+					continue;
+				}
+				tabNm = "#wrtancSbdTab" + i;
+				$(tabNm).hide();
+
+				liNm = "tabli" + i;
+				document.getElementById(liNm).className = "";
+
+				aNm = "tagA" + i;
+				document.getElementById(aNm).className = "";
+				document.getElementById(aNm).title = "";
+			}
+
+			if (ccrCnntSysDsCd == '03') {
+				changeTabplScdInf(num);
+			}
+		}
+
+		// 공고이력조회 팝업
+		function GoHistory() {
+			var pop_title = "공고이력조회";
+
+			var popupWidth = 800;
+			var popupHeight = 400;
+			var popupX = (window.screen.width / 2) - (popupWidth / 2);
+			var popupY= (window.screen.height / 2) - (popupHeight / 2);
+
+			// 듀얼모니터의 경우 팝업창이 화면 좌측에 붙어서 좌측 화면 사이즈 추가
+			popupX += window.screenLeft;
+			var option = "width=" + popupWidth + ", height=" + popupHeight + ", left=" + popupX + ", top=" + popupY;
+
+			window.open("", pop_title, option);
+			var frmData = document.getElementById("openHistoryPopupForm");
+			frmData.target = pop_title;
+			frmData.action = "/lhapply/apply/wt/wrtanc/selectWrtancHistoryInfoPopUp.do";
+			var chkOs = getCookie("d");
+			if("ios" ==chkOs) {
+				frmData.method = 'get';
+			}
+
+			frmData.submit();
+			frmData.method = 'post';
+		}
+
+		// 주택형 공급정보 팝업
+		function GoHtyInfo(ccrCnntSysDsCd, aisInfSn, panId, bzdtCd, hcBlkCd, htyCd, ddoAr, idx, listNo) {
+			var pop_title = "주택형 공급정보";
+
+			var popupWidth = 800;
+			var popupHeight = 600;
+			var popupX = (window.screen.width / 2) - (popupWidth / 2);
+			var popupY= (window.screen.height / 2) - (popupHeight / 2);
+
+			// 듀얼모니터의 경우 팝업창이 화면 좌측에 붙어서 좌측 화면 사이즈 추가
+			popupX += window.screenLeft;
+			var option = "width=" + popupWidth + ", height=" + popupHeight + ", left=" + popupX + ", top=" + popupY;
+
+			$('#HtyInfoPanId').val(panId);
+			$('#HtyInfoCcrCnntSysDsCd').val(ccrCnntSysDsCd);
+			$('#HtyInfoAisInfSn').val(aisInfSn);
+			$('#HtyInfoBzdtCd').val(bzdtCd);
+			$('#HtyInfoHcBlkCd').val(hcBlkCd);
+			$('#HtyInfoHtyCd').val(htyCd);
+			$('#HtyInfoDdoAr').val(ddoAr);
+			$('#idx').val(idx);
+			$('#listNo').val(listNo);
+
+			window.open("", pop_title, option);
+			var frmData = document.getElementById("openHtyInfoPopupForm");
+			frmData.target = pop_title;
+			frmData.action = "/lhapply/apply/wt/wrtanc/selectWrtancHtyInfoPopUp.do";
+			var chkOs = getCookie("d");
+			if("ios" ==chkOs) {
+				frmData.method = 'get';
+			}
+			frmData.submit();
+			frmData.method = 'post';
+		}
+
+		// 분양전환일반매각 주택형 공급정보 팝업
+		function GoHtyInfo_slcv(ccrCnntSysDsCd, aisInfSn, panId, bzdtCd, hcBlkCd, htyCd, ddoAr, idx, listNo) {
+			var pop_title = "주택형 공급정보";
+
+			var popupWidth = 800;
+			var popupHeight = 600;
+			var popupX = (window.screen.width / 2) - (popupWidth / 2);
+			var popupY= (window.screen.height / 2) - (popupHeight / 2);
+
+			// 듀얼모니터의 경우 팝업창이 화면 좌측에 붙어서 좌측 화면 사이즈 추가
+			popupX += window.screenLeft;
+			var option = "width=" + popupWidth + ", height=" + popupHeight + ", left=" + popupX + ", top=" + popupY;
+
+			$('#HtyInfoPanId').val(panId);
+			$('#HtyInfoCcrCnntSysDsCd').val(ccrCnntSysDsCd);
+			$('#HtyInfoAisInfSn').val(aisInfSn);
+			$('#HtyInfoBzdtCd').val(bzdtCd);
+			$('#HtyInfoHcBlkCd').val(hcBlkCd);
+			$('#HtyInfoHtyCd').val(htyCd);
+			$('#HtyInfoDdoAr').val(ddoAr);
+			$('#idx').val(idx);
+			$('#listNo').val(listNo);
+
+			window.open("", pop_title, option);
+			var frmData = document.getElementById("openHtyInfoPopupForm");
+			frmData.target = pop_title;
+			frmData.action = "/lhapply/apply/wt/wrtanc/selectWrtancHtyInfoPopUp.do";
+			frmData.submit();
+		}
+
+		// 임대-분양전환일반매각 탭 변경시 공급일정값 변경
+		function changeTabplScdInf(idx) {
+			var splScdlist = new Array();
+			var sbdList = new Array();
+
+			
+
+			
+
+			if (sbdList.length > 1) {
+				var refText = "(" + sbdList[idx].lccNtNm + ")";
+				$('#refText').text(refText);
+			}
+
+			rowSize = splScdlist.length;
+
+			var strLtrUntNo = sbdList[idx].ltrUntNo;
+			var strLtrNot = sbdList[idx].ltrNot;
+
+			var sta_acpDt = " ~ ";
+			var sta_ancDt = " ~ ";
+			var sta_pprAcpDt = " ~ ";
+			var sta_pzwrDt = " ~ ";
+			var sta_ctrtDt = " ~ ";
+
+			for (var i = 0; i < rowSize; i++) {
+				if ((splScdlist[i].ltrUntNo == strLtrUntNo)	&& (splScdlist[i].ltrNot == strLtrNot)) {
+					if ((splScdlist[i].sbscAcpStDt != null)	&& splScdlist[i].sbscAcpClsgDt != null) {
+						sta_acpDt = splScdlist[i].sbscAcpStDt + " ~ " + splScdlist[i].sbscAcpClsgDt;
+					}
+
+					if (splScdlist[i].pprSbmOpeAncDt != null) {
+						sta_ancDt = splScdlist[i].pprSbmOpeAncDt;
+					}
+
+					if (splScdlist[i].pprAcpStDt != null && splScdlist[i].pprAcpClsgDt != null) {
+						sta_pprAcpDt = splScdlist[i].pprAcpStDt + " ~ "	+ splScdlist[i].pprAcpClsgDt;
+					}
+
+					if (splScdlist[i].pzwrAncDt != null) {
+						sta_pzwrDt = splScdlist[i].pzwrAncDt;
+					}
+
+					if (splScdlist[i].ctrtStDt != null	&& splScdlist[i].ctrtEdDt != null) {
+						sta_ctrtDt = splScdlist[i].ctrtStDt + " ~ "	+ splScdlist[i].ctrtEdDt;
+					}
+				}
+			}
+
+			$('#sta_acpDt').text(sta_acpDt); // 접수기간
+			$('#sta_ancDt').text(sta_ancDt); // 서류제출대상자 발표일
+			$('#sta_pprAcpDt').text(sta_pprAcpDt); // 서류접수기간
+			$('#sta_pzwrDt').text(sta_pzwrDt); // 당첨자발표일
+			$('#sta_ctrtDt').text(sta_ctrtDt); // 계약기간
+		}
+
+		//평면도 - 동영상보기 팝업
+		$(function(){
+			var popVideo = '';
+			$(document).on('click', 'a.videoView', function(){
+				var title = $(this).parent('li').find('strong').text();
+				var src = $(this).attr('aria-controls');
+				$('#popPlanVideo h2 span').text(title);
+				$('#popPlanVideo video').attr('src', src);
+
+				popVideo = $('#popPlanVideo video').get(0);
+				popVideo.play();
+			});
+
+			$(document).on('click', '#popPlanVideo .lyPopClose', function(){
+				popVideo.pause();
+				$('#popPlanVideo video').attr('src', '');
+			});
+		});
+
+
+	// 청약신청 바로가기
+	function goSbsc(ccrCnntSysDsCd, aisInfSn, panId, bzdtCd,bzdtNm, hcBlkCd, splTpCd, htyCd, htyNm, ddoAr, idx, listNo){
+			if('' == 'Y'){
+				alert('대행접수자는 공고문에서 신청하기를 할 수 없습니다.');
+				return;
+			}
+
+			var usrSsnDs = "";
+			var crtfTpCd = "";
+			//var frrRqsYn = "N";
+			var frrRqsYn =  "N";						//외국인 접수 가능 여부
+
+			if(!isEmpty(usrSsnDs) && !isEmpty(crtfTpCd)){
+				if(usrSsnDs == "SLS" && frrRqsYn != "Y" && crtfTpCd == "02"){
+					alert("외국인의 경우 본 공고에 청약신청이 불가합니다.");
+					//this.gfn_alert("CMCU3002");
+					return ;
+				}
+			 }
+
+
+			//외국인 신청 여부 5678 막음
+			if(frrRqsYn != "Y" && gfn_getForeignYn("")=="Y" && !isEmpty("")){
+				alert("외국인의 경우 본 공고에 청약신청이 불가합니다");
+				return ;
+			}
+
+
+
+
+		//	alert("ste4"+htyNm+" :: "+bzdtNm); //titBzdtNm
+			var mobYn  = "";
+			var isMobile = /Andriod|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true:false;
+		    var chkWinodw = window.matchMedia("screen and (max-width: 1024px)");
+			if (chkWinodw.matches || isMobile) {
+				   mobYn = "Y";
+			 } else {
+			    	mobYn = "N";
+			 }
+
+			$('#HtyInfoPanId').val(panId);
+			$('#HtyInfoCcrCnntSysDsCd').val(ccrCnntSysDsCd);
+			$('#HtyInfoAisInfSn').val(aisInfSn);
+			$('#HtyInfoBzdtCd').val(bzdtCd);
+			$('#HtyInfoHcBlkCd').val(hcBlkCd);
+			$('#HtyInfoHtyCd').val(htyCd);
+			$('#HtyInfoSplTpCd').val(splTpCd);
+			$('#HtyInfoDdoAr').val(ddoAr);
+			$('#idx').val(idx);
+			$('#listNo').val(listNo);
+
+			$('#mobYn').val(mobYn);
+			$('#inetSbscRqsStepCd').val("02");
+			$('#htyNm').val(htyNm);
+			$('#titBzdtNm').val(bzdtNm);
+			var usrSsnDs = "";
+			var sOsdPanYn = "N";
+			if(usrSsnDs == "OSD"){// 대행접수자 신청시 청약신청
+				if(sOsdPanYn != "Y"){
+					alert("신청이 불가한 공고입니다.");
+					return;
+				}
+			}
+
+			//신청서 바로가기
+			//*** 넷퍼넬
+	    	nfStart({
+				projectKey : "service_1",   // project_key
+				segmentKey : "act_41"  		// segment_key
+				}, function(response) {
+
+					if(response.status == 'Success'){
+
+						$.ajax({
+							type : "POST",
+							async : false,
+							datatype : "json",
+							data : $('#openHtyInfoPopupForm').serialize(),
+
+							url : "/lhapply/apply/silh/insertTmpSbscRqs.do",
+							success : function(result){
+
+								nfStop({
+									projectKey : "service_1",
+									segmentKey : "act_41"
+								});
+
+								var result = JSON.parse(result);
+								madeFormData(result.sbscRqsNo);
+
+							}, error : function(result){
+
+								nfStop({
+									projectKey : "service_1",
+									segmentKey : "act_41"
+								});
+
+								//alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+							}
+						});
+
+					}else{
+
+						var sNetfMsg = "";
+
+						if(response.status == 'Close'){
+							sNetfMsg = "대기를 취소하였습니다.";
+						}else if(response.status == 'Error'){
+							sNetfMsg = "오류가 발생하였습니다.";
+						}else if(response.status == 'NetworkError'){
+							sNetfMsg = "네트워크 요청을 실패하였습니다.";
+						}else if(response.status == 'Block'){
+							sNetfMsg = "진입이 차단된 페이지입니다.";
+						}else if(response.status == 'IpBlock'){
+							sNetfMsg = "반복된 요청으로 차단되었습니다.";
+						}else{
+							sNetfMsg = "오류가 발생하였습니다.\n관리자에게 문의하세요. "+response.status + "[" + response.statusCode + "]" ;
+						}
+
+						//alert(sNetfMsg);
+					}
+
+			});
+
+
+
+
+			/*** 신청서작성
+			NetFunnel.TS_SERVICE_ID	= "service_1";
+			NetFunnel.TS_ACTION_ID	= "act_41";
+
+			NetFunnel_Action({},function(ev,ret){
+
+					$.ajax({
+						type : "POST",
+						async : false,
+						datatype : "json",
+						data : $('#openHtyInfoPopupForm').serialize(),
+
+						url : "/lhapply/apply/silh/insertTmpSbscRqs.do",
+						success : function(result){
+							var result = JSON.parse(result);
+							//dsSch.acpNo = result.acpNo;
+
+							madeFormData(result.sbscRqsNo);
+
+						}, error : function(result){
+							NetFunnel_Complete({});
+							alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+						}
+					});
+
+			});
+			*/
+
+
+
+
+
+		}
+
+	function goSbsc_slcv(ccrCnntSysDsCd, panId, ltstAdmNo, ddoAr, ltrUntNo, ltrNot, sbdLgoNo, sbdLgoNm, acpStNo, idx, listNo){
+			if('' == 'Y'){
+				alert('대행접수자는 공고문에서 신청하기를 할 수 없습니다.');
+				return;
+			}
+
+		//	alert("ste4"+htyNm+" :: "+bzdtNm); //titBzdtNm
+			var mobYn  = "";
+			var isMobile = /Andriod|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true:false;
+		    var chkWinodw = window.matchMedia("screen and (max-width: 1024px)");
+			if (chkWinodw.matches || isMobile) {
+				   mobYn = "Y";
+			 } else {
+			    	mobYn = "N";
+			 }
+
+			if(gfn_getLoginCheck() == false){
+				return false;
+			}
+
+			$('#HtyInfoCcrCnntSysDsCd').val(ccrCnntSysDsCd);
+			$('#HtyInfoPanId').val(panId);
+			$('#HtyInfoLtstAdmNo').val(ltstAdmNo); // +
+			$('#HtyInfoDdoAr').val(ddoAr);
+			$('#HtyInfoLtrUntNo').val(ltrUntNo);
+			$('#HtyInfoLtrNot').val(ltrNot);
+
+			$('#idx').val(idx);
+			$('#listNo').val(listNo);
+
+			$("#HtyInfoHcBlkCd").val(sbdLgoNo);
+			$("#HtyInfoBzdtNm").val(sbdLgoNm);
+			$("#HtyInfoAcpStNo").val(acpStNo);
+
+
+			$('#mobYn').val(mobYn);
+
+			var usrSsnDs = "";
+			$("#inetSbscRqsStepCd").val("01");
+
+			if(usrSsnDs == "OSD"){// 대행접수자 신청시 청약신청경로구분코드 '03' 인터넷대행 으로 처리
+				$("#sbscRqsPthDsCd").val("03");
+			}else{
+				$("#sbscRqsPthDsCd").val("01");
+			}
+
+			//$('#htyNna').val(htyNna);
+
+			$.ajax({
+				type : "POST",
+				async : false,
+				datatype : "json",
+				data : $('#openHtyInfoPopupForm').serialize(),
+
+				url : "/lhapply/apply/slcv/insertTmpSbscRqs.do",
+				success : function(result){
+					var result = JSON.parse(result);
+					//dsSch.acpNo = result.acpNo;
+					if(result.resultAt == "N"){
+						alert(result.msg);
+					}
+
+					$("#HtyInfoAcpNo").val(result.acpNo);
+					madeFormData(result.sbscRqsNo);
+
+				}, error : function(result){
+					alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+				}
+			});
+
+
+		}
+
+		function madeFormData(sbscRqsNo){
+			$('#sbscRqsNo').val(sbscRqsNo);
+
+			var wtYnInputTag = document.createElement('input');
+			wtYnInputTag.type = "hidden";
+			wtYnInputTag.name = "wtYn";
+			wtYnInputTag.value = "Y";
+
+			var paramForm = document.getElementById('openHtyInfoPopupForm');
+			paramForm.target = '_self';
+			paramForm.append(wtYnInputTag);
+
+			if($('#ccrCnntSysDsCd').val() =="03")   {
+				$("#openHtyInfoPopupForm #mi").val("1060");
+				$("#openHtyInfoPopupForm").attr('action', "/lhapply/apply/slcv/slcv03.do").submit();
+			}else{
+
+				if($('#HtyInfoSplTpCd').val() =="49")   {
+					$("#openHtyInfoPopupForm #mi").val("1060");
+					$("#openHtyInfoPopupForm").attr('action', "/lhapply/apply/shar/shar03.do").submit();
+				} else {
+					$("#openHtyInfoPopupForm #mi").val("1060");
+					$("#openHtyInfoPopupForm").attr('action', "/lhapply/apply/silh/silh03.do").submit();
+				}
+			}
+		}
+
+		//실시간 로그인 체크 및 관련 데이터 겟
+	 	function gfn_getLoginCheck() {
+	 		var returnVal = true;
+	 		$.ajax({
+				type : "post",
+				url : "/lhapply/apply/rtho/getLoginCheck.do",
+				dataType : "json",
+				async : false,
+				success : function(result) {
+					if(result.loginAt == 'N') {
+						alert("로그인 후 다시 시도해주세요.");
+						returnVal = false;
+					}
+				},
+				error : function(result) {
+					alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+				}
+			});
+
+	 		return returnVal;
+	 	}
+
+	</script>
+
+	<!-- 공통 -->
+	
+
+
+
+
+
+<!-- 슬라이드 -->
+<script src="/00_common/js/swiper.min.js"></script>
+<link rel="stylesheet" href="/00_common/css/swiper.min.css" media="all">
+
+<!-- 접수처지도보기 -->
+<a href="#popWrtancCtrtMap" class="btn_bl1 mini hash" id="popWrtancCtrtMapBtn" style="display:none;"><i class="xi-info-o" aria-hidden="true"></i></a>
+<div class="lyPop" id="popWrtancCtrtMap">
+	<div class="lyPop_wrap">
+		<h2>지도 상세보기</h2>
+		<div class="inner">
+			<div class="wtMapInfo" id="ctrtMapContainer">
+			</div>
+		</div>
+		<a href="#popWrtancCtrtMap" class="lyPopClose hashClose"><span class="hid">닫기</span><i class="xi-close" aria-hidden="true"></i></a>
+	</div>
+</div>
+
+<!-- 이미지확대 레이어팝업 -->
+<div class="lyPop" id="popImgZoom">
+	<div class="lyPop_wrap">
+		<h2>이미지 확대보기</h2>
+		<div class="inner">
+			<p class="ac rsp_img"></p>
+		</div>
+		<a href="#popImgZoom" class="lyPopClose hashClose"><span class="hid">닫기</span><i class="xi-close" aria-hidden="true"></i></a>
+	</div>
+</div>
+
+<script>
+var ctrtXxs = '';
+var ctrtYxs = '';
+
+$(function (){
+	var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
+	if(isMobile){
+		$('.wtViewer').hide();
+// 		window.setTimeout(function() {
+// 			$('.btn_grL.preview').attr("style", "display:inline !important");
+// 	 	}, 50);
+	}
+	//관심고객 로그인이 아니면 관심공고 등록 비활성화 (관심공고 자동등록 기능오로 대체)
+// 	$.ajax({
+// 		type : "post",
+// 		url : "/lhapply/lo/login/getLoginCheck.do",
+// 		dataType : "json",
+// 		async : false,
+// 		success : function(result) {
+// 			var ctfSe = result.ctfSe;
+// 			//로그인 성공 시 ssnDs 값 체크해서 한번 더 따지면 될것 같습니다.
+// 			if(!ctfSe || ctfSe.indexOf('ITR') == -1) {
+// 				$('.btns.ar .btn_bl3').hide();
+// 			}
+// 		},
+// 		error : function(result) {
+// 			alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+// 		}
+// 	});
+})
+
+
+// $("#popWrtancCtrtMapBtn").on("click", function(){
+// 	window.setTimeout(function() {
+// 	    map.relayout();
+
+// 	    map.setCenter( new kakao.maps.LatLng(ctrtXxs, ctrtYxs));
+
+// 	    infowindow.close();
+// 	    infowindow.open(map, marker);
+// 	}, 10);
+// });
+
+$(window).load(function(){
+	if($('.ntcImg').length > 0){
+		$('.ntcImg .slider').each(function(){
+			var ntcImg = new Swiper($(this), {
+				loop: false,
+				slidesPerView : 'auto',
+				spaceBetween : 0,
+				speed : 500,
+				observer: true,
+				navigation: {
+					nextEl: $(this).parent().find('button.next'),
+					prevEl: $(this).parent().find('button.prev'),
+				}
+			});
+		});
+	}
+});
+
+// 미로그인 사용자 param
+function makeParamNotLogin(jsonData, wtType){
+	var paramForm = document.getElementById('goSbscForm');
+	var keys = Object.keys(jsonData);
+	for(var i = 0; i < keys.length ; i++){
+		var key = keys[i];
+
+		let element = document.getElementById("sbsc"+key);
+		if(!isEmpty(element)){
+			element.parentNode.removeChild(element);
+		}
+
+		var inputTag = document.createElement('input');
+        inputTag.type = "hidden";
+        inputTag.id = "sbsc"+key;
+        inputTag.name = key;
+        inputTag.value = jsonData[key];
+
+		paramForm.append(inputTag);
+	}
+	var wtYnInputTag = document.createElement('input');
+	wtYnInputTag.type = "hidden";
+	wtYnInputTag.name = "wtYn";
+	wtYnInputTag.value = "Y";
+	paramForm.append(wtYnInputTag);
+
+	var wtTypeInputTag = document.createElement('input');
+	wtTypeInputTag.type = "hidden";
+	wtTypeInputTag.name = "wtType";
+	wtTypeInputTag.value = wtType;
+	paramForm.append(wtTypeInputTag);
+
+	var thisUrl = window.location.href;
+	thisUrl = thisUrl.substring(thisUrl.indexOf('/lhapply/'), thisUrl.length);
+
+	var infoUrlInputTag = document.createElement('input');
+	infoUrlInputTag.type = "hidden";
+	infoUrlInputTag.name = "infoUrl";
+	infoUrlInputTag.value = thisUrl;
+	paramForm.append(infoUrlInputTag);
+}
+
+//이미지 확대 레이어팝업
+function popimgZoom(obj){
+	var url = $(obj).find('img').prop('src');
+	var type = $(obj).parents('.inner').find('strong').text();
+	var imgTy = ($(obj).parents('p').hasClass('plan1')==true) ? '평면도' : '투시도';
+	$('#popImgZoom .rsp_img').html('<img src="'+url+'" alt="'+type + imgTy+' 이미지">')
+}
+
+function ctrtMapPop(Xxs, Yxs, content){
+	if(isEmpty(Xxs) || isEmpty(Yxs)){
+		alert('해당 위치 정보가 없습니다.');
+		return;
+	}
+
+	ctrtXxs = Xxs; //X좌표
+	ctrtYxs = Yxs; //Y좌표
+
+	showCtrtMap(content);
+}
+
+function showCtrtMap(content){
+	setTimeout(function(){
+		ctrtDrawMap(content);
+	},10);
+
+
+	$('#popWrtancCtrtMapBtn').get(0).click();
+}
+
+function ctrtDrawMap(content){
+	$("#ctrtMapContainer").css("height", "500px");
+
+	var coord = new naver.maps.LatLng(ctrtXxs, ctrtYxs),
+	map = new naver.maps.Map('ctrtMapContainer', { // 지도를 표시할 div
+        center: coord, // 지도의 중심좌표
+        zoom: 15
+    }),
+    marker = new naver.maps.Marker({ // 마커를 생성합니다
+        map: map, // 마커가 지도 위에 표시되도록 설정합니다
+        position: coord // 마커가 표시될 위치입니다
+    });
+
+	var contentString = "<div style=\"padding:5px; white-space:nowrap\">"+content+"</div>"; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+
+	var infowindow = new naver.maps.InfoWindow({ // 인포윈도우를 생성합니다
+        content: contentString
+    });
+
+    infowindow.open(map, marker); // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+}
+</script>
+
+<!-- 레이어팝업 : 비디오팝업 -->
+<div class="lyPop" id="popPlanVideo">
+	<div class="lyPop_wrap w100">
+		<h2>평면도 동영상보기 - <span></span></h2>
+		<div class="inner">
+			<p class="videoArea">
+				<video src="" controls></video>
+			</p>
+		</div>
+		<a href="#popPlanVideo" class="lyPopClose hashClose"><span class="hid">닫기</span><i class="xi-close" aria-hidden="true"></i></a>
+	</div>
+</div>
+
+<!-- 레이어팝업 : 한국부동산원 청약홈 안내 -->
+<div class="lyPop" id="popApplyHome">
+	<div class="lyPop_wrap">
+		<h2>한국부동산원 청약홈 안내</h2>
+		<div class="inner">
+			<div class="box_gr">
+				<p class="font_Fm">LH에서 공급하는 주택에 대한 고객님의 <span class="Tline_b">주택소유여부 및 청약제한사항</span> 등의 청약자격은 한국부동산원 "청약Home"하단 <span class="Tline_b">청약자격확인</span> 메뉴를 통해 본인의 <span class="Tline_b">공동인증서 등을 이용</span>하여 직접 조회해볼 수 있습니다.</p>
+				<p class="bu_atte">주택소유여부는 참고용 정보로서 실제 사실과는 다를 수 있으며, 소득&middot;자산은 당첨자 선정 이후 사회보장정보시스템을 통해 검증합니다.</p>
+				<p class="bu_atte">모바일기기 이용자는 "청약홈"앱을 설치하시면 더욱 편리하게 이용할 수 있습니다.</p>
+			</div>
+			<p class="rsp_img"><img src="/images/web/lhapply/sub/REB_applyHome.png" alt="한국부동산원 청악홈 메인페이지 > 청약자격확인 바로가기 영역 표시"></p>
+		</div>
+		<div class="btns ac"><a href="http://www.applyhome.co.kr" class="btn_bl1" title="새창" target="_blank">한국부동산원 청약홈 바로가기 <i class="xi-angle-right" aria-hidden="true"></i></a></div>
+		<a href="#popApplyHome" class="lyPopClose hashClose"><span class="hid">닫기</span><i class="xi-close" aria-hidden="true"></i></a>
+	</div>
+</div>
+
+<!-- 레이어팝업 : 투시도 -->
+<div class="lyPop" id="popPerspect">
+	<div class="lyPop_wrap">
+		<h2>투시도 이미지 정보</h2>
+		<div class="inner">
+			<p class="ac rsp_img"><img id="perspectImg" src="" alt=""></p>
+		</div>
+		<a href="#popPerspect" class="lyPopClose hashClose"><span class="hid">닫기</span><i class="xi-close" aria-hidden="true"></i></a>
+	</div>
+</div>
+<a href="#popPerspect" class="btn_bl1 hash" id="popPerspectBtn" style="display:none;"></a>
+
+<form id="fileDownForm">
+	<input type="hidden" name="fileid" id="fileid">
+</form>
+
+<form name="przwinForm" id="przwinForm" method="post">
+	<input type="hidden" name="mi" value="1248">
+
+	<input type="hidden" id="pr_uppAisTpCd" name="uppAisTpCd"/>
+	<input type="hidden" id="pr_aisTpCd" name="aisTpCd"/>
+	<input type="hidden" id="pr_ltrUntNo" name="ltrUntNo"/>
+	<input type="hidden" id="pr_ltrToyNo" name="ltrToyNo"/>
+	<input type="hidden" id="pr_splInfNm" name="splInfNm"/>
+	<input type="hidden" id="pr_cnpCd" name="cnpCd"/>
+	<input type="hidden" id="pr_slYn" name="slYn"/>
+	<input type="hidden" id="pr_lsScrnTpCd" name="lsScrnTpCd"/>
+	<input type="hidden" id="pr_hsLtrKdCdNm" name="hsLtrKdCdNm"/>
+	<input type="hidden" id="pr_splTpCd" name="splTpCd"/>
+	<input type="hidden" id="pr_panNm" name="panNm"/>
+	<input type="hidden" id="pr_pzwrAncDt" name="pzwrAncDt"/>
+	<input type="hidden" id="pr_panId" name="panId"/>
+	<input type="hidden" id="pr_ccrCnntSysDsCd" name="ccrCnntSysDsCd"/>
+	<input type="hidden" id="pr_rnk" name="rnk"/>
+	<input type="hidden" id="pr_ltrmNleYn" name="ltrmNleYn"/>
+	<input type="hidden" id="pr_lohTpCd" name="lohTpCd"/>
+	<input type="hidden" id="pr_ltrNot" name="ltrNot"/>
+	<input type="hidden" id="pr_bltrDsCd" name="bltrDsCd"/>
+	<input type="hidden" id="pr_pzwrBtn1" name="pzwrBtn1"/>
+</form>
+
+<div class="loading" style="display: none;"><p><object type="image/svg+xml" data="/00_common/images/layout/LH_loading.svg"></object></p></div>
+
+<script>
+
+function fileDownLoad(fileId){
+	if(isEmpty(fileId)){
+		alert('다운로드할 이미지 정보가 없습니다.');
+		return;
+	}
+	location.href = "/lhapply/lhFile.do?fileid="+fileId;
+}
+
+function fileDownLoad2(){
+	if($('#fileid').val() == ''){
+		alert('다운로드할 이미지 정보가 없습니다.');
+		return false;
+	}
+
+	location.href = "/lhapply/lhFile.do?fileid="+$('#fileid').val();
+}
+
+// 투시도 레이어팝업
+function perspectPop(fileSn, fileNm, filePath){
+	$('#perspectImg').attr('src',getFilePath(fileSn));
+	$('#popPerspectBtn').get(0).click();
+}
+
+function selectPrzwin(panId){
+	$.ajax({
+		type : "POST",
+		datatype : "json",
+		async : false,
+		data : {
+			schPanId : panId
+		},
+		url : "/lhapply/apply/wt/wrtanc/selectWrtancPrzwinAnnoRdList.do",
+		success : function(result){
+
+			//공고에서 호출할때 act_11로 호출해서 해당 요청을 받아 act_11 해제
+			nfStop({
+				projectKey : "service_1",
+				segmentKey : "act_11"
+			});
+
+
+			result = JSON.parse(result);
+
+			if(result.SUC == 'Y'){
+				if(!isEmpty(result.pzwrBtn1)){ // 당첨,낙찰자명단
+					$('#conf').show();
+					$('#conf').text(result.pzwrBtn1);
+					$('#pr_pzwrBtn1').val(result.pzwrBtn1);
+				}
+				if(!isEmpty(result.pzwrBtn2)){ // 예비자명단
+					$('#resrv').show();
+				}
+
+				$('#pr_aisTpCd').val(result.aisTpCd);
+				$('#pr_uppAisTpCd').val(result.uppAisTpCd);
+				$('#pr_ltrUntNo').val(result.ltrUntNo);
+				$('#pr_ltrToyNo').val(result.ltrToyNo);
+				$('#pr_splInfNm').val(result.splInfNm);
+				$('#pr_cnpCd').val(result.cnpCd);
+				$('#pr_slYn').val(result.slYn);
+				$('#pr_lsScrnTpCd').val(result.lsScrnTpCd);
+				$('#pr_hsLtrKdCdNm').val(result.hsLtrKdCdNm);
+				$('#pr_splTpCd').val(result.splTpCd);
+				$('#pr_panNm').val(result.panNm);
+				$('#pr_pzwrAncDt').val(result.pzwrAncDt);
+				$('#pr_panId').val(result.panId);
+				$('#pr_ccrCnntSysDsCd').val(result.ccrCnntSysDsCd);
+				$('#pr_rnk').val(result.rnk);
+				$('#pr_ltrmNleYn').val(result.ltrmNleYn);
+				$('#pr_lohTpCd').val(result.lohTpCd);
+				$('#pr_ltrNot').val(result.ltrToyNo);
+			}else{
+				$('#conf').hide();
+				$('#resrv').hide();
+			}
+		}, error : function(result){
+
+				nfStop({
+					projectKey : "service_1",
+					segmentKey : "act_11"
+				});
+
+			alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+		}
+	});
+}
+
+//당첨,낙찰,예비자 명단
+function goPrzDetail(gubun){
+	var goPageUrl = "";
+	var bltrDsCd = "";
+	var aisTpCd = $('#pr_aisTpCd').val();
+	var pzwrBtn1 = $('#pr_pzwrBtn1').val();
+
+	if(gubun == "1"){ // 당첨,낙찰자 명단
+		if(pzwrBtn1 == "낙찰자명단"){
+			if(aisTpCd == "01"){
+				bltrDsCd = "01";
+			}
+			goPageUrl = "/lhapply/apply/pr/przwin/selectPrzwinSucessFulAnnoRdList.do";
+
+		}else{
+			if(aisTpCd == "01"){
+				bltrDsCd = "02"; // 당첨자명단
+			}
+			goPageUrl = "/lhapply/apply/pr/przwin/selectPrzwinConfAnnoRdList.do";
+		}
+	}else{ // 예비자명단
+		goPageUrl = "/lhapply/apply/pr/przwin/selectPrzwinResrvAnnoRdList.do";
+	}
+
+	if(aisTpCd == "41"){
+		aisTpCd = "07";
+	}else if(aisTpCd == "42"){
+		aisTpCd = "10";
+	}
+
+	$('#pr_aisTpCd').val(aisTpCd);
+	$('#pr_bltrDsCd').val(bltrDsCd);
+
+
+	//*** 넷퍼넬
+	nfStart({
+		projectKey : "service_1",   // project_key
+		segmentKey : "act_8"  		// segment_key
+		}, function(response) {
+
+			if(response.status == 'Success'){
+
+				$("#przwinForm").attr('action', goPageUrl).submit();
+
+			}else{
+
+				var sNetfMsg = "";
+
+				if(response.status == 'Close'){
+					sNetfMsg = "대기를 취소하였습니다.";
+				}else if(response.status == 'Error'){
+					sNetfMsg = "오류가 발생하였습니다.";
+				}else if(response.status == 'NetworkError'){
+					sNetfMsg = "네트워크 요청을 실패하였습니다.";
+				}else if(response.status == 'Block'){
+					sNetfMsg = "진입이 차단된 페이지입니다.";
+				}else if(response.status == 'IpBlock'){
+					sNetfMsg = "반복된 요청으로 차단되었습니다.";
+				}else{
+					sNetfMsg = "오류가 발생하였습니다.\n관리자에게 문의하세요. "+response.status + "[" + response.statusCode + "]" ;
+				}
+
+				//alert(sNetfMsg);
+			}
+
+	});
+
+
+	/*** 당첨/예비 상세 넷퍼넬
+	NetFunnel.TS_SERVICE_ID	= "service_1";
+	NetFunnel.TS_ACTION_ID	= "act_8";
+
+	NetFunnel_Action({},function(ev,ret){
+
+		$("#przwinForm").attr('action', goPageUrl).submit();
+
+	});
+	*/
+
+
+}
+</script>
+
+
+
+
+			<!-- //서브컨텐츠 -->
+			</div>
+		</div>
+
+		<!-- Quick menu -->
+		
+
+
+
+<div class="quickMenu hide">
+	<a href="" class="toggle" id="quickToggle">퀵메뉴 열기/닫기</a>
+	<ul class="lst">
+		
+			<li><a href="/lhapply/apply/lo/login/inLoginPage.do" class="quick_Login"><i class="xi-user" aria-hidden="true"></i>로그인</a></li>
+		
+		
+		<li><a href="/lhapply/csvc/selectCtrtList.do?mi=1117"><i class="xi-file-text-o" aria-hidden="true"></i>증명서발급</a></li>
+		<li><a href="/lhapply/apply/csvc/qup/rnkList.do?mi=1113"><i class="xi-list-number" aria-hidden="true"></i>예비입주자 <br>순위 조회</a></li>
+		<li><a href="/lhapply/pre/main.do?mi=1022"><i class="xi-list-number" aria-hidden="true"></i>사전청약</a></li>
+		<li><i class="xi-apps" aria-hidden="true"></i>방문한메뉴
+			<ul class="vis" id="menuUl">
+
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<script>
+	$(document).ready(function(){
+
+		var isHide = getCookie("quickMenuStts");
+		if(isHide == "Y") {
+			$(".quickMenu").addClass("hide");
+		} else {
+			$(".quickMenu").removeClass("hide");
+		}
+
+		$("#menuUl").empty();
+		
+			
+			
+				$("#menuUl").prepend("<li><a href='/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1027&cntntsId='>공고문</a></li>");
+			
+		
+
+		$("#quickToggle").click(function() {
+			var isHide = "N";
+			if(!$(".quickMenu").hasClass("hide")) {
+				isHide = "Y";
+			}
+			setCookie("quickMenuStts", isHide, 1);
+		})
+
+		// 퀵메뉴 활성화 시 5초후 닫힘
+		
+		if (isHide != "Y") {
+			setTimeout(function(){
+				setCookie("quickMenuStts", "Y", 1);
+				setCookie("quickMenuSttsAuto", "Y", 1);
+				$(".quickMenu").addClass("hide");
+			}, 5000);
+		}
+		
+
+		// 메인화면일때 자동으로 닫힌 경우라면 초기화
+		
+	});
+
+	var setCookie = function(name, value, exp) {
+		exp = typeof exp !== 'undefined' ? exp : 1;
+		var date = new Date();
+// 		date.setTime(date.getTime() + exp*24*60*60*1000); //현재에서 24시간
+// 		date.setHours(0,0,1,0); //다음 날 자정
+		date = new Date(parseInt(date.getTime() / 86400000) * 86400000 + 54000000);
+		if (date > new Date()) exp -= 1;
+		date.setDate(date.getDate() + exp); //다음날 자정
+
+		document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+	};
+
+	var getCookie = function(name) {
+		var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+		return value? value[2] : "";
+	};
+</script>
+
+		<!-- //Quick menu -->
+		<!-- 관심공고 알림 -->
+		
+
+
+
+
+<div class="alert" id="itrDiv" style="display: none;">
+	<div class="top_bar copy">
+		<h3>관심공고 알림</h3>
+		<p>
+			<a href="javascript:" class='b-close'><em class="hid">관심공고 알림 닫기</em><img src="/images/co/lo/cancel.png" alt=""></a>
+		</p>
+	</div>
+	<div class="login copy">
+		<!-- <p class="user_img">
+			<img src="/images/co/lo/user.png">
+		</p> -->
+		<p class="user_txt" id='itrDivNotice'></p>
+	</div>
+</div>
+
+
+<script>
+	function callItrNotice(url,message,title){
+
+			var addHtmlCnt ="<p>"+message+"</p>";
+			addHtmlCnt += "<br><a href='"+url+"' target='_blank'>"+title+" 바로가기</a>";
+
+			var windowWidth = $( window ).width();
+
+				$('#itrDivNotice').html(addHtmlCnt);
+
+				$('#itrDiv').bPopup({
+					modalClose : false,
+					opacity : 0.3,
+					speed : 450,
+	  				autoClose : 2400,
+	 				followSpeed: 1500,
+					transition: 'slideDown',
+					transitionClose: 'slideBack',
+					positionStyle: 'fixed'
+				});
+				// 닫기
+				$(".b-close").click(function(){
+					$('#itrDiv').bPopup().close();
+				});
+
+	}
+</script>
+		<!-- //관심공고 알림 -->
+
+		<!-- 레이어 팝업 : 자가진단 -->
+		
+		<!-- 레이어팝업 종료 -->
+	</div>
+	<!-- //컨테이너 -->
+
+	<!-- 레이어팝업 : 청약신청 목록보기 -->
+	<div class="lyPop" id="popAplLoadLy">
+		<div class="lyPop_wrap" tabindex="0">
+			<h2>청약신청 목록보기</h2>
+			<div class="inner">
+				<div class="infoUtil">
+					<p class="info">청약신청 중 임시저장된 목록이며, 당일 임시저장된 내역만 조회됩니다.</p>
+				</div>
+				<div class="aplyLoad">
+					<ol id="aplyLoadOl">
+						<li>
+							<p class="cate">
+								<span class="stt ing">접수중</span><!--상태-->
+								<span class="col1">일반형공공분양주택</span><!--공급유형-->
+								<span class="col2">일반공급(우선)</span><!--구분-->
+							</p>
+							<ul class="list_st2 col-flex col-2">
+								<li>사업지구명 : 부천원종(B2)</li>
+								<li>저장일시 : 2023-04-17 14:23:15</li>
+							</ul>
+							<div class="btn">
+								<a href="" class="btn_blL mini">불러오기</a>
+								<a href="" class="btn_gr mini">삭제</a>
+							</div>
+						</li>
+						<li>
+							<p class="cate">
+								<span class="stt end">접수마감</span><!--상태-->
+								<span class="col1">나눔형(이익공유형) 분양주택</span><!--공급유형-->
+								<span class="col2">일반공급(우선)</span><!--구분-->
+							</p>
+							<ul class="list_st2 col-flex col-2">
+								<li>사업지구명 : 부천원종(B2) 부천원종(B2) 부천원종(B2)</li>
+								<li>저장일시 : 2023-04-17 14:23:15</li>
+							</ul>
+							<div class="btn">
+								<a href="" class="btn_blL mini">불러오기</a>
+								<a href="" class="btn_gr mini">삭제</a>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<a href="#popAplLoadLy" class="lyPopClose hashClose"><span class="hid">닫기</span><i class="xi-close" aria-hidden="true"></i></a>
+		</div>
+	</div>
+
+	
+	<!-- footer -->
+	
+
+<!-- footer -->
+	<footer id="footer">
+		<div class="container">
+			<!-- site link -->
+			<div class="siteLink">
+				<div class="siteBtn">
+					<button type="button">관련사이트</button>
+					<div class="sitelst">
+						<ul>
+							<li><a href="http://bizmap.lh.or.kr/lhmapIntro.do" target="_blank" title="새창">LH집어디</a></li>
+							<li><a href="https://myapt.molit.go.kr/main/index.do" target="_blank" title="새창">중앙공동주택관리지원센터</a></li>
+							<li><a href="https://irts.molit.go.kr/" target="_blank" title="새창">부동산거래 전자계약시스템</a></li>
+							<li><a href="https://apply.lh.or.kr/lhlease/main.do" target="_blank" title="새창">전세플러스</a></li>
+							<li><a href="https://hanaro.lh.or.kr" target="_blank" title="새창">하나로 내집</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<img class="wide" style="height: 33px;position: absolute;top: 4rem;right: 6.5rem;" src="/images/web/main/main/vision_copy_wide.png" alt="슬로건:살고싶은집과 도시로 국민의 희망을 가꾸는 기업">
+			<p class="ico_wa"><img src="/00_common/images/layout/img_WA_Mark.png" alt="과학기술정보통신부 WA(WEB접근성) 품질인증 마크, 웹와치(WebWatch) 2025.09.25 ~ 2026.09.24"></p>
+
+			<p class="line"></p>
+
+			<div class="ftBox">
+				<ul class="lst">
+					<li><a href="/lhapply/iv/indvdlView/selectIndvdlView.do?mi=1266"><strong>개인정보처리방침</strong></a></li>
+					<li><a href="/lhapply/cm/cntnts/cntntsView.do?mi=1266&cntntsId=1200">이메일무단수집거부</a></li>
+					
+				</ul>
+
+				<div class="inner">
+					<p class="logo"><img src="/00_common/images/layout/footer_logo.png" alt="한국토지주택공사"></p>
+					<address>
+						<span>52852  경상남도 진주시 충의로 19 (충무공동)</span>
+						<span>대표번호 <a href="tel:1600-1004">1600-1004</a></span>
+						<p class="copyright">Copyright 2023 korea land & housing corporation all rights reserved.</p>
+					</address>
+				</div>
+			</div>
+			<button class="moveTop" id="moveTopBtn" style="display: flex;"><i class="xi-arrow-top" aria-hidden="true"></i><span class="hid">페이지상단으로 이동</span></button>
+		</div>
+	</footer>
+<!-- // footer -->
+
+	
+
+	<div style="display:none;" data-id='datas'>
+		
+
+
+
+<input type='hidden' data-id='dsServiceJson'
+	value='{}' />
+<input type='hidden' data-id='gdsCertServiceJson'
+	value='{}' />
+<input type='hidden' data-id='ctx' value='lhapply' />
+
+
+	
+	<input type='hidden' data-id='gds_apxTpDtl' value='/{ctx}/lh-adaptor-cmc/gds_apxTpDtl/nfu.do' />
+
+	</div>
+</div>
+
+
+
+<script type='module' src='/js/SubLoader.js'></script>
+<script>
+	$(window).load(function(){
+
+		//gnb 현재 메인 check
+		
+			
+				//var mainOn = $('#gnb .mn1, #fullMenu .mn1, #mNav .mn1 > a');
+				//mainOn.addClass('on');
+				//$gnbMnCheck = mainOn;
+			
+			
+			
+			
+		
+
+		const originalOpen = window.open;
+		const originalSubmit = HTMLFormElement.prototype.submit;
+		const iframe = document.getElementById('addrIframe');
+
+		var isIOS = /iPhone|iPod|iPad/i.test(navigator.userAgent) ? true : false;
+		var isMobile = /iPhone|iPod|Android|iPad|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|OperaMobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i.test(navigator.userAgent) ? true : false;
+		var chkOs = getCookie("d");
+		if (isMobile) {
+			window.open = function (url, name, specs) {
+
+				if (url && (url.indexOf("/addrSrch_pop.do") || url.indexOf("/addCertiSignPage.do")) > -1) {
+					iframe.name = name;
+					if (url) {
+						showLoading();
+						iframe.src = url;
+					}
+					openAddrLayer();
+					return {
+						   closed : false,
+						   focus : function(){},
+						   close : function() {
+							   $('#addrLayer').hide();
+						   }
+					};
+				} else if (isIOS || chkOs == "ios") {
+					iframe.name = name;
+					if (url) {
+						showLoading();
+						iframe.src = url;
+					}
+
+					openAddrLayer();
+					return {
+						   closed : false,
+						   focus : function(){},
+						   close : function() {
+							   $('#addrLayer').hide();
+						   }
+					};
+
+				}
+				return originalOpen.call(window, url, name, specs);
+			};
+
+		}
+		if (isIOS || chkOs == "ios") {
+			HTMLFormElement.prototype.submit = function (){
+				const params = new URLSearchParams(new FormData(this)).toString();
+
+				if (iframe && this.target === iframe.name) {
+					showLoading();
+					iframe.src = this.action + (this.action.includes('?') ? '&' : '?') + params;
+					return;
+				}
+				return originalSubmit.call(this);
+			}
+		}
+
+		function showLoading() {
+			$(".cmmloading").show();
+
+			clearTimeout(iframe._loadingTimer);
+
+			iframe._loadingTimer = setTimeout(function () {
+				$(".cmmloading").hide();
+			}, 5000);
+		}
+
+		iframe.onload = function () {
+			iframe.contentWindow.close = function () {
+				$('#addrLayer').hide();
+			};
+			$(".cmmloading").hide();
+		};
+
+		function openAddrLayer() {
+
+			var isMobile = /iPhone|iPod|Android|iPad|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|OperaMobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i.test(navigator.userAgent) ? true : false;
+
+			var popupWidth = 700;
+			var popupHeight = 900;
+
+			if (isMobile) {
+				iframe.style.width = '100vw';
+				iframe.style.height = '100dvh';
+			} else {
+				iframe.style.width = '700px';
+				iframe.style.height = '900px';
+
+				$('#addrLayerinner').css('width', '700px');
+				$('#addrLayerinner').css('height', '900px');
+			}
+			iframe.style.backgroundColor = "#fff";
+
+			$('#addrLayer').show();
+		}
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% from "_macros.html" import notice_badges, coop_reason %}
+{% block title %}공고 목록{% endblock %}
+{% block content %}
+<h1>공고 목록 <span class="muted small">{{ total }}건</span></h1>
+<form class="searchbar" method="get" action="{{ base }}/notices">
+  <input type="search" name="q" value="{{ params.q or '' }}" placeholder="공고명·단지·지역 검색">
+  <select name="source"><option value="">모든 출처</option>
+    {% for k, v in SOURCE_LABELS.items() if k != 'lh_api' %}<option value="{{ k }}" {% if params.source == k %}selected{% endif %}>{{ v }}</option>{% endfor %}
+  </select>
+  <select name="type"><option value="">모든 유형</option>
+    {% for t in SUPPLY_TYPES %}<option {% if params.type == t %}selected{% endif %}>{{ t }}</option>{% endfor %}
+  </select>
+  <select name="sido"><option value="">모든 지역</option>
+    {% for s in SIDO_LIST + ['전국'] %}<option {% if params.sido == s %}selected{% endif %}>{{ s }}</option>{% endfor %}
+  </select>
+  <select name="show">
+    {% for k, v in [('', '전체'), ('open', '접수 진행·예정(제외 빼고)'), ('ok', '알림 대상만(협동조합 제외 빼고)'), ('coop', '협동조합 의심 제외됨'), ('notified', '알림 보낸 공고')] %}
+    <option value="{{ k }}" {% if (params.show or '') == k %}selected{% endif %}>{{ v }}</option>{% endfor %}
+  </select>
+  <button>검색</button>
+</form>
+
+<div class="notice-list">
+{% for n in notices %}
+  <article class="notice {% if n.cooperative_suspect and not n.coop_override %}excluded{% endif %}">
+    <div class="title-line">
+      {{ notice_badges(n, today) }}
+      <a href="{{ base }}/notices/{{ n.id }}">{{ n.title }}</a>
+    </div>
+    <div class="meta">
+      <span>{{ SOURCE_LABELS.get(n.source, n.source) }}</span>
+      <span>{{ n.supply_type or '-' }}</span>
+      <span>{{ (n.sido or n.region_raw or '-') | replace(',', '·') }}{% if n.sigungu %} {{ n.sigungu }}{% endif %}</span>
+      <span>공고 {{ n.posted_date or '-' }}</span>
+      {% if n.apply_start or n.apply_end %}<span>접수 {{ n.apply_start or '?' }} ~ {{ n.apply_end or '?' }}</span>{% endif %}
+      {% if n.households %}<span>{{ '{:,}'.format(n.households) }}세대</span>{% endif %}
+      {% if n.area_min %}<span>{{ '%g' % n.area_min }}~{{ '%g' % n.area_max }}㎡</span>{% endif %}
+      {% if n.deposit_min %}<span>보증금 {{ fmt_won(n.deposit_min) }}~</span>{% endif %}
+      {% if n.price_min %}<span>분양가 {{ fmt_won(n.price_min) }}~</span>{% endif %}
+      {% if n.url %}<a href="{{ n.url }}" target="_blank" rel="noopener noreferrer">원문 ↗</a>{% endif %}
+    </div>
+    {% if n.cooperative_suspect %}{{ coop_reason(n) }}{% endif %}
+  </article>
+{% else %}
+  <p class="muted">조건에 맞는 공고가 없습니다.</p>
+{% endfor %}
+</div>
+
+{% if pages > 1 %}
+<nav class="pager">
+  {% if page > 1 %}<a href="?{{ qs }}&page={{ page - 1 }}">← 이전</a>{% endif %}
+  <span>{{ page }} / {{ pages }}</span>
+  {% if page < pages %}<a href="?{{ qs }}&page={{ page + 1 }}">다음 →</a>{% endif %}
+</nav>
+{% endif %}
+{% endblock %}

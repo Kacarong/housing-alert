@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}로그인{% endblock %}
+{% block content %}
+<section class="card narrow">
+  <h1>로그인</h1>
+  <form method="post" action="{{ base }}/login">
+    <label>비밀번호<input type="password" name="password" autofocus required autocomplete="current-password"></label>
+    <button class="primary">로그인</button>
+  </form>
+  <p class="muted small">초기 비밀번호는 서버의 프로젝트 <code>.env</code> 파일 <code>ADMIN_INITIAL_PASSWORD</code>에 있습니다.</p>
+</section>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}대시보드{% endblock %}
+{% block content %}
+<div class="row-between">
+  <h1>대시보드</h1>
+  <form method="post" action="{{ base }}/collect">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <button class="primary" {% if running %}disabled{% endif %}>{% if running %}수집 진행 중…{% else %}지금 수집{% endif %}</button>
+  </form>
+</div>
+
+{% if not webhook %}<div class="flash warn">디스코드 웹훅이 없어 알림은 '미발송'으로 쌓이고 있습니다({{ counts.pending }}건). <a href="{{ base }}/settings">설정에서 웹훅 넣기</a></div>{% endif %}
+{% if webhook and backlog %}<div class="flash warn">밀린 알림 {{ backlog }}건이 보낼지/버릴지 선택을 기다립니다. <a href="{{ base }}/settings#backlog">처리하기</a></div>{% endif %}
+{% if not api_key %}<div class="flash info">공공데이터포털 API 키 미설정: 청약홈·LH API 수집기는 건너뜁니다(LH·SH·GH 스크래핑은 동작). <a href="{{ base }}/settings#apikey">키 넣기</a></div>{% endif %}
+{% if counts.filters_on == 0 %}<div class="flash info">켜진 필터가 없습니다. <a href="{{ base }}/filters">필터 관리</a>에서 예시 필터를 켜거나 고쳐 쓰세요.</div>{% endif %}
+
+<div class="stats">
+  <div class="stat"><b>{{ counts.notices }}</b><span>저장된 공고</span></div>
+  <div class="stat"><b>{{ counts.open }}</b><span>접수 진행·예정</span></div>
+  <div class="stat"><b>{{ counts.coop }}</b><span>협동조합 의심 제외</span></div>
+  <div class="stat"><b>{{ counts.pending }}</b><span>미발송 알림</span></div>
+  <div class="stat"><b>{{ counts.filters_on }}</b><span>켜진 필터</span></div>
+</div>
+<p class="muted small">마지막 수집: {{ last_collect or '없음' }}{% if last_run %} · 마지막 실행 방식: {{ last_run.trigger }}{% if not last_run.finished_at %} (진행 중){% endif %}{% endif %}</p>
+
+<section class="card">
+  <h2>출처별 상태</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>출처</th><th>상태</th><th>마지막 성공</th><th>연속 실패</th><th>최근 수집/신규</th><th>오류</th></tr></thead>
+    <tbody>
+    {% for s in sources %}
+      <tr>
+        <td>{{ s.label }}</td>
+        <td>{% if s.state == '정상' %}<span class="badge ok">정상</span>{% elif s.state == '실패' %}<span class="badge danger">실패</span>{% elif s.state == '키 미설정' %}<span class="badge muted">키 미설정</span>{% else %}<span class="badge muted">{{ s.state }}</span>{% endif %}</td>
+        <td class="nowrap">{{ (s.last_success_at or '-')[:16] | replace('T', ' ') }}</td>
+        <td>{{ s.consecutive_failures or 0 }}</td>
+        <td>{% if s.last_count is not none %}{{ s.last_count }} / {{ s.last_new }}{% else %}-{% endif %}</td>
+        <td class="small">{{ s.last_error or '' }}{% if s.next_attempt_at %}<br><span class="muted">다음 시도 {{ s.next_attempt_at[:16] | replace('T',' ') }}</span>{% endif %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>최근 알림</h2>
+  {% if recent %}
+  <ul class="list">
+    {% for r in recent %}
+    <li>
+      <span class="badge {% if r.status == 'sent' %}ok{% elif r.status == 'pending' %}warn{% else %}muted{% endif %}">{{ {'sent':'발송','pending':'미발송','discarded':'버림'}.get(r.status, r.status) }}</span>
+      {% if r.kind == 'remind' %}<span class="badge info">D-1</span>{% endif %}
+      <a href="{{ base }}/notices/{{ r.notice_id }}">{% if r.is_correction %}[정정] {% endif %}{{ r.title }}</a>
+      <span class="muted small">· {{ r.filter_name }} · {{ (r.sent_at or r.created_at)[:16] | replace('T',' ') }}</span>
+      {% if r.error %}<span class="small danger-text">{{ r.error }}</span>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}<p class="muted">아직 알림이 없습니다. 최초 수집 때 있던 공고는 '이미 본 것'으로만 저장되고, 이후 새로 올라온 공고 중 켜진 필터에 맞는 것만 알립니다.</p>{% endif %}
+</section>
+{% endblock %}

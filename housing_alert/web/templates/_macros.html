@@ -1,0 +1,16 @@
+{% macro notice_badges(n, today=None) -%}
+  {% if n.cooperative_suspect and not n.coop_override %}<span class="badge danger">제외됨</span>{% endif %}
+  {% if n.cooperative_suspect and n.coop_override %}<span class="badge warn">오탐 허용</span>{% endif %}
+  {% if n.is_correction %}<span class="badge warn">정정</span>{% endif %}
+  {% if n.notice_kind == '안내' %}<span class="badge muted">안내</span>{% endif %}
+  {% if n.baseline %}<span class="badge muted" title="최초 실행 때 이미 있던 공고(알림 안 함)">기존</span>{% endif %}
+  {% if today and n.apply_end and n.apply_end < today %}<span class="badge muted">마감</span>{% endif %}
+{%- endmacro %}
+
+{% macro coop_reason(n) -%}
+  {% if n.cooperative_reason %}{% set r = n.cooperative_reason | fromjson %}
+  <div class="reason">제외됨(사유: {{ r.text }})
+    {% for m in r.matches[:3] %}<div class="snippet">“…{{ m.snippet }}…”</div>{% endfor %}
+  </div>
+  {% endif %}
+{%- endmacro %}

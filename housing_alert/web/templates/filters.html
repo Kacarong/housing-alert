@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}필터 관리{% endblock %}
+{% block content %}
+<div class="row-between">
+  <h1>필터 관리</h1>
+  <a class="button primary" href="{{ base }}/filters/new">+ 새 필터</a>
+</div>
+<p class="muted small">필터를 켠 시점 이후 새로 들어온 공고만 알립니다. '매칭 미리보기'는 지금 저장된 공고 전체에 적용했을 때 맞는 건수입니다(협동조합 의심 공고 제외).</p>
+<div class="filter-list">
+{% for f in filters %}
+  <article class="card filter {% if f.enabled %}on{% endif %}">
+    <div class="row-between">
+      <h2><a href="{{ base }}/filters/{{ f.id }}">{{ f.name }}</a></h2>
+      <span class="badge {% if f.enabled %}ok{% else %}muted{% endif %}">{% if f.enabled %}켜짐{% else %}꺼짐{% endif %}</span>
+    </div>
+    <p class="small">
+      {% set c = f.config %}
+      지역: {{ (c.sidos | join('·')) or '전국' }}{% if c.sigungus %} ({{ c.sigungus | join(', ') }}){% endif %} ·
+      유형: {{ (c.supply_types | join(', ')) or '전체' }}
+      {% if c.target_groups %} · 대상: {{ c.target_groups | join(', ') }}{% endif %}
+      {% if c.deposit_max %} · 보증금 ≤ {{ fmt_won(c.deposit_max) }}{% endif %}
+      {% if c.rent_max %} · 월세 ≤ {{ fmt_won(c.rent_max) }}{% endif %}
+      {% if c.price_max %} · 분양가 ≤ {{ fmt_won(c.price_max) }}{% endif %}
+      {% if c.remind_d1 %} · D-1 리마인드{% endif %}
+      {% if f.webhook_url %} · 전용 웹훅{% endif %}
+    </p>
+    <p class="small">매칭 미리보기 <b>{{ f.preview_count }}</b>건 · 발송 {{ f.sent }}건
+      <button class="link js-preview" data-id="{{ f.id }}">목록 보기</button></p>
+    <div class="preview" id="preview-{{ f.id }}"></div>
+    <div class="actions">
+      <form method="post" action="{{ base }}/filters/{{ f.id }}/toggle"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="{% if not f.enabled %}primary{% endif %}">{% if f.enabled %}끄기{% else %}켜기{% endif %}</button></form>
+      <a class="button" href="{{ base }}/filters/{{ f.id }}">수정</a>
+      <form method="post" action="{{ base }}/filters/{{ f.id }}/duplicate"><input type="hidden" name="csrf" value="{{ csrf }}"><button>복제</button></form>
+      <form method="post" action="{{ base }}/filters/{{ f.id }}/delete" onsubmit="return confirm('삭제할까요?')"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="danger">삭제</button></form>
+    </div>
+  </article>
+{% else %}
+  <p class="muted">필터가 없습니다.</p>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}{{ f.name or '새 필터' }}{% endblock %}
+{% block content %}
+{% set c = f.config %}
+<p><a href="{{ base }}/filters">← 필터 목록</a></p>
+<h1>{% if f.id %}필터 수정{% else %}새 필터{% endif %}</h1>
+<form method="post" action="{{ base }}/filters/save" id="filter-form" class="filter-form">
+  <input type="hidden" name="csrf" value="{{ csrf }}">
+  {% if f.id %}<input type="hidden" name="id" value="{{ f.id }}">{% endif %}
+  <section class="card">
+    <label>이름<input name="name" value="{{ f.name }}" required></label>
+    <label class="check"><input type="checkbox" name="enabled" {% if f.enabled %}checked{% endif %}> 켜기 (켠 시점 이후 새 공고부터 알림)</label>
+  </section>
+
+  <section class="card">
+    <h2>지역</h2>
+    <p class="muted small">선택 안 하면 전국. '전국' 대상 공고(예: 전세임대)는 지역 조건과 관계없이 통과합니다.</p>
+    <div class="chips">
+      {% for s in SIDO_LIST %}<label class="chip"><input type="checkbox" name="sidos" value="{{ s }}" {% if s in c.sidos %}checked{% endif %}>{{ s }}</label>{% endfor %}
+    </div>
+    <label>시군구 (쉼표로 구분, 부분 일치. 예: 강서구, 수원)<input name="sigungus" value="{{ c.sigungus | join(', ') }}"></label>
+  </section>
+
+  <section class="card">
+    <h2>공급 유형</h2>
+    <p class="muted small">선택 안 하면 전체.</p>
+    <div class="chips">
+      {% for t in SUPPLY_TYPES %}<label class="chip"><input type="checkbox" name="supply_types" value="{{ t }}" {% if t in c.supply_types %}checked{% endif %}>{{ t }}</label>{% endfor %}
+    </div>
+    <label class="check"><input type="checkbox" name="private_rent_official_only" {% if c.private_rent_official_only %}checked{% endif %}> 민간임대는 청약홈 등에 정식 공고된 공공지원 민간임대만 허용 (일반 민간임대 제외)</label>
+    <label class="check"><input type="checkbox" name="recruit_only" {% if c.recruit_only %}checked{% endif %}> 입주자 모집 공고만 (당첨자 발표·서류 안내 등 제외)</label>
+    <label class="check"><input type="checkbox" name="exclude_closed" {% if c.exclude_closed %}checked{% endif %}> 접수 마감이 지난 공고 제외</label>
+  </section>
+
+  <section class="card grid2">
+    <h2 class="full">면적·금액·세대수</h2>
+    <label>전용면적 최소(㎡)<input type="number" step="0.1" name="area_min" value="{{ c.area_min if c.area_min is not none else '' }}"></label>
+    <label>전용면적 최대(㎡)<input type="number" step="0.1" name="area_max" value="{{ c.area_max if c.area_max is not none else '' }}"></label>
+    <label>임대보증금 상한(만원)<input type="number" name="deposit_max" value="{{ won_to_manwon(c.deposit_max) }}"></label>
+    <label>월 임대료 상한(만원)<input type="number" step="0.1" name="rent_max" value="{{ won_to_manwon(c.rent_max) }}"></label>
+    <label>분양가 상한(만원)<input type="number" name="price_max" value="{{ won_to_manwon(c.price_max) }}"></label>
+    <label>공급 세대수 최소<input type="number" name="households_min" value="{{ c.households_min if c.households_min is not none else '' }}"></label>
+    <div class="full">
+      값을 모르는 공고(보증금·면적 등 미기재):
+      <label class="check inline"><input type="radio" name="unknown_policy" value="pass" {% if c.unknown_policy != 'exclude' %}checked{% endif %}> 통과</label>
+      <label class="check inline"><input type="radio" name="unknown_policy" value="exclude" {% if c.unknown_policy == 'exclude' %}checked{% endif %}> 제외</label>
+      <p class="muted small">보증금·월세 조건은 임대 유형에만, 분양가 조건은 분양 유형에만 적용됩니다.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>키워드·대상 계층</h2>
+    <label>포함 키워드 (하나라도 있으면 통과, 쉼표 구분)<input name="include_keywords" value="{{ c.include_keywords | join(', ') }}"></label>
+    <label>제외 키워드 (하나라도 있으면 제외)<input name="exclude_keywords" value="{{ c.exclude_keywords | join(', ') }}"></label>
+    <div class="chips">
+      {% for g in TARGET_GROUPS %}<label class="chip"><input type="checkbox" name="target_groups" value="{{ g }}" {% if g in c.target_groups %}checked{% endif %}>{{ g }}</label>{% endfor %}
+    </div>
+    <label class="check"><input type="checkbox" name="keywords_in_body" {% if c.keywords_in_body %}checked{% endif %}> 키워드·대상 계층을 본문에서도 찾기 (기본은 제목·단지명만 — 본문 공통 문구로 인한 오탐 방지)</label>
+  </section>
+
+  <section class="card">
+    <h2>출처·알림</h2>
+    <div class="chips">
+      {% for name, label in sources %}<label class="chip"><input type="checkbox" name="sources" value="{{ name }}" {% if name in c.sources %}checked{% endif %}>{{ label }}</label>{% endfor %}
+    </div>
+    <p class="muted small">출처를 선택 안 하면 전체.</p>
+    <label class="check"><input type="checkbox" name="remind_d1" {% if c.remind_d1 %}checked{% endif %}> 접수 마감 하루 전(D-1) 리마인드 보내기</label>
+    <label>이 필터 전용 디스코드 웹훅 (선택, 비우면 기본 웹훅)
+      <input name="webhook_url" placeholder="{% if f.webhook_url %}설정됨 — 바꾸려면 새 URL 입력{% else %}https://discord.com/api/webhooks/...{% endif %}" autocomplete="off"></label>
+    {% if f.webhook_url %}<label class="check"><input type="checkbox" name="keep_webhook" value="1" checked> 기존 전용 웹훅 유지 (해제하고 저장하면 삭제)</label>{% endif %}
+  </section>
+
+  <div class="actions sticky">
+    <button type="button" id="preview-btn">매칭 미리보기</button>
+    <button class="primary">저장</button>
+  </div>
+  <div id="preview-result" class="preview"></div>
+</form>
+{% endblock %}

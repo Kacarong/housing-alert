@@ -1,0 +1,10 @@
+[Unit]
+Description=housing-alert 수집 타이머 (실제 간격은 웹 설정: 주간 60분 / 야간 180분)
+
+[Timer]
+OnCalendar=*-*-* *:05,35:00
+RandomizedDelaySec=120
+Persistent=true
+
+[Install]
+WantedBy=timers.target

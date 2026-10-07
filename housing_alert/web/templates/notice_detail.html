@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% from "_macros.html" import notice_badges, coop_reason %}
+{% block title %}{{ n.title }}{% endblock %}
+{% block content %}
+<p><a href="{{ base }}/notices">← 공고 목록</a></p>
+<h1 class="notice-title">{{ notice_badges(n) }} {{ n.title }}</h1>
+{% if n.url %}<p><a class="button" href="{{ n.url }}" target="_blank" rel="noopener noreferrer">원문 보기 ↗</a></p>{% endif %}
+
+{% if n.cooperative_suspect %}
+<section class="card warnbox">
+  <h2>협동조합 의심 판정</h2>
+  {{ coop_reason(n) }}
+  <form method="post" action="{{ base }}/notices/{{ n.id }}/coop-override">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    {% if n.coop_override %}
+      <p>오탐으로 표시되어 알림 대상에 포함됩니다.</p>
+      <input type="hidden" name="value" value="0"><button>다시 제외하기</button>
+    {% else %}
+      <p class="small muted">정식 공고인데 잘못 걸렸다면(예: 운영기관이 협동조합인 공공 매입임대) 알림 대상으로 되돌릴 수 있습니다.</p>
+      <input type="hidden" name="value" value="1"><button>오탐 — 알림 허용</button>
+    {% endif %}
+  </form>
+</section>
+{% endif %}
+
+<section class="card">
+  <h2>공고 정보</h2>
+  <dl class="facts">
+    <dt>출처</dt><dd>{{ SOURCE_LABELS.get(n.source, n.source) }} (ID {{ n.source_id }})</dd>
+    <dt>유형</dt><dd>{{ n.supply_type }} <span class="muted small">(원문 분류: {{ n.category_raw or '-' }}, {{ n.notice_kind }})</span></dd>
+    <dt>지역</dt><dd>{{ (n.sido or '-') | replace(',', '·') }} {{ n.sigungu or '' }} <span class="muted small">{{ n.region_raw or '' }}</span></dd>
+    <dt>단지</dt><dd>{{ n.complex_name or '-' }}</dd>
+    <dt>공고일</dt><dd>{{ n.posted_date or '-' }}</dd>
+    <dt>접수기간</dt><dd>{{ n.apply_start or '?' }} ~ {{ n.apply_end or '?' }} {% if n.status %}<span class="muted small">({{ n.status }})</span>{% endif %}</dd>
+    <dt>공급 세대수</dt><dd>{{ '{:,}'.format(n.households) if n.households else '-' }}</dd>
+    <dt>전용면적</dt><dd>{% if n.area_min %}{{ '%g' % n.area_min }} ~ {{ '%g' % n.area_max }}㎡{% else %}-{% endif %}</dd>
+    <dt>임대보증금</dt><dd>{% if n.deposit_min %}{{ fmt_won(n.deposit_min) }} ~ {{ fmt_won(n.deposit_max) }}{% else %}-{% endif %}</dd>
+    <dt>월 임대료</dt><dd>{% if n.rent_min %}{{ fmt_won(n.rent_min) }} ~ {{ fmt_won(n.rent_max) }}{% else %}-{% endif %}</dd>
+    <dt>분양가</dt><dd>{% if n.price_min %}{{ fmt_won(n.price_min) }} ~ {{ fmt_won(n.price_max) }}{% else %}-{% endif %}</dd>
+    <dt>최초 수집</dt><dd>{{ n.first_seen_at[:16] | replace('T',' ') }}{% if n.baseline %} <span class="muted small">(최초 실행 기준선 — 알림 안 함)</span>{% endif %}</dd>
+    <dt>상세 수집</dt><dd>{% if n.detail_fetched %}완료{% else %}미완료{% if n.detail_error %} <span class="small danger-text">{{ n.detail_error }}</span>{% endif %}{% endif %}</dd>
+  </dl>
+</section>
+
+<section class="card">
+  <h2>필터별 매칭</h2>
+  <ul class="list">
+  {% for f in filter_results %}
+    <li>{% if f.ok %}<span class="badge ok">매칭</span>{% else %}<span class="badge muted">불일치</span>{% endif %}
+      {{ f.name }} {% if not f.enabled %}<span class="muted small">(꺼짐)</span>{% endif %}
+      {% if not f.ok %}<span class="muted small">— {{ f.fails | join(', ') }}</span>{% endif %}</li>
+  {% endfor %}
+  </ul>
+  {% if notes %}
+  <h3>발송 기록</h3>
+  <ul class="list">{% for r in notes %}<li>{{ r.filter_name }} · {{ r.kind }} · {{ r.status }} · {{ (r.sent_at or r.created_at)[:16] | replace('T',' ') }}</li>{% endfor %}</ul>
+  {% endif %}
+</section>
+
+{% if n.body_text %}
+<section class="card">
+  <h2>수집한 본문 (요약)</h2>
+  <pre class="body">{{ n.body_text[:3000] }}</pre>
+</section>
+{% endif %}
+{% endblock %}
