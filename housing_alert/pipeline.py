@@ -32,6 +32,11 @@ BACKOFF_MAX_MIN = 12 * 60
 
 DEFAULT_SCHEDULE = {"day_interval_min": 60, "night_interval_min": 180, "night_start_hour": 0, "night_end_hour": 7}
 
+# 상세 페이지가 더 정확한 값을 주는 필드: 상세를 받은 뒤에는 목록 값으로 덮지 않는다(비어 있을 때만 채움)
+DETAIL_OWNED = {"sigungu", "complex_name", "households", "area_min", "area_max", "deposit_min", "deposit_max",
+                "rent_min", "rent_max", "price_min", "price_max", "apply_start", "apply_end", "body_text",
+                "complex_text", "posted_date"}
+
 LIST_FIELDS = ["title", "url", "category_raw", "region_raw", "sigungu", "complex_name", "households",
                "area_min", "area_max", "deposit_min", "deposit_max", "rent_min", "rent_max", "price_min",
                "price_max", "posted_date", "apply_start", "apply_end", "status", "body_text", "complex_text"]
@@ -146,6 +151,8 @@ def upsert_notice(conn: sqlite3.Connection, item: NoticeData, baseline: bool, no
 
     old = dict(row)
     revised = False
+    if old["detail_fetched"]:
+        values = {k: v for k, v in values.items() if k not in DETAIL_OWNED or old.get(k) is None}
     updates = {**values, **computed}
     # 상세에서 얻은 값은 목록 값(None 아님)으로만 덮는다; 지역은 상세가 더 정확할 수 있어 비어 있을 때만
     if old.get("sido") and "sido" in updates:
@@ -272,10 +279,11 @@ def run_source(conn: sqlite3.Connection, collector: Collector, client: PoliteCli
         placeholders = ",".join("?" * len(notice_sources))
         backlog = conn.execute(
             f"SELECT id FROM notices WHERE source IN ({placeholders}) AND detail_fetched=0 AND detail_attempts<? "
-            f"AND id NOT IN ({','.join('?' * len(targets)) or 'NULL'}) ORDER BY first_seen_at DESC LIMIT ?",
-            (*notice_sources, MAX_DETAIL_ATTEMPTS, *targets, MAX_BACKLOG_DETAILS),
+            f"ORDER BY first_seen_at DESC, id DESC LIMIT ?",
+            (*notice_sources, MAX_DETAIL_ATTEMPTS, MAX_BACKLOG_DETAILS + len(targets)),
         ).fetchall()
-        for nid in targets + [r["id"] for r in backlog]:
+        backlog_ids = [r["id"] for r in backlog if r["id"] not in set(targets)][:MAX_BACKLOG_DETAILS]
+        for nid in targets + backlog_ids:
             row = conn.execute("SELECT * FROM notices WHERE id=?", (nid,)).fetchone()
             try:
                 fields = collector.fetch_detail(client, notice_for_detail(row))

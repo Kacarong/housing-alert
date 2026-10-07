@@ -250,3 +250,26 @@ def test_same_notice_from_two_sources_notified_once(env):
                                                    category_raw="주택", sidos=["경기"])]
     env["run"](T0 + timedelta(hours=1))
     assert len(env["sent"]) == 1
+
+
+def test_detail_backlog_is_filled_on_later_runs(env, monkeypatch):
+    conn = env["conn"]
+    monkeypatch.setattr(pipeline, "MAX_NEW_DETAILS", 2)
+    monkeypatch.setattr(pipeline, "MAX_BACKLOG_DETAILS", 3)
+    fake = env["collectors"]["fake"]
+    fake.items = [item(str(i)) for i in range(7)]
+    env["run"]()
+    assert count(conn, "SELECT COUNT(*) FROM notices WHERE detail_fetched=1") == 2 + 3
+    env["run"](T0 + timedelta(hours=1))  # 새 공고 없음 → 남은 2건 보강
+    assert count(conn, "SELECT COUNT(*) FROM notices WHERE detail_fetched=1") == 7
+
+
+def test_list_values_do_not_overwrite_detail_values(env):
+    conn = env["conn"]
+    fake = env["collectors"]["fake"]
+    fake.items = [item("d", apply_end="2027-09-16")]          # 목록의 '공고 마감일'
+    fake.detail = {"d": {"apply_start": "2026-10-06", "apply_end": "2026-10-07"}}  # 상세의 접수기간
+    env["run"]()
+    env["run"](T0 + timedelta(hours=1))
+    row = conn.execute("SELECT apply_start, apply_end FROM notices WHERE source_id='d'").fetchone()
+    assert (row["apply_start"], row["apply_end"]) == ("2026-10-06", "2026-10-07")
